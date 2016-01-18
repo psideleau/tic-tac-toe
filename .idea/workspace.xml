@@ -46,11 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="board_spec.clj" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spec/tic/board_spec.clj">
+      <file leaf-file-name="ai_engine_spec.clj" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/tic/ai_engine_spec.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7635727">
-              <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6567426">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -84,8 +84,10 @@
         <option value="$PROJECT_DIR$/spec/tic/core_spec.clj" />
         <option value="$PROJECT_DIR$/src/tic/core.clj" />
         <option value="$PROJECT_DIR$/spec/board/board_spec.clj" />
-        <option value="$PROJECT_DIR$/src/tic/board.clj" />
         <option value="$PROJECT_DIR$/spec/tic/board_spec.clj" />
+        <option value="$PROJECT_DIR$/src/tic/board.clj" />
+        <option value="$PROJECT_DIR$/src/tic/ai_engine.clj" />
+        <option value="$PROJECT_DIR$/spec/tic/ai_engine_spec.clj" />
       </list>
     </option>
   </component>
@@ -685,16 +687,16 @@
       <option name="number" value="Default" />
       <updated>1452729009220</updated>
       <workItem from="1452729013837" duration="5140000" />
-      <workItem from="1452972528878" duration="15238000" />
+      <workItem from="1452972528878" duration="33741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20378000" />
+    <option name="totallyTimeSpent" value="38881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -706,7 +708,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -751,7 +753,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
+          <folding>
+            <marker date="1453060316000" expanded="true" signature="0:93" placeholder="(ns tic.board-spec ...)" />
+            <marker date="1453060316000" expanded="true" signature="95:295" placeholder="(describe ...)" />
+            <marker date="1453060316000" expanded="true" signature="325:586" placeholder="(describe ...)" />
+            <marker date="1453060316000" expanded="true" signature="588:6630" placeholder="(describe ...)" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -760,17 +767,6 @@
         <state vertical-scroll-proportion="0.078809105">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/tic/core_spec.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15761821">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <marker date="1452729028000" expanded="true" signature="0:92" placeholder="(ns tic.core-spec ...)" />
-            <marker date="1452729028000" expanded="true" signature="94:155" placeholder="(describe ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -785,7 +781,7 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.7.0-RC2/clojure-1.7.0-RC2.jar!/clojure/core.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33274958">
-          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+          <caret line="502" column="6" selection-start-line="502" selection-start-column="6" selection-end-line="502" selection-end-column="6" />
           <folding>
             <marker date="1435631470000" expanded="true" signature="464:549" placeholder="(ns clojure.core ...)" />
             <marker date="1435631470000" expanded="true" signature="589:735" placeholder="(def list ...)" />
@@ -1412,35 +1408,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tic/board.clj">
+    <entry file="file://$PROJECT_DIR$/spec/tic/core_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8423818">
-          <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.15761821">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding>
-            <marker date="1452993682000" expanded="true" signature="16:69" placeholder="(defn- empty-row ...)" />
-            <marker date="1452993682000" expanded="true" signature="71:140" placeholder="(defn- coordinate ...)" />
-            <marker date="1452993682000" expanded="true" signature="142:213" placeholder="(defn- get-board-piece-val ...)" />
-            <marker date="1452993682000" expanded="true" signature="215:361" placeholder="(defn- get-board-piece ...)" />
-            <marker date="1452993682000" expanded="true" signature="363:448" placeholder="(defn- play-marked-all-of? ...)" />
-            <marker date="1452993682000" expanded="true" signature="450:538" placeholder="(defn- is-winner-accross? ...)" />
-            <marker date="1452993682000" expanded="true" signature="540:652" placeholder="(defn- get-piece-vals-top-to-bottom ...)" />
-            <marker date="1452993682000" expanded="true" signature="654:924" placeholder="(defn- is-winner-top-to-bottom? ...)" />
-            <marker date="1452993682000" expanded="true" signature="926:1046" placeholder="(defn- get-piece-vals-top-left-to-bottom-right ...)" />
-            <marker date="1452993682000" expanded="true" signature="1048:1247" placeholder="(defn- get-piece-vals-bottom-left-to-top-right ...)" />
-            <marker date="1452993682000" expanded="true" signature="1249:1460" placeholder="(defn- is-winner-diagonal? ...)" />
-            <marker date="1452993682000" expanded="true" signature="1462:1622" placeholder="(defn winner? ...)" />
-            <marker date="1452993682000" expanded="true" signature="1624:1693" placeholder="(defn free? ...)" />
-            <marker date="1452993682000" expanded="true" signature="1695:1753" placeholder="(defn new-board ...)" />
-            <marker date="1452993682000" expanded="true" signature="1755:1812" placeholder="(defn mark-col ...)" />
-            <marker date="1452993682000" expanded="true" signature="1814:1993" placeholder="(defn move ...)" />
+            <marker date="1452729028000" expanded="true" signature="0:92" placeholder="(ns tic.core-spec ...)" />
+            <marker date="1452729028000" expanded="true" signature="94:155" placeholder="(describe ...)" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/tic/board_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7635727">
-          <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.33274958">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <marker date="1453060316000" expanded="true" signature="0:93" placeholder="(ns tic.board-spec ...)" />
+            <marker date="1453060316000" expanded="true" signature="95:295" placeholder="(describe ...)" />
+            <marker date="1453060316000" expanded="true" signature="325:586" placeholder="(describe ...)" />
+            <marker date="1453060316000" expanded="true" signature="588:6630" placeholder="(describe ...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tic/board.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44833624">
+          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+          <folding>
+            <marker date="1453060316000" expanded="true" signature="16:65" placeholder="(defn- empty-row ...)" />
+            <marker date="1453060316000" expanded="true" signature="67:139" placeholder="(defn- coordinate ...)" />
+            <marker date="1453060316000" expanded="true" signature="141:209" placeholder="(defn- board-square-val ...)" />
+            <marker date="1453060316000" expanded="true" signature="211:357" placeholder="(defn- get-board-square ...)" />
+            <marker date="1453060316000" expanded="true" signature="359:446" placeholder="(defn- play-marked-all-of? ...)" />
+            <marker date="1453060316000" expanded="true" signature="448:536" placeholder="(defn- is-winner-accross? ...)" />
+            <marker date="1453060316000" expanded="true" signature="538:644" placeholder="(defn- square-vals-top-to-bottom ...)" />
+            <marker date="1453060316000" expanded="true" signature="646:904" placeholder="(defn- winner-top-to-bottom? ...)" />
+            <marker date="1453060316000" expanded="true" signature="906:1020" placeholder="(defn- square-vals-top-left-to-bottom-right ...)" />
+            <marker date="1453060316000" expanded="true" signature="1022:1215" placeholder="(defn- square-vals-bottom-left-to-top-right ...)" />
+            <marker date="1453060316000" expanded="true" signature="1217:1419" placeholder="(defn- winner-diagonal? ...)" />
+            <marker date="1453060316000" expanded="true" signature="1421:1575" placeholder="(defn winner? ...)" />
+            <marker date="1453060316000" expanded="true" signature="1577:1645" placeholder="(defn free? ...)" />
+            <marker date="1453060316000" expanded="true" signature="1647:1705" placeholder="(defn new-board ...)" />
+            <marker date="1453060316000" expanded="true" signature="1707:1765" placeholder="(defn- mark-col ...)" />
+            <marker date="1453060316000" expanded="true" signature="1767:1955" placeholder="(defn take-square ...)" />
+            <marker date="1453060316000" expanded="true" signature="1957:2027" placeholder="(defn- game-over? ...)" />
+            <marker date="1453060316000" expanded="true" signature="2029:2150" placeholder="(defn tie? ...)" />
+            <marker date="1453060316000" expanded="true" signature="2152:2217" placeholder="(defn open-squares ...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tic/ai_engine.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57793343">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding>
+            <marker date="1453090273000" expanded="true" signature="0:53" placeholder="(ns tic.ai-engine ...)" />
+            <marker date="1453090273000" expanded="true" signature="110:241" placeholder="(defn- next-player ...)" />
+            <marker date="1453090273000" expanded="true" signature="243:923" placeholder="(defn- minimax-square ...)" />
+            <marker date="1453090273000" expanded="true" signature="925:1229" placeholder="(defn- minimax-for-open-postions ...)" />
+            <marker date="1453090273000" expanded="true" signature="1231:1554" placeholder="(defn minimax ...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/tic/ai_engine_spec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6567426">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding />
         </state>
       </provider>
