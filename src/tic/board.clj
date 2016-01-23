@@ -65,7 +65,7 @@
     (assoc board (:row coordinate) (mark-col (nth board (:row coordinate)) player (:col coordinate)))
     ))
 
-(defn- game-over? [board]
+(defn game-over? [board]
   (every? #(not (free? board %)) (range 9)))
 
 (defn tie? [board player1 player2]
