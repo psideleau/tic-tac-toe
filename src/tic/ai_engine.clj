@@ -4,36 +4,53 @@
 (declare minimax-square)
 (declare minimax-for-open-postions)
 
-(defn- next-player [{:keys [current-player opposing-player player-turn]}]
-  (if (= current-player player-turn)
-    opposing-player
-    current-player))
 
-(defn minimax-square
+(defn minimax-square-stack
   [{:keys [board
            current-player
            opposing-player
-           player-turn
            square] :as params}]
-  (let [new-board (board/take-square board player-turn square)]
+  (let [new-board (board/take-square board (:mark-char current-player) square)]
     (cond
-      (board/winner? new-board current-player) 10
-      (board/winner? new-board opposing-player) -10
-      (board/tie?    new-board current-player opposing-player) 0
+      (board/winner? new-board (:mark-char current-player)) (:winner-score current-player)
+      (board/game-over? new-board) 0
       :else
-          (let [next-player (next-player params)
-                scores (map #(minimax-square (assoc params :board new-board
-                                        :player-turn next-player
-                                        :square %))  (board/open-squares new-board))]
-          (if (= next-player current-player)
-            (apply max scores)
-            (apply min scores))))))
+          (let [scores (map #(minimax-square-stack {:board new-board
+                                        :current-player opposing-player
+                                        :opposing-player current-player
+                                        :square %})  (board/open-squares new-board))]
+            (apply (:score-selection-fn opposing-player) scores)))))
+
+(defn minimax-square2
+[{:keys [board
+         current-player
+         opposing-player
+         square] :as params}]
+(let [new-board (board/take-square board (:mark-char current-player) square)]
+  (cond
+    (board/winner? new-board (:mark-char current-player)) (:winner-score current-player)
+    (board/game-over? new-board) 0
+    :else
+    (loop [squares (board/open-squares new-board)
+           scores  []]
+        (if (empty? squares)
+          (apply (:score-selection-fn opposing-player) scores)
+          (recur (rest squares)
+               (conj scores (minimax-square2 {:board new-board
+                                            :current-player opposing-player
+                                            :opposing-player current-player
+                                            :square (first squares)}))))))))
+
 
 (defn minimax [board current-player opposing-player]
-    (map #(minimax-square {:board board
-                           :current-player current-player
-                           :opposing-player opposing-player
-                           :player-turn current-player
+    (map #(minimax-square-stack {:board board
+                           :current-player {:mark-char current-player
+                                            :winner-score 10
+                                            :score-selection-fn max}
+                           :opposing-player {:mark-char opposing-player
+                                             :winner-score -10
+                                             :score-selection-fn min
+                                             }
                            :square %}) (board/open-squares board)))
 
 
