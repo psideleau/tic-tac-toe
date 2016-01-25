@@ -1,5 +1,7 @@
 (ns tic.board)
 
+(def ^:const total-squares 9)
+
 (defn- empty-row []
   (vec (take 3 (repeat :_))))
 
@@ -9,7 +11,7 @@
 (defn- board-square-val [board row col]
   (nth (nth board row) col))
 
-(defn- get-board-square [board square]
+(defn get-board-square [board square]
   (let [coordinate  (coordinate square)]
     (board-square-val board (:row coordinate) (:col coordinate))))
 
@@ -66,10 +68,19 @@
     ))
 
 (defn game-over? [board]
-  (every? #(not (free? board %)) (range 9)))
+  (every? #(not (free? board %)) (range total-squares)))
 
 (defn tie? [board player1 player2]
   (and (game-over? board) (not (or (winner? board player1) (winner? board player2)))))
 
+(defn find-squares-matching [board predicate]
+  (filter predicate (range total-squares)))
+
 (defn open-squares [board]
-  (filter #(free? board %) (range 9)))
+  (find-squares-matching board #(free? board %)))
+
+(defn taken-squares [board player]
+  (find-squares-matching board  #(= player (get-board-square board %))))
+
+(defn new-game? [board]
+  (= total-squares (count (open-squares board))))

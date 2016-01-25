@@ -21,11 +21,13 @@
       (let [board (board/new-board)]
         (should (board/free? board square)))))
 
+
 (describe "check if player has won the game"
   (context "player X by going accross"
     (it (str "x should win top row")
       (let [board [[:X :X :X] [:_ :_ :_] [:_ :_ :_]]]
-        (should (board/winner? board :X))))
+        (should (board/winner? board :X))
+        (should= [0 1 2] (board/taken-squares board :X))))
     (it (str "x should win middle row")
       (let [board [[:_ :_ :_] [:X :X :X] [:_ :_ :_]]]
         (should (board/winner? board :X))))
