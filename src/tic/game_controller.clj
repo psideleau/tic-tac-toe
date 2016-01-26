@@ -7,19 +7,20 @@
     :O
     :X))
 
-(defn- first-player [player player-first]
-  (if (= true player-first)
-    player
-    (computer-name player)))
+(defn- computer-goes-first [game]
+  (assoc game :board (engine/computer-take-square game) :current-turn (:player game)))
 
 (defn start [{:keys [player player-first]}]
-  {:player player
-   :computer (computer-name player)
-   :winner false
-   :current-turn (first-player player player-first)
-   :board (board/new-board)})
+  (let [game   {:player player
+                :computer (computer-name player)
+                :winner false
+                :current-turn player
+                :board (board/new-board)}]
+    (if (not player-first)
+      (computer-goes-first game)
+      game)))
 
 (defn take-square [game square]
-  (let  [player-turn (assoc game :board (board/take-square (:board game) (:player game) square))
-         computer-turn (assoc game :board (engine/select-square player-turn))]
-         computer-turn))
+  (let  [player-turn-game (assoc game :board (board/take-square (:board game) (:player game) square))
+         computer-turn-game (assoc game :board (engine/computer-take-square player-turn-game) :current-turn (:player game))]
+         computer-turn-game))

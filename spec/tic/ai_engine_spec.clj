@@ -15,17 +15,17 @@
          stub-select-center-fn (fn [col]
                                      (reset! spy-eligible-first-choice-squares col)
                                     center-square)
-        board-after-selection (engine/select-square {:board (board/new-board) :computer :X :player :0} stub-select-center-fn)]
+        board-after-selection (engine/computer-take-square {:board (board/new-board) :computer :X :player :0} stub-select-center-fn)]
         (should  (every? #(board/free? board-after-selection %) edge-squares))
         (should= first-choice-squares @spy-eligible-first-choice-squares)
         (should-not (board/free? board-after-selection center-square)))))
 
 (describe "computer wins the game"
   (it "should win game"
-    (let [board (engine/select-square {:board   [[:O :_ :X]
+    (let [board (engine/computer-take-square {:board [[:O :_ :X]
                                                  [:X :_ :_]
                                                  [:X :O :O]]
-                                       :computer :O :player :X} rand-nth)]
+                                       :computer     :O :player :X} rand-nth)]
     (should= [[:O :_ :X]
               [:X :O :_]
               [:X :O :O]] board)
@@ -34,30 +34,35 @@
 
 (describe "the possible moves of a board"
   (context "get minimax scores"
-    (it "should get minimax values of each state"
+    (it "should be 10 when X has immediate win"
       (should= '(10) (engine/minimax [[:X :X :O]
                                       [:O :O :X]
                                       [:X :X :_]] :X :O)))
-    (it "should get minimax values of each state"
+    (it "should be tie when there is no way to win"
       (should= '(0) (engine/minimax [[:X :X :O]
                                      [:O :O :_]
                                      [:X :X :O]] :X :O)))
-    (it "should get minimax values of each state"
+    (it "should be 10 when O has immeidate win"
       (should= '(10) (engine/minimax [[:X :X :O]
                                       [:O :O :_]
                                       [:X :X :O]] :O :X)))
-    (it "should get minimax values of each state"
-      (should= '(-10 10 -10) (engine/minimax [[:O :_ :X]
+    (it "there should only be one way to win"
+      (should= '(-11 10 -11) (engine/minimax [[:O :_ :X]
                                               [:X :_ :_]
                                               [:X :O :O]] :X :O)))
 
-    (it "should get minimax values of each state"
-      (should= '(10 10 10 10) (engine/minimax [[:_ :X :_]
-                                              [:_ :_ :X]
-                                              [:O :O :X]] :X :O)))
+     (it "immediate wins should be scored higher"
+       (should= '(10 8 10 8 8)  (engine/minimax [[:_ :_ :X]
+                                                 [:X :_ :_]
+                                                 [:X :_ :O]] :X :O)))
+
+    (it "X will always win but it should pick the immeidate win"
+      (should= '(8 10 8 8) (engine/minimax [[:_ :X :_]
+                                               [:_ :_ :X]
+                                               [:O :O :X]] :X :O)))
 
     (it "should get minimax values of each state"
-      (should= '(-10 10 -10) (engine/minimax [  [:O :_ :X]
+      (should= '(-11 10 -11) (engine/minimax [[:O :_ :X]
                                               [:X :_ :_]
                                               [:X :O :O]] :O :X)))
 

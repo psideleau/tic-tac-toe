@@ -7,15 +7,17 @@
   [{:keys [board
            current-player
            opposing-player
-           square] :as params}]
+           square
+           depth] :as params}]
   (let [new-board (board/take-square board (:mark-char current-player) square)]
     (cond
-      (board/winner? new-board (:mark-char current-player)) (:winner-score current-player)
+      (board/winner? new-board (:mark-char current-player)) (- (:winner-score current-player) depth)
       (board/game-over? new-board) 0
       :else
           (let [scores (map #(minimax-square-stack {:board new-board
                                         :current-player opposing-player
                                         :opposing-player current-player
+                                        :depth (inc depth)
                                         :square %})  (board/open-squares new-board))]
             (apply (:score-selection-fn opposing-player) scores)))))
 
@@ -48,6 +50,7 @@
                                                  :winner-score -10
                                                  :score-selection-fn min
                                                  }
+                               :depth 0
                                :square %}) (board/open-squares board)))
 
 (defn- square-index-with-max-score [scores max-score]
@@ -65,11 +68,12 @@
         scores (minimax board computer player)
         max-score (apply max scores)
         winning-square (nth open-squares (square-index-with-max-score scores max-score))]
+    (print scores)
     (board/take-square board computer winning-square)))
 
-(defn select-square
+(defn computer-take-square
   ([params]
-   (select-square params rand-nth))
+   (computer-take-square params rand-nth))
   ([{:keys [board computer player] :as params} selection-fn]
   (if (board/new-game? board)
     (make-first-move params selection-fn)
