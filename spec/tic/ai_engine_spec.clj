@@ -46,6 +46,7 @@
       (should= '(10) (engine/minimax [[:X :X :O]
                                       [:O :O :_]
                                       [:X :X :O]] :O :X)))
+
     (it "there should only be one way to win"
       (should= '(-11 10 -11) (engine/minimax [[:O :_ :X]
                                               [:X :_ :_]
@@ -57,15 +58,14 @@
                                                  [:X :_ :O]] :X :O)))
 
     (it "X will always win but it should pick the immeidate win"
-      (should= '(8 10 8 8) (engine/minimax [[:_ :X :_]
+      (should= '(8 10 8 8) (engine/minimax    [[:_ :X :_]
                                                [:_ :_ :X]
                                                [:O :O :X]] :X :O)))
 
-    (it "should get minimax values of each state"
+    (it "O can only win by taking center position"
       (should= '(-11 10 -11) (engine/minimax [[:O :_ :X]
                                               [:X :_ :_]
                                               [:X :O :O]] :O :X)))
 
     (it "an empty board will end in a draw if both players play perfectly"
-      (println "end test")
       (should= '(0 0 0 0 0 0 0 0 0) (engine/minimax (board/new-board) :X :O)))))

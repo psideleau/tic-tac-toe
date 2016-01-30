@@ -169,6 +169,34 @@
                             [:O :O :X]
                             [:X :O :O]] :X :O))))
 
+    (context "x is a winner"
+       (let [board [[:X :X :X]
+                    [:O :O :X]
+                    [:X :O :O]]]
+       (it "x should be winner"
+         (should (board/winner? board :X :O))
+         (should (board/winner? board :X))
+         (should-not (board/winner? board :O))
+         (should= :X (board/winner board)))))
+
+    (context "o is a winner"
+             (let [board [[:X :X :_]
+                          [:O :O :O]
+                          [:X :O :O]]]
+               (it "x should be winner"
+                   (should (board/winner? board :X :O))
+                   (should (board/winner? board :O))
+                   (should-not (board/winner? board :X))
+                   (should= :O (board/winner board)))))
+
+    (context "no a winner"
+       (let [board (board/new-board)]
+         (it "x should be winner"
+             (should-not (board/winner? board :X :0))
+             (should-not (board/winner? board))
+             (should= :_ (board/winner board)))))
+
+
   (context "the state of a board"
     (it "all positions should be free"
      (should= [0 1 2 3 4 5 6 7 8] (board/open-squares (board/new-board))))

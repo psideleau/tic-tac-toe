@@ -21,6 +21,8 @@
       game)))
 
 (defn take-square [game square]
-  (let  [player-turn-game (assoc game :board (board/take-square (:board game) (:player game) square))
-         computer-turn-game (assoc game :board (engine/computer-take-square player-turn-game) :current-turn (:player game))]
-         computer-turn-game))
+  (if (board/free? (:board game) square)
+    (let  [player-turn-game (assoc game :board (board/take-square (:board game) (:player game) square))
+           computer-turn-game (assoc game :board (engine/computer-take-square player-turn-game) :current-turn (:player game))]
+           computer-turn-game)
+    (throw (IllegalStateException. "Square is already taken"))))

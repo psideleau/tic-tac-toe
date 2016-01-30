@@ -39,19 +39,24 @@
   (loop [row 2 col 0 vals []]
     (if (> col 2)
       vals
-      (recur (dec row) (inc col) (conj  vals (board-square-val board row col))))))
+      (recur (dec row) (inc col) (conj vals (board-square-val board row col))))))
 
 (defn- winner-diagonal? [board player]
   (or
     (play-marked-all-of? (square-vals-top-left-to-bottom-right board) player)
     (play-marked-all-of? (square-vals-bottom-left-to-top-right board) player)))
 
-(defn winner? [board player]
-  (or
-    (is-winner-accross? board player)
-    (winner-top-to-bottom? board player)
-    (winner-diagonal? board player)
-  ))
+(declare winner)
+(defn winner?
+  ([board]
+     (not (= :_ (winner board))))
+  ([board player1 player2]
+   (or (winner? board player1) (winner? board player2)))
+  ([board player]
+    (or
+      (is-winner-accross? board player)
+      (winner-top-to-bottom? board player)
+      (winner-diagonal? board player))))
 
 (defn free? [board square]
   (= :_ (get-board-square board square)))
@@ -59,28 +64,43 @@
 (defn new-board[]
   (vec (take 3 (repeatedly empty-row))))
 
+(defn- players [board]
+  (->> (range total-squares)
+       (filter #(not (free? board %)))
+       (map #(get-board-square board %))
+       (into [])
+       (set)))
+
+(defn winner [board]
+  (let [players (players board)
+        player1 (first players)
+        player2 (second players)]
+    (cond
+      (winner? board player1) player1
+      (winner? board player2) player2
+      :else :_)))
+
 (defn- mark-col [col player idx]
   (assoc col idx player))
 
 (defn take-square [board player square]
   (let [coordinate (coordinate square)]
-    (assoc board (:row coordinate) (mark-col (nth board (:row coordinate)) player (:col coordinate)))
-    ))
+    (assoc board (:row coordinate) (mark-col (nth board (:row coordinate)) player (:col coordinate)))))
 
-(defn game-over? [board]
+(defn all-squares-taken? [board]
   (every? #(not (free? board %)) (range total-squares)))
 
 (defn tie? [board player1 player2]
-  (and (game-over? board) (not (or (winner? board player1) (winner? board player2)))))
+  (and (all-squares-taken? board) (not (or (winner? board player1) (winner? board player2)))))
 
-(defn find-squares-matching [board predicate]
+(defn find-squares-matching [predicate]
   (filter predicate (range total-squares)))
 
 (defn open-squares [board]
-  (find-squares-matching board #(free? board %)))
+  (find-squares-matching #(free? board %)))
 
 (defn taken-squares [board player]
-  (find-squares-matching board  #(= player (get-board-square board %))))
+  (find-squares-matching #(= player (get-board-square board %))))
 
 (defn new-game? [board]
   (= total-squares (count (open-squares board))))

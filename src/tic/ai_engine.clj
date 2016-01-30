@@ -1,45 +1,25 @@
 (ns tic.ai-engine
   (:require [tic.board :as board]))
 
-(declare minimax-square)
-(declare minimax-for-open-postions)
+
 (defn minimax-square-stack
   [{:keys [board
            current-player
            opposing-player
            square
-           depth] :as params}]
+           depth] }]
   (let [new-board (board/take-square board (:mark-char current-player) square)]
     (cond
       (board/winner? new-board (:mark-char current-player)) (- (:winner-score current-player) depth)
-      (board/game-over? new-board) 0
+      (board/all-squares-taken? new-board) 0
       :else
-          (let [scores (map #(minimax-square-stack {:board new-board
+      (let [scores (map #(minimax-square-stack {:board new-board
                                         :current-player opposing-player
                                         :opposing-player current-player
                                         :depth (inc depth)
                                         :square %})  (board/open-squares new-board))]
             (apply (:score-selection-fn opposing-player) scores)))))
 
-(defn minimax-square2
-[{:keys [board
-         current-player
-         opposing-player
-         square] :as params}]
-(let [new-board (board/take-square board (:mark-char current-player) square)]
-  (cond
-    (board/winner? new-board (:mark-char current-player)) (:winner-score current-player)
-    (board/game-over? new-board) 0
-    :else
-    (loop [squares (board/open-squares new-board)
-           scores  []]
-        (if (empty? squares)
-          (apply (:score-selection-fn opposing-player) scores)
-          (recur (rest squares)
-               (conj scores (minimax-square2 {:board new-board
-                                            :current-player opposing-player
-                                            :opposing-player current-player
-                                              :square (first squares)}))))))))
 
 (defn minimax [board current-player opposing-player]
   (map #(minimax-square-stack {:board board
@@ -65,19 +45,18 @@
 
 (defn- make-move [{:keys [board computer player]}]
   (let [open-squares (board/open-squares board)
-        scores (minimax board computer player)
+        scores (minimax board  computer player)
         max-score (apply max scores)
         winning-square (nth open-squares (square-index-with-max-score scores max-score))]
-    (print scores)
     (board/take-square board computer winning-square)))
 
 (defn computer-take-square
   ([params]
    (computer-take-square params rand-nth))
   ([{:keys [board computer player] :as params} selection-fn]
-  (if (board/new-game? board)
-    (make-first-move params selection-fn)
-    (make-move params))))
+    (if (board/new-game? board)
+      (make-first-move params selection-fn)
+      (make-move params))))
 
 
 
