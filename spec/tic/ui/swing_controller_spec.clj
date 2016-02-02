@@ -3,7 +3,7 @@
             [tic.board :as board]
             [tic.game-controller :as game-controller]
             [tic.ui.swing-controller :as swing-controller])
-  (:import [tic.ui.swing_controller SquareWidget GameListener]))
+  (:import [tic.ui.swing_controller GameListener SquareWidget]))
 
 (deftype SpySquareWidget [^{:volatile-mutable true} square-index
                           ^{:volatile-mutable true} current-state

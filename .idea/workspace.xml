@@ -26,12 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="449d5f7d-dd9f-483c-b05b-a843b02dd538" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tic/ui/swing.clj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" afterPath="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/ui/swing.clj" afterPath="$PROJECT_DIR$/src/tic/ui/swing.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" afterPath="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" />
     </list>
     <ignored path="tic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,8 +55,8 @@
       <file leaf-file-name="swing.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tic/ui/swing.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4601227">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.44785276">
+              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -113,8 +112,8 @@
         <option value="$PROJECT_DIR$/src/tic/ui/swing_1.clj" />
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/javax/swing/JFrame.java" />
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/java/awt/BorderLayout.java" />
-        <option value="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" />
         <option value="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" />
+        <option value="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" />
         <option value="$PROJECT_DIR$/src/tic/ui/swing.clj" />
       </list>
     </option>
@@ -173,6 +172,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -287,9 +287,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -806,15 +805,16 @@
       <workItem from="1453530894323" duration="25578000" />
       <workItem from="1453779307027" duration="4995000" />
       <workItem from="1453869522262" duration="11604000" />
-      <workItem from="1454104254815" duration="28096000" />
+      <workItem from="1454104254815" duration="28441000" />
+      <workItem from="1454374878219" duration="5823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140834000" />
+    <option name="totallyTimeSpent" value="147002000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -910,6 +910,14 @@
     </option>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/tic/ui/swing.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tic/ai_engine.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -948,7 +956,6 @@
             <marker date="1453870796000" expanded="true" signature="100:165" placeholder="(defn- computer-name ...)" />
             <marker date="1453870796000" expanded="true" signature="167:287" placeholder="(defn- computer-goes-first ...)" />
             <marker date="1453870796000" expanded="true" signature="289:596" placeholder="(defn start ...)" />
-            <marker date="1453870796000" expanded="true" signature="598:997" placeholder="(defn take-square ...)" />
           </folding>
         </state>
       </provider>
@@ -1035,66 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.17302053">
           <caret line="448" column="10" selection-start-line="448" selection-start-column="10" selection-end-line="448" selection-end-column="10" />
-          <folding>
-            <marker date="1453494062000" expanded="true" signature="0:155" placeholder="(ns speclj.core ...)" />
-            <marker date="1453494062000" expanded="true" signature="157:218" placeholder="(try ...)" />
-            <marker date="1453494062000" expanded="true" signature="287:549" placeholder="(defmacro -new-exception ...)" />
-            <marker date="1453494062000" expanded="true" signature="551:722" placeholder="(defmacro -new-throwable ...)" />
-            <marker date="1453494062000" expanded="true" signature="724:852" placeholder="(defmacro -new-failure ...)" />
-            <marker date="1453494062000" expanded="true" signature="854:982" placeholder="(defmacro -new-pending ...)" />
-            <marker date="1453494062000" expanded="true" signature="984:1292" placeholder="(defmacro it ...)" />
-            <marker date="1453494062000" expanded="true" signature="1294:1414" placeholder="(defmacro xit ...)" />
-            <marker date="1453494062000" expanded="true" signature="1416:1556" placeholder="(defmacro when-not-bound ...)" />
-            <marker date="1453494062000" expanded="true" signature="1558:2387" placeholder="(defmacro describe ...)" />
-            <marker date="1453494062000" expanded="true" signature="2389:2601" placeholder="(defmacro context ...)" />
-            <marker date="1453494062000" expanded="true" signature="2603:2874" placeholder="(defmacro before ...)" />
-            <marker date="1453494062000" expanded="true" signature="2876:3144" placeholder="(defmacro after ...)" />
-            <marker date="1453494062000" expanded="true" signature="3146:3606" placeholder="(defmacro around ...)" />
-            <marker date="1453494062000" expanded="true" signature="3608:3891" placeholder="(defmacro before-all ...)" />
-            <marker date="1453494062000" expanded="true" signature="3893:4186" placeholder="(defmacro after-all ...)" />
-            <marker date="1453494062000" expanded="true" signature="4188:4393" placeholder="(defmacro around-all ...)" />
-            <marker date="1453494062000" expanded="true" signature="4395:4939" placeholder="(defn -make-with ...)" />
-            <marker date="1453494062000" expanded="true" signature="4941:5353" placeholder="(defmacro with ...)" />
-            <marker date="1453494062000" expanded="true" signature="5355:5840" placeholder="(defmacro with! ...)" />
-            <marker date="1453494062000" expanded="true" signature="5842:6226" placeholder="(defmacro with-all ...)" />
-            <marker date="1453494062000" expanded="true" signature="6228:6788" placeholder="(defmacro with-all! ...)" />
-            <marker date="1453494062000" expanded="true" signature="6790:6867" placeholder="(defmacro -to-s ...)" />
-            <marker date="1453494062000" expanded="true" signature="6869:6973" placeholder="(defmacro -fail ...)" />
-            <marker date="1453494062000" expanded="true" signature="6975:7151" placeholder="(defmacro should ...)" />
-            <marker date="1453494062000" expanded="true" signature="7153:7326" placeholder="(defmacro should-not ...)" />
-            <marker date="1453494062000" expanded="true" signature="7328:8031" placeholder="(defmacro should= ...)" />
-            <marker date="1453494062000" expanded="true" signature="8033:8273" placeholder="(defmacro should-be ...)" />
-            <marker date="1453494062000" expanded="true" signature="8275:8526" placeholder="(defmacro should-not-be ...)" />
-            <marker date="1453494062000" expanded="true" signature="8528:8878" placeholder="(defmacro should-not= ...)" />
-            <marker date="1453494062000" expanded="true" signature="8880:9285" placeholder="(defmacro should-be-same ...)" />
-            <marker date="1453494062000" expanded="true" signature="9287:9704" placeholder="(defmacro should-not-be-same ...)" />
-            <marker date="1453494062000" expanded="true" signature="9706:9805" placeholder="(defmacro should-be-nil ...)" />
-            <marker date="1453494062000" expanded="true" signature="9807:11489" placeholder="(defmacro should-contain ...)" />
-            <marker date="1453494062000" expanded="true" signature="11491:12865" placeholder="(defmacro should-not-contain ...)" />
-            <marker date="1453494062000" expanded="true" signature="12867:13131" placeholder="(defmacro -remove-first ...)" />
-            <marker date="1453494062000" expanded="true" signature="13133:13608" placeholder="(defmacro -coll-difference ...)" />
-            <marker date="1453494062000" expanded="true" signature="13610:13927" placeholder="(defmacro -difference-message ...)" />
-            <marker date="1453494062000" expanded="true" signature="13929:14847" placeholder="(defmacro should== ...)" />
-            <marker date="1453494062000" expanded="true" signature="14849:15840" placeholder="(defmacro should-not== ...)" />
-            <marker date="1453494062000" expanded="true" signature="15842:15961" placeholder="(defmacro should-not-be-nil ...)" />
-            <marker date="1453494062000" expanded="true" signature="15963:16116" placeholder="(defmacro should-fail ...)" />
-            <marker date="1453494062000" expanded="true" signature="16118:16587" placeholder="(defmacro -create-should-throw-failure ...)" />
-            <marker date="1453494062000" expanded="true" signature="16589:18152" placeholder="(defmacro should-throw ...)" />
-            <marker date="1453494062000" expanded="true" signature="18155:18513" placeholder="(defmacro should-not-throw ...)" />
-            <marker date="1453494062000" expanded="true" signature="18515:19005" placeholder="(defmacro should-be-a ...)" />
-            <marker date="1453494062000" expanded="true" signature="19007:19437" placeholder="(defmacro should-not-be-a ...)" />
-            <marker date="1453494062000" expanded="true" signature="19439:19673" placeholder="(defmacro pending ...)" />
-            <marker date="1453494062000" expanded="true" signature="19675:19956" placeholder="(defmacro tags ...)" />
-            <marker date="1453494062000" expanded="true" signature="19958:20182" placeholder="(defmacro with-stubs ...)" />
-            <marker date="1453494062000" expanded="true" signature="20184:20800" placeholder="(defmacro stub ...)" />
-            <marker date="1453494062000" expanded="true" signature="20802:23361" placeholder="(defmacro should-have-invoked ...)" />
-            <marker date="1453494062000" expanded="true" signature="23363:25790" placeholder="(defmacro should-not-have-invoked ...)" />
-            <marker date="1453494062000" expanded="true" signature="25849:26021" placeholder="(defmacro bound-by-should-invoke? ...)" />
-            <marker date="1453494062000" expanded="true" signature="26023:26293" placeholder="(defmacro with-stubbed-invocations ...)" />
-            <marker date="1453494062000" expanded="true" signature="26295:26924" placeholder="(defmacro should-invoke ...)" />
-            <marker date="1453494062000" expanded="true" signature="26926:27681" placeholder="(defmacro should-not-invoke ...)" />
-            <marker date="1453494062000" expanded="true" signature="27684:28317" placeholder="(defmacro run-specs ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1180,110 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.6646216">
           <caret line="231" column="11" selection-start-line="231" selection-start-column="11" selection-end-line="231" selection-end-column="11" />
-          <folding>
-            <marker date="1438711546000" expanded="false" signature="0:215" placeholder="/.../" />
-            <marker date="1438711546000" expanded="false" signature="245:736" placeholder="..." />
-            <marker date="1438711546000" expanded="true" signature="739:4160" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="4421:4721" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="4774:4880" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="5075:5142" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="5193:5458" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="5498:5864" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="5926:6397" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="6443:6488" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="6494:7380" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="7425:7472" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="7478:8028" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="8086:8136" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="8142:9198" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="9257:9311" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="9317:9392" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="9424:10099" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="10105:10209" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="10251:10598" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="10301:10545" placeholder="//..." />
-            <marker date="1438711546000" expanded="true" signature="10604:10938" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="10998:11645" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="11393:11485" placeholder="//..." />
-            <marker date="1438711546000" expanded="true" signature="11651:14305" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="14362:15176" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="15182:15393" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="15435:15446" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="15475:15481" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="15487:16917" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="16981:17232" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="17238:17466" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="17514:17525" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="17548:17554" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="17560:17765" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="17800:17811" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="17820:17826" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="17831:18092" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="18138:18149" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="18183:18189" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="18194:18320" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="18354:18365" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="18399:18405" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="18411:18805" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="18855:18866" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="18897:18903" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="18910:19485" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="19548:19559" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="19593:19599" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="19606:20438" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="20517:20714" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="20720:21224" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="21264:21405" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="21412:21784" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="21834:22005" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="22012:22211" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="22246:22257" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="22273:22279" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="22286:22595" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="22647:23090" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="23096:23128" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="23170:23181" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="23207:23213" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="23219:23430" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="23468:23479" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="23517:23523" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="23529:24441" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="24495:24506" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="24548:24554" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="24560:24771" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="24812:24823" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="24861:24867" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="24873:25408" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="25465:25476" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="25518:25524" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="25530:25733" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="25769:25780" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="25816:25822" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="25828:26202" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="26252:26263" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="26301:26307" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="26313:26370" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="26405:26493" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="26499:27001" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="27074:27345" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="27351:28569" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="28661:28915" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="28922:29255" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="29314:29628" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="29634:30038" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="30074:31119" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="31123:31182" placeholder="//..." />
-            <marker date="1438711546000" expanded="true" signature="31188:31227" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="31291:31626" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="31679:31827" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="31833:32058" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="32123:33443" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="32171:32362" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="32405:32710" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="32720:32930" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="32989:33437" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="33286:33400" placeholder="//..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1397,19 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/tic/ai_engine_spec.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.061349694">
-          <caret line="2" column="33" selection-start-line="1" selection-start-column="3" selection-end-line="2" selection-end-column="33" />
-          <folding>
-            <marker date="1454181298000" expanded="true" signature="0:135" placeholder="(ns tic.ai-engine-spec ...)" />
-            <marker date="1454181298000" expanded="true" signature="294:983" placeholder="(describe ...)" />
-            <marker date="1454181298000" expanded="true" signature="985:1432" placeholder="(describe ...)" />
-            <marker date="1454181298000" expanded="true" signature="1435:3233" placeholder="(describe ...)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/tic/game_controller_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.66790354">
@@ -1487,629 +1317,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="2250" column="6" selection-start-line="2250" selection-start-column="6" selection-end-line="2250" selection-end-column="6" />
-          <folding>
-            <marker date="1453494062000" expanded="true" signature="464:549" placeholder="(ns clojure.core ...)" />
-            <marker date="1453494062000" expanded="true" signature="589:735" placeholder="(def list ...)" />
-            <marker date="1453494062000" expanded="true" signature="737:950" placeholder="(def cons ...)" />
-            <marker date="1453494062000" expanded="true" signature="1035:1128" placeholder="(def let ...)" />
-            <marker date="1453494062000" expanded="true" signature="1130:1223" placeholder="(def loop ...)" />
-            <marker date="1453494062000" expanded="true" signature="1225:1408" placeholder="(def fn ...)" />
-            <marker date="1453494062000" expanded="true" signature="1410:1650" placeholder="(def first ...)" />
-            <marker date="1453494062000" expanded="true" signature="1652:1924" placeholder="(def next ...)" />
-            <marker date="1453494062000" expanded="true" signature="1926:2171" placeholder="(def rest ...)" />
-            <marker date="1453494062000" expanded="true" signature="2173:2674" placeholder="(def conj ...)" />
-            <marker date="1453494062000" expanded="true" signature="2676:2819" placeholder="(def second ...)" />
-            <marker date="1453494062000" expanded="true" signature="2821:2966" placeholder="(def ffirst ...)" />
-            <marker date="1453494062000" expanded="true" signature="2968:3111" placeholder="(def nfirst ...)" />
-            <marker date="1453494062000" expanded="true" signature="3113:3254" placeholder="(def fnext ...)" />
-            <marker date="1453494062000" expanded="true" signature="3256:3395" placeholder="(def nnext ...)" />
-            <marker date="1453494062000" expanded="true" signature="3397:3951" placeholder="(def seq ...)" />
-            <marker date="1453494062000" expanded="true" signature="3953:4159" placeholder="(def instance? ...)" />
-            <marker date="1453494062000" expanded="true" signature="4161:4323" placeholder="(def seq? ...)" />
-            <marker date="1453494062000" expanded="true" signature="4325:4480" placeholder="(def char? ...)" />
-            <marker date="1453494062000" expanded="true" signature="4482:4635" placeholder="(def string? ...)" />
-            <marker date="1453494062000" expanded="true" signature="4637:4819" placeholder="(def map? ...)" />
-            <marker date="1453494062000" expanded="true" signature="4821:5015" placeholder="(def vector? ...)" />
-            <marker date="1453494062000" expanded="true" signature="5017:5775" placeholder="(def assoc ...)" />
-            <marker date="1453494062000" expanded="true" signature="5832:6086" placeholder="(def meta ...)" />
-            <marker date="1453494062000" expanded="true" signature="6088:6356" placeholder="(def with-meta ...)" />
-            <marker date="1453494062000" expanded="true" signature="6358:6428" placeholder="(def assert-valid-fdecl ...)" />
-            <marker date="1453494062000" expanded="true" signature="6430:7287" placeholder="(def sigs ...)" />
-            <marker date="1453494062000" expanded="true" signature="7290:7505" placeholder="(def last ...)" />
-            <marker date="1453494062000" expanded="true" signature="7507:7812" placeholder="(def butlast ...)" />
-            <marker date="1453494062000" expanded="true" signature="7814:10317" placeholder="(def defn ...)" />
-            <marker date="1453494062000" expanded="true" signature="10346:10605" placeholder="(defn to-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="10607:10749" placeholder="(defn cast ...)" />
-            <marker date="1453494062000" expanded="true" signature="10752:11042" placeholder="(defn vector ...)" />
-            <marker date="1453494062000" expanded="true" signature="11044:11422" placeholder="(defn vec ...)" />
-            <marker date="1453494062000" expanded="true" signature="11424:11700" placeholder="(defn hash-map ...)" />
-            <marker date="1453494062000" expanded="true" signature="11702:11931" placeholder="(defn hash-set ...)" />
-            <marker date="1453494062000" expanded="true" signature="11933:12199" placeholder="(defn sorted-map ...)" />
-            <marker date="1453494062000" expanded="true" signature="12201:12525" placeholder="(defn sorted-map-by ...)" />
-            <marker date="1453494062000" expanded="true" signature="12527:12749" placeholder="(defn sorted-set ...)" />
-            <marker date="1453494062000" expanded="true" signature="12751:13032" placeholder="(defn sorted-set-by ...)" />
-            <marker date="1453494062000" expanded="true" signature="13057:13268" placeholder="(defn nil? ...)" />
-            <marker date="1453494062000" expanded="true" signature="13270:15337" placeholder="(def defmacro ...)" />
-            <marker date="1453494062000" expanded="true" signature="15371:15524" placeholder="(defmacro when ...)" />
-            <marker date="1453494062000" expanded="true" signature="15526:15690" placeholder="(defmacro when-not ...)" />
-            <marker date="1453494062000" expanded="true" signature="15692:15858" placeholder="(defn false? ...)" />
-            <marker date="1453494062000" expanded="true" signature="15860:16023" placeholder="(defn true? ...)" />
-            <marker date="1453494062000" expanded="true" signature="16025:16165" placeholder="(defn not ...)" />
-            <marker date="1453494062000" expanded="true" signature="16167:16300" placeholder="(defn some? ...)" />
-            <marker date="1453494062000" expanded="true" signature="16302:16847" placeholder="(defn str ...)" />
-            <marker date="1453494062000" expanded="true" signature="16850:16970" placeholder="(defn symbol? ...)" />
-            <marker date="1453494062000" expanded="true" signature="16972:17095" placeholder="(defn keyword? ...)" />
-            <marker date="1453494062000" expanded="true" signature="17097:17348" placeholder="(defn symbol ...)" />
-            <marker date="1453494062000" expanded="true" signature="17350:17706" placeholder="(defn gensym ...)" />
-            <marker date="1453494062000" expanded="true" signature="17708:18298" placeholder="(defmacro cond ...)" />
-            <marker date="1453494062000" expanded="true" signature="18300:18757" placeholder="(defn keyword ...)" />
-            <marker date="1453494062000" expanded="true" signature="18759:19353" placeholder="(defn find-keyword ...)" />
-            <marker date="1453494062000" expanded="true" signature="19356:19549" placeholder="(defn spread ...)" />
-            <marker date="1453494062000" expanded="true" signature="19551:19926" placeholder="(defn list* ...)" />
-            <marker date="1453494062000" expanded="true" signature="19928:20457" placeholder="(defn apply ...)" />
-            <marker date="1453494062000" expanded="true" signature="20459:20673" placeholder="(defn vary-meta ...)" />
-            <marker date="1453494062000" expanded="true" signature="20675:21039" placeholder="(defmacro lazy-seq ...)" />
-            <marker date="1453494062000" expanded="true" signature="21045:21175" placeholder="(defn chunk-buffer ...)" />
-            <marker date="1453494062000" expanded="true" signature="21177:21250" placeholder="(defn chunk-append ...)" />
-            <marker date="1453494062000" expanded="true" signature="21252:21337" placeholder="(defn chunk ...)" />
-            <marker date="1453494062000" expanded="true" signature="21339:21459" placeholder="(defn chunk-first ...)" />
-            <marker date="1453494062000" expanded="true" signature="21461:21574" placeholder="(defn chunk-rest ...)" />
-            <marker date="1453494062000" expanded="true" signature="21576:21689" placeholder="(defn chunk-next ...)" />
-            <marker date="1453494062000" expanded="true" signature="21691:21849" placeholder="(defn chunk-cons ...)" />
-            <marker date="1453494062000" expanded="true" signature="21853:21926" placeholder="(defn chunked-seq? ...)" />
-            <marker date="1453494062000" expanded="true" signature="21928:22827" placeholder="(defn concat ...)" />
-            <marker date="1453494062000" expanded="true" signature="22921:23276" placeholder="(defmacro delay ...)" />
-            <marker date="1453494062000" expanded="true" signature="23278:23415" placeholder="(defn delay? ...)" />
-            <marker date="1453494062000" expanded="true" signature="23417:23592" placeholder="(defn force ...)" />
-            <marker date="1453494062000" expanded="true" signature="23594:23842" placeholder="(defmacro if-not ...)" />
-            <marker date="1453494062000" expanded="true" signature="23844:24052" placeholder="(defn identical? ...)" />
-            <marker date="1453494062000" expanded="true" signature="24067:24697" placeholder="(defn = ...)" />
-            <marker date="1453494062000" expanded="true" signature="25270:25445" placeholder="(defn not= ...)" />
-            <marker date="1453494062000" expanded="true" signature="25449:25884" placeholder="(defn compare ...)" />
-            <marker date="1453494062000" expanded="true" signature="25886:26260" placeholder="(defmacro and ...)" />
-            <marker date="1453494062000" expanded="true" signature="26262:26631" placeholder="(defmacro or ...)" />
-            <marker date="1453494062000" expanded="true" signature="26691:26868" placeholder="(defn zero? ...)" />
-            <marker date="1453494062000" expanded="true" signature="26870:27132" placeholder="(defn count ...)" />
-            <marker date="1453494062000" expanded="true" signature="27134:27318" placeholder="(defn int ...)" />
-            <marker date="1453494062000" expanded="true" signature="27320:27805" placeholder="(defn nth ...)" />
-            <marker date="1453494062000" expanded="true" signature="27807:28192" placeholder="(defn &lt; ...)" />
-            <marker date="1453494062000" expanded="true" signature="28194:28407" placeholder="(defn inc' ...)" />
-            <marker date="1453494062000" expanded="true" signature="28409:28682" placeholder="(defn inc ...)" />
-            <marker date="1453494062000" expanded="true" signature="28744:29208" placeholder="(defn reduce1 ...)" />
-            <marker date="1453494062000" expanded="true" signature="29210:29360" placeholder="(defn reverse ...)" />
-            <marker date="1453494062000" expanded="true" signature="29375:29914" placeholder="(defn nary-inline ...)" />
-            <marker date="1453494062000" expanded="true" signature="30027:30321" placeholder="(defn +' ...)" />
-            <marker date="1453494062000" expanded="true" signature="30323:30653" placeholder="(defn + ...)" />
-            <marker date="1453494062000" expanded="true" signature="30655:30963" placeholder="(defn *' ...)" />
-            <marker date="1453494062000" expanded="true" signature="30965:31314" placeholder="(defn * ...)" />
-            <marker date="1453494062000" expanded="true" signature="31316:31625" placeholder="(defn / ...)" />
-            <marker date="1453494062000" expanded="true" signature="31627:32001" placeholder="(defn -' ...)" />
-            <marker date="1453494062000" expanded="true" signature="32003:32414" placeholder="(defn - ...)" />
-            <marker date="1453494062000" expanded="true" signature="32416:32810" placeholder="(defn &lt;= ...)" />
-            <marker date="1453494062000" expanded="true" signature="32812:33197" placeholder="(defn &gt; ...)" />
-            <marker date="1453494062000" expanded="true" signature="33199:33593" placeholder="(defn &gt;= ...)" />
-            <marker date="1453494062000" expanded="true" signature="33595:33999" placeholder="(defn == ...)" />
-            <marker date="1453494062000" expanded="true" signature="34001:34223" placeholder="(defn max ...)" />
-            <marker date="1453494062000" expanded="true" signature="34225:34444" placeholder="(defn min ...)" />
-            <marker date="1453494062000" expanded="true" signature="34446:34656" placeholder="(defn dec' ...)" />
-            <marker date="1453494062000" expanded="true" signature="34658:34928" placeholder="(defn dec ...)" />
-            <marker date="1453494062000" expanded="true" signature="34930:35198" placeholder="(defn unchecked-inc-int ...)" />
-            <marker date="1453494062000" expanded="true" signature="35200:35456" placeholder="(defn unchecked-inc ...)" />
-            <marker date="1453494062000" expanded="true" signature="35458:35723" placeholder="(defn unchecked-dec-int ...)" />
-            <marker date="1453494062000" expanded="true" signature="35725:35978" placeholder="(defn unchecked-dec ...)" />
-            <marker date="1453494062000" expanded="true" signature="35980:36247" placeholder="(defn unchecked-negate-int ...)" />
-            <marker date="1453494062000" expanded="true" signature="36249:36502" placeholder="(defn unchecked-negate ...)" />
-            <marker date="1453494062000" expanded="true" signature="36504:36774" placeholder="(defn unchecked-add-int ...)" />
-            <marker date="1453494062000" expanded="true" signature="36776:37035" placeholder="(defn unchecked-add ...)" />
-            <marker date="1453494062000" expanded="true" signature="37037:37329" placeholder="(defn unchecked-subtract-int ...)" />
-            <marker date="1453494062000" expanded="true" signature="37331:37606" placeholder="(defn unchecked-subtract ...)" />
-            <marker date="1453494062000" expanded="true" signature="37608:37897" placeholder="(defn unchecked-multiply-int ...)" />
-            <marker date="1453494062000" expanded="true" signature="37899:38177" placeholder="(defn unchecked-multiply ...)" />
-            <marker date="1453494062000" expanded="true" signature="38179:38464" placeholder="(defn unchecked-divide-int ...)" />
-            <marker date="1453494062000" expanded="true" signature="38466:38773" placeholder="(defn unchecked-remainder-int ...)" />
-            <marker date="1453494062000" expanded="true" signature="38775:38962" placeholder="(defn pos? ...)" />
-            <marker date="1453494062000" expanded="true" signature="38964:39148" placeholder="(defn neg? ...)" />
-            <marker date="1453494062000" expanded="true" signature="39150:39372" placeholder="(defn quot ...)" />
-            <marker date="1453494062000" expanded="true" signature="39374:39596" placeholder="(defn rem ...)" />
-            <marker date="1453494062000" expanded="true" signature="39598:39740" placeholder="(defn rationalize ...)" />
-            <marker date="1453494062000" expanded="true" signature="39753:39899" placeholder="(defn bit-not ...)" />
-            <marker date="1453494062000" expanded="true" signature="39902:40110" placeholder="(defn bit-and ...)" />
-            <marker date="1453494062000" expanded="true" signature="40112:40307" placeholder="(defn bit-or ...)" />
-            <marker date="1453494062000" expanded="true" signature="40309:40519" placeholder="(defn bit-xor ...)" />
-            <marker date="1453494062000" expanded="true" signature="40521:40772" placeholder="(defn bit-and-not ...)" />
-            <marker date="1453494062000" expanded="true" signature="40775:40895" placeholder="(defn bit-clear ...)" />
-            <marker date="1453494062000" expanded="true" signature="40897:41011" placeholder="(defn bit-set ...)" />
-            <marker date="1453494062000" expanded="true" signature="41013:41130" placeholder="(defn bit-flip ...)" />
-            <marker date="1453494062000" expanded="true" signature="41132:41249" placeholder="(defn bit-test ...)" />
-            <marker date="1453494062000" expanded="true" signature="41252:41426" placeholder="(defn bit-shift-left ...)" />
-            <marker date="1453494062000" expanded="true" signature="41428:41606" placeholder="(defn bit-shift-right ...)" />
-            <marker date="1453494062000" expanded="true" signature="41608:41836" placeholder="(defn unsigned-bit-shift-right ...)" />
-            <marker date="1453494062000" expanded="true" signature="41838:42104" placeholder="(defn integer? ...)" />
-            <marker date="1453494062000" expanded="true" signature="42106:42400" placeholder="(defn even? ...)" />
-            <marker date="1453494062000" expanded="true" signature="42402:42541" placeholder="(defn odd? ...)" />
-            <marker date="1453494062000" expanded="true" signature="42548:42860" placeholder="(defn complement ...)" />
-            <marker date="1453494062000" expanded="true" signature="42862:43007" placeholder="(defn constantly ...)" />
-            <marker date="1453494062000" expanded="true" signature="43009:43091" placeholder="(defn identity ...)" />
-            <marker date="1453494062000" expanded="true" signature="43126:43353" placeholder="(defn peek ...)" />
-            <marker date="1453494062000" expanded="true" signature="43355:43663" placeholder="(defn pop ...)" />
-            <marker date="1453494062000" expanded="true" signature="43678:44130" placeholder="(defn contains? ...)" />
-            <marker date="1453494062000" expanded="true" signature="44132:44447" placeholder="(defn get ...)" />
-            <marker date="1453494062000" expanded="true" signature="44449:44794" placeholder="(defn dissoc ...)" />
-            <marker date="1453494062000" expanded="true" signature="44796:45172" placeholder="(defn disj ...)" />
-            <marker date="1453494062000" expanded="true" signature="45174:45327" placeholder="(defn find ...)" />
-            <marker date="1453494062000" expanded="true" signature="45329:45736" placeholder="(defn select-keys ...)" />
-            <marker date="1453494062000" expanded="true" signature="45738:45895" placeholder="(defn keys ...)" />
-            <marker date="1453494062000" expanded="true" signature="45897:46056" placeholder="(defn vals ...)" />
-            <marker date="1453494062000" expanded="true" signature="46058:46185" placeholder="(defn key ...)" />
-            <marker date="1453494062000" expanded="true" signature="46187:46318" placeholder="(defn val ...)" />
-            <marker date="1453494062000" expanded="true" signature="46320:46560" placeholder="(defn rseq ...)" />
-            <marker date="1453494062000" expanded="true" signature="46562:46744" placeholder="(defn name ...)" />
-            <marker date="1453494062000" expanded="true" signature="46746:46941" placeholder="(defn namespace ...)" />
-            <marker date="1453494062000" expanded="true" signature="46943:47237" placeholder="(defmacro locking ...)" />
-            <marker date="1453494062000" expanded="true" signature="47239:47718" placeholder="(defmacro .. ...)" />
-            <marker date="1453494062000" expanded="true" signature="47720:48273" placeholder="(defmacro -&gt; ...)" />
-            <marker date="1453494062000" expanded="true" signature="48275:48808" placeholder="(defmacro -&gt;&gt; ...)" />
-            <marker date="1453494062000" expanded="true" signature="48821:49232" placeholder="(defn check-valid-options ...)" />
-            <marker date="1453494062000" expanded="true" signature="49273:51566" placeholder="(defmacro defmulti ...)" />
-            <marker date="1453494062000" expanded="true" signature="51568:51822" placeholder="(defmacro defmethod ...)" />
-            <marker date="1453494062000" expanded="true" signature="51824:51981" placeholder="(defn remove-all-methods ...)" />
-            <marker date="1453494062000" expanded="true" signature="51983:52191" placeholder="(defn remove-method ...)" />
-            <marker date="1453494062000" expanded="true" signature="52193:52479" placeholder="(defn prefer-method ...)" />
-            <marker date="1453494062000" expanded="true" signature="52481:52662" placeholder="(defn methods ...)" />
-            <marker date="1453494062000" expanded="true" signature="52664:52935" placeholder="(defn get-method ...)" />
-            <marker date="1453494062000" expanded="true" signature="52937:53125" placeholder="(defn prefers ...)" />
-            <marker date="1453494062000" expanded="true" signature="53148:53477" placeholder="(defmacro assert-args ...)" />
-            <marker date="1453494062000" expanded="true" signature="53479:54081" placeholder="(defmacro if-let ...)" />
-            <marker date="1453494062000" expanded="true" signature="54083:54523" placeholder="(defmacro when-let ...)" />
-            <marker date="1453494062000" expanded="true" signature="54525:55140" placeholder="(defmacro if-some ...)" />
-            <marker date="1453494062000" expanded="true" signature="55142:55608" placeholder="(defmacro when-some ...)" />
-            <marker date="1453494062000" expanded="true" signature="55610:56154" placeholder="(defn push-thread-bindings ...)" />
-            <marker date="1453494062000" expanded="true" signature="56156:56377" placeholder="(defn pop-thread-bindings ...)" />
-            <marker date="1453494062000" expanded="true" signature="56379:56576" placeholder="(defn get-thread-bindings ...)" />
-            <marker date="1453494062000" expanded="true" signature="56578:57562" placeholder="(defmacro binding ...)" />
-            <marker date="1453494062000" expanded="true" signature="57564:57981" placeholder="(defn with-bindings* ...)" />
-            <marker date="1453494062000" expanded="true" signature="57983:58311" placeholder="(defmacro with-bindings ...)" />
-            <marker date="1453494062000" expanded="true" signature="58313:58758" placeholder="(defn bound-fn* ...)" />
-            <marker date="1453494062000" expanded="true" signature="58760:59110" placeholder="(defmacro bound-fn ...)" />
-            <marker date="1453494062000" expanded="true" signature="59112:59303" placeholder="(defn find-var ...)" />
-            <marker date="1453494062000" expanded="true" signature="59305:59901" placeholder="(defn binding-conveyor-fn ...)" />
-            <marker date="1453494062000" expanded="true" signature="59976:60223" placeholder="(defn setup-reference ...)" />
-            <marker date="1453494062000" expanded="true" signature="60225:61468" placeholder="(defn agent ...)" />
-            <marker date="1453494062000" expanded="true" signature="61470:61631" placeholder="(defn set-agent-send-executor! ...)" />
-            <marker date="1453494062000" expanded="true" signature="61633:61800" placeholder="(defn set-agent-send-off-executor! ...)" />
-            <marker date="1453494062000" expanded="true" signature="61802:62166" placeholder="(defn send-via ...)" />
-            <marker date="1453494062000" expanded="true" signature="62168:62519" placeholder="(defn send ...)" />
-            <marker date="1453494062000" expanded="true" signature="62521:62884" placeholder="(defn send-off ...)" />
-            <marker date="1453494062000" expanded="true" signature="62886:63391" placeholder="(defn release-pending-sends ...)" />
-            <marker date="1453494062000" expanded="true" signature="63393:64364" placeholder="(defn add-watch ...)" />
-            <marker date="1453494062000" expanded="true" signature="64366:64542" placeholder="(defn remove-watch ...)" />
-            <marker date="1453494062000" expanded="true" signature="64544:64780" placeholder="(defn agent-error ...)" />
-            <marker date="1453494062000" expanded="true" signature="64782:65564" placeholder="(defn restart-agent ...)" />
-            <marker date="1453494062000" expanded="true" signature="65566:65921" placeholder="(defn set-error-handler! ...)" />
-            <marker date="1453494062000" expanded="true" signature="65923:66117" placeholder="(defn error-handler ...)" />
-            <marker date="1453494062000" expanded="true" signature="66119:66912" placeholder="(defn set-error-mode! ...)" />
-            <marker date="1453494062000" expanded="true" signature="66914:67070" placeholder="(defn error-mode ...)" />
-            <marker date="1453494062000" expanded="true" signature="67072:67314" placeholder="(defn agent-errors ...)" />
-            <marker date="1453494062000" expanded="true" signature="67316:67592" placeholder="(defn clear-agent-errors ...)" />
-            <marker date="1453494062000" expanded="true" signature="67594:67830" placeholder="(defn shutdown-agents ...)" />
-            <marker date="1453494062000" expanded="true" signature="67832:69102" placeholder="(defn ref ...)" />
-            <marker date="1453494062000" expanded="true" signature="69104:69408" placeholder="(defn deref-future ...)" />
-            <marker date="1453494062000" expanded="true" signature="69415:70469" placeholder="(defn deref ...)" />
-            <marker date="1453494062000" expanded="true" signature="70471:71057" placeholder="(defn atom ...)" />
-            <marker date="1453494062000" expanded="true" signature="71059:71541" placeholder="(defn swap! ...)" />
-            <marker date="1453494062000" expanded="true" signature="71543:71840" placeholder="(defn compare-and-set! ...)" />
-            <marker date="1453494062000" expanded="true" signature="71842:72038" placeholder="(defn reset! ...)" />
-            <marker date="1453494062000" expanded="true" signature="72040:72608" placeholder="(defn set-validator! ...)" />
-            <marker date="1453494062000" expanded="true" signature="72610:72766" placeholder="(defn get-validator ...)" />
-            <marker date="1453494062000" expanded="true" signature="72768:73030" placeholder="(defn alter-meta! ...)" />
-            <marker date="1453494062000" expanded="true" signature="73032:73230" placeholder="(defn reset-meta! ...)" />
-            <marker date="1453494062000" expanded="true" signature="73232:73804" placeholder="(defn commute ...)" />
-            <marker date="1453494062000" expanded="true" signature="73806:74093" placeholder="(defn alter ...)" />
-            <marker date="1453494062000" expanded="true" signature="74095:74269" placeholder="(defn ref-set ...)" />
-            <marker date="1453494062000" expanded="true" signature="74271:74420" placeholder="(defn ref-history-count ...)" />
-            <marker date="1453494062000" expanded="true" signature="74422:74653" placeholder="(defn ref-min-history ...)" />
-            <marker date="1453494062000" expanded="true" signature="74655:74886" placeholder="(defn ref-max-history ...)" />
-            <marker date="1453494062000" expanded="true" signature="74888:75193" placeholder="(defn ensure ...)" />
-            <marker date="1453494062000" expanded="true" signature="75195:75708" placeholder="(defmacro sync ...)" />
-            <marker date="1453494062000" expanded="true" signature="75711:76219" placeholder="(defmacro io! ...)" />
-            <marker date="1453494062000" expanded="true" signature="76221:76388" placeholder="(defn volatile! ...)" />
-            <marker date="1453494062000" expanded="true" signature="76390:76579" placeholder="(defn vreset! ...)" />
-            <marker date="1453494062000" expanded="true" signature="76581:76871" placeholder="(defmacro vswap! ...)" />
-            <marker date="1453494062000" expanded="true" signature="76873:76987" placeholder="(defn volatile? ...)" />
-            <marker date="1453494062000" expanded="true" signature="77048:77570" placeholder="(defn comp ...)" />
-            <marker date="1453494062000" expanded="true" signature="77572:78865" placeholder="(defn juxt ...)" />
-            <marker date="1453494062000" expanded="true" signature="78867:79810" placeholder="(defn partial ...)" />
-            <marker date="1453494062000" expanded="true" signature="79871:80850" placeholder="(defn sequence ...)" />
-            <marker date="1453494062000" expanded="true" signature="80852:81106" placeholder="(defn every? ...)" />
-            <marker date="1453494062000" expanded="true" signature="81108:81290" placeholder="(def not-every? ...)" />
-            <marker date="1453494062000" expanded="true" signature="81292:81659" placeholder="(defn some ...)" />
-            <marker date="1453494062000" expanded="true" signature="81661:81837" placeholder="(def not-any? ...)" />
-            <marker date="1453494062000" expanded="true" signature="81878:82270" placeholder="(defmacro dotimes ...)" />
-            <marker date="1453494062000" expanded="true" signature="82272:83954" placeholder="(defn map ...)" />
-            <marker date="1453494062000" expanded="true" signature="83956:84161" placeholder="(defmacro declare ...)" />
-            <marker date="1453494062000" expanded="true" signature="84178:84498" placeholder="(defn mapcat ...)" />
-            <marker date="1453494062000" expanded="true" signature="84500:85423" placeholder="(defn filter ...)" />
-            <marker date="1453494062000" expanded="true" signature="85426:85741" placeholder="(defn remove ...)" />
-            <marker date="1453494062000" expanded="true" signature="85743:85880" placeholder="(defn reduced ...)" />
-            <marker date="1453494062000" expanded="true" signature="85882:86086" placeholder="(defn reduced? ...)" />
-            <marker date="1453494062000" expanded="true" signature="86088:86233" placeholder="(defn ensure-reduced ...)" />
-            <marker date="1453494062000" expanded="true" signature="86235:86362" placeholder="(defn unreduced ...)" />
-            <marker date="1453494062000" expanded="true" signature="86364:87157" placeholder="(defn take ...)" />
-            <marker date="1453494062000" expanded="true" signature="87159:87749" placeholder="(defn take-while ...)" />
-            <marker date="1453494062000" expanded="true" signature="87751:88457" placeholder="(defn drop ...)" />
-            <marker date="1453494062000" expanded="true" signature="88459:88649" placeholder="(defn drop-last ...)" />
-            <marker date="1453494062000" expanded="true" signature="88651:88964" placeholder="(defn take-last ...)" />
-            <marker date="1453494062000" expanded="true" signature="88966:89808" placeholder="(defn drop-while ...)" />
-            <marker date="1453494062000" expanded="true" signature="89810:89980" placeholder="(defn cycle ...)" />
-            <marker date="1453494062000" expanded="true" signature="89982:90129" placeholder="(defn split-at ...)" />
-            <marker date="1453494062000" expanded="true" signature="90131:90319" placeholder="(defn split-with ...)" />
-            <marker date="1453494062000" expanded="true" signature="90321:90521" placeholder="(defn repeat ...)" />
-            <marker date="1453494062000" expanded="true" signature="90523:90674" placeholder="(defn replicate ...)" />
-            <marker date="1453494062000" expanded="true" signature="90676:90853" placeholder="(defn iterate ...)" />
-            <marker date="1453494062000" expanded="true" signature="90855:91669" placeholder="(defn range ...)" />
-            <marker date="1453494062000" expanded="true" signature="91671:92000" placeholder="(defn merge ...)" />
-            <marker date="1453494062000" expanded="true" signature="92002:92612" placeholder="(defn merge-with ...)" />
-            <marker date="1453494062000" expanded="true" signature="92616:92947" placeholder="(defn zipmap ...)" />
-            <marker date="1453494062000" expanded="true" signature="92949:93222" placeholder="(defn line-seq ...)" />
-            <marker date="1453494062000" expanded="true" signature="93224:93417" placeholder="(defn comparator ...)" />
-            <marker date="1453494062000" expanded="true" signature="93419:93889" placeholder="(defn sort ...)" />
-            <marker date="1453494062000" expanded="true" signature="93891:94400" placeholder="(defn sort-by ...)" />
-            <marker date="1453494062000" expanded="true" signature="94402:94919" placeholder="(defn dorun ...)" />
-            <marker date="1453494062000" expanded="true" signature="94921:95422" placeholder="(defn doall ...)" />
-            <marker date="1453494062000" expanded="true" signature="95424:95645" placeholder="(defn nthnext ...)" />
-            <marker date="1453494062000" expanded="true" signature="95647:95871" placeholder="(defn nthrest ...)" />
-            <marker date="1453494062000" expanded="true" signature="95873:96760" placeholder="(defn partition ...)" />
-            <marker date="1453494062000" expanded="true" signature="96777:96942" placeholder="(defn eval ...)" />
-            <marker date="1453494062000" expanded="true" signature="96944:99924" placeholder="(defmacro doseq ...)" />
-            <marker date="1453494062000" expanded="true" signature="99926:100571" placeholder="(defn await ...)" />
-            <marker date="1453494062000" expanded="true" signature="100573:100674" placeholder="(defn await1 ...)" />
-            <marker date="1453494062000" expanded="true" signature="100676:101407" placeholder="(defn await-for ...)" />
-            <marker date="1453494062000" expanded="true" signature="101409:101912" placeholder="(defmacro dotimes ...)" />
-            <marker date="1453494062000" expanded="true" signature="102245:102435" placeholder="(defn transient ...)" />
-            <marker date="1453494062000" expanded="true" signature="102437:102738" placeholder="(defn persistent! ...)" />
-            <marker date="1453494062000" expanded="true" signature="102740:103030" placeholder="(defn conj! ...)" />
-            <marker date="1453494062000" expanded="true" signature="103032:103522" placeholder="(defn assoc! ...)" />
-            <marker date="1453494062000" expanded="true" signature="103524:103848" placeholder="(defn dissoc! ...)" />
-            <marker date="1453494062000" expanded="true" signature="103850:104064" placeholder="(defn pop! ...)" />
-            <marker date="1453494062000" expanded="true" signature="104067:104446" placeholder="(defn disj! ...)" />
-            <marker date="1453494062000" expanded="true" signature="104479:104775" placeholder="(defn into1 ...)" />
-            <marker date="1453494062000" expanded="true" signature="104777:105566" placeholder="(defmacro import ...)" />
-            <marker date="1453494062000" expanded="true" signature="105568:106076" placeholder="(defn into-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="106078:106142" placeholder="(defn array ...)" />
-            <marker date="1453494062000" expanded="true" signature="106144:106270" placeholder="(defn class ...)" />
-            <marker date="1453494062000" expanded="true" signature="106272:106419" placeholder="(defn type ...)" />
-            <marker date="1453494062000" expanded="true" signature="106421:106579" placeholder="(defn num ...)" />
-            <marker date="1453494062000" expanded="true" signature="106581:106727" placeholder="(defn long ...)" />
-            <marker date="1453494062000" expanded="true" signature="106729:106923" placeholder="(defn float ...)" />
-            <marker date="1453494062000" expanded="true" signature="106925:107079" placeholder="(defn double ...)" />
-            <marker date="1453494062000" expanded="true" signature="107081:107275" placeholder="(defn short ...)" />
-            <marker date="1453494062000" expanded="true" signature="107277:107466" placeholder="(defn byte ...)" />
-            <marker date="1453494062000" expanded="true" signature="107468:107653" placeholder="(defn char ...)" />
-            <marker date="1453494062000" expanded="true" signature="107655:107809" placeholder="(defn boolean ...)" />
-            <marker date="1453494062000" expanded="true" signature="107811:108021" placeholder="(defn unchecked-byte ...)" />
-            <marker date="1453494062000" expanded="true" signature="108023:108237" placeholder="(defn unchecked-short ...)" />
-            <marker date="1453494062000" expanded="true" signature="108239:108445" placeholder="(defn unchecked-char ...)" />
-            <marker date="1453494062000" expanded="true" signature="108447:108653" placeholder="(defn unchecked-int ...)" />
-            <marker date="1453494062000" expanded="true" signature="108655:108865" placeholder="(defn unchecked-long ...)" />
-            <marker date="1453494062000" expanded="true" signature="108867:109067" placeholder="(defn unchecked-float ...)" />
-            <marker date="1453494062000" expanded="true" signature="109069:109273" placeholder="(defn unchecked-double ...)" />
-            <marker date="1453494062000" expanded="true" signature="109276:109386" placeholder="(defn number? ...)" />
-            <marker date="1453494062000" expanded="true" signature="109388:109610" placeholder="(defn mod ...)" />
-            <marker date="1453494062000" expanded="true" signature="109612:109730" placeholder="(defn ratio? ...)" />
-            <marker date="1453494062000" expanded="true" signature="109732:109886" placeholder="(defn numerator ...)" />
-            <marker date="1453494062000" expanded="true" signature="109888:110048" placeholder="(defn denominator ...)" />
-            <marker date="1453494062000" expanded="true" signature="110050:110167" placeholder="(defn decimal? ...)" />
-            <marker date="1453494062000" expanded="true" signature="110169:110324" placeholder="(defn float? ...)" />
-            <marker date="1453494062000" expanded="true" signature="110326:110469" placeholder="(defn rational? ...)" />
-            <marker date="1453494062000" expanded="true" signature="110471:110978" placeholder="(defn bigint ...)" />
-            <marker date="1453494062000" expanded="true" signature="110980:111456" placeholder="(defn biginteger ...)" />
-            <marker date="1453494062000" expanded="true" signature="111458:111961" placeholder="(defn bigdec ...)" />
-            <marker date="1453494062000" expanded="true" signature="112021:112173" placeholder="(defmulti print-method ...)" />
-            <marker date="1453494062000" expanded="true" signature="112222:112344" placeholder="(defn pr-on ...)" />
-            <marker date="1453494062000" expanded="true" signature="112346:112804" placeholder="(defn pr ...)" />
-            <marker date="1453494062000" expanded="true" signature="112806:112887" placeholder="(def system-newline ...)" />
-            <marker date="1453494062000" expanded="true" signature="112889:113035" placeholder="(defn newline ...)" />
-            <marker date="1453494062000" expanded="true" signature="113037:113184" placeholder="(defn flush ...)" />
-            <marker date="1453494062000" expanded="true" signature="113186:113384" placeholder="(defn prn ...)" />
-            <marker date="1453494062000" expanded="true" signature="113386:113642" placeholder="(defn print ...)" />
-            <marker date="1453494062000" expanded="true" signature="113644:113802" placeholder="(defn println ...)" />
-            <marker date="1453494062000" expanded="true" signature="113804:114846" placeholder="(defn read ...)" />
-            <marker date="1453494062000" expanded="true" signature="114848:115147" placeholder="(defn read-line ...)" />
-            <marker date="1453494062000" expanded="true" signature="115149:115572" placeholder="(defn read-string ...)" />
-            <marker date="1453494062000" expanded="true" signature="115574:116007" placeholder="(defn subvec ...)" />
-            <marker date="1453494062000" expanded="true" signature="116009:116826" placeholder="(defmacro with-open ...)" />
-            <marker date="1453494062000" expanded="true" signature="116828:117333" placeholder="(defmacro doto ...)" />
-            <marker date="1453494062000" expanded="true" signature="117335:117820" placeholder="(defmacro memfn ...)" />
-            <marker date="1453494062000" expanded="true" signature="117822:118109" placeholder="(defmacro time ...)" />
-            <marker date="1453494062000" expanded="true" signature="118150:118355" placeholder="(defn alength ...)" />
-            <marker date="1453494062000" expanded="true" signature="118357:118558" placeholder="(defn aclone ...)" />
-            <marker date="1453494062000" expanded="true" signature="118560:118928" placeholder="(defn aget ...)" />
-            <marker date="1453494062000" expanded="true" signature="118930:119277" placeholder="(defn aset ...)" />
-            <marker date="1453494062000" expanded="true" signature="119279:119620" placeholder="(defmacro def-aset ...)" />
-            <marker date="1453494062000" expanded="true" signature="119622:119757" placeholder="(def-aset aset-int ...)" />
-            <marker date="1453494062000" expanded="true" signature="119759:119898" placeholder="(def-aset aset-long ...)" />
-            <marker date="1453494062000" expanded="true" signature="119900:120051" placeholder="(def-aset aset-boolean ...)" />
-            <marker date="1453494062000" expanded="true" signature="120053:120196" placeholder="(def-aset aset-float ...)" />
-            <marker date="1453494062000" expanded="true" signature="120198:120345" placeholder="(def-aset aset-double ...)" />
-            <marker date="1453494062000" expanded="true" signature="120347:120490" placeholder="(def-aset aset-short ...)" />
-            <marker date="1453494062000" expanded="true" signature="120492:120631" placeholder="(def-aset aset-byte ...)" />
-            <marker date="1453494062000" expanded="true" signature="120633:120772" placeholder="(def-aset aset-char ...)" />
-            <marker date="1453494062000" expanded="true" signature="120774:121458" placeholder="(defn make-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="121460:121952" placeholder="(defn to-array-2d ...)" />
-            <marker date="1453494062000" expanded="true" signature="121954:122147" placeholder="(defn macroexpand-1 ...)" />
-            <marker date="1453494062000" expanded="true" signature="122149:122494" placeholder="(defn macroexpand ...)" />
-            <marker date="1453494062000" expanded="true" signature="122496:122660" placeholder="(defn create-struct ...)" />
-            <marker date="1453494062000" expanded="true" signature="122662:122816" placeholder="(defmacro defstruct ...)" />
-            <marker date="1453494062000" expanded="true" signature="122818:123183" placeholder="(defn struct-map ...)" />
-            <marker date="1453494062000" expanded="true" signature="123185:123487" placeholder="(defn struct ...)" />
-            <marker date="1453494062000" expanded="true" signature="123489:123904" placeholder="(defn accessor ...)" />
-            <marker date="1453494062000" expanded="true" signature="123906:124085" placeholder="(defn load-reader ...)" />
-            <marker date="1453494062000" expanded="true" signature="124087:124349" placeholder="(defn load-string ...)" />
-            <marker date="1453494062000" expanded="true" signature="124351:124491" placeholder="(defn set? ...)" />
-            <marker date="1453494062000" expanded="true" signature="124493:124832" placeholder="(defn set ...)" />
-            <marker date="1453494062000" expanded="true" signature="124834:125109" placeholder="(defn filter-key ...)" />
-            <marker date="1453494062000" expanded="true" signature="125111:125274" placeholder="(defn find-ns ...)" />
-            <marker date="1453494062000" expanded="true" signature="125276:125519" placeholder="(defn create-ns ...)" />
-            <marker date="1453494062000" expanded="true" signature="125521:125729" placeholder="(defn remove-ns ...)" />
-            <marker date="1453494062000" expanded="true" signature="125731:125853" placeholder="(defn all-ns ...)" />
-            <marker date="1453494062000" expanded="true" signature="125855:126199" placeholder="(defn the-ns ...)" />
-            <marker date="1453494062000" expanded="true" signature="126201:126329" placeholder="(defn ns-name ...)" />
-            <marker date="1453494062000" expanded="true" signature="126331:126470" placeholder="(defn ns-map ...)" />
-            <marker date="1453494062000" expanded="true" signature="126472:126618" placeholder="(defn ns-unmap ...)" />
-            <marker date="1453494062000" expanded="true" signature="126711:127068" placeholder="(defn ns-publics ...)" />
-            <marker date="1453494062000" expanded="true" signature="127070:127244" placeholder="(defn ns-imports ...)" />
-            <marker date="1453494062000" expanded="true" signature="127246:127549" placeholder="(defn ns-interns ...)" />
-            <marker date="1453494062000" expanded="true" signature="127551:129217" placeholder="(defn refer ...)" />
-            <marker date="1453494062000" expanded="true" signature="129219:129523" placeholder="(defn ns-refers ...)" />
-            <marker date="1453494062000" expanded="true" signature="129525:129872" placeholder="(defn alias ...)" />
-            <marker date="1453494062000" expanded="true" signature="129874:130011" placeholder="(defn ns-aliases ...)" />
-            <marker date="1453494062000" expanded="true" signature="130013:130164" placeholder="(defn ns-unalias ...)" />
-            <marker date="1453494062000" expanded="true" signature="130166:130732" placeholder="(defn take-nth ...)" />
-            <marker date="1453494062000" expanded="true" signature="130734:131286" placeholder="(defn interleave ...)" />
-            <marker date="1453494062000" expanded="true" signature="131288:131408" placeholder="(defn var-get ...)" />
-            <marker date="1453494062000" expanded="true" signature="131410:131585" placeholder="(defn var-set ...)" />
-            <marker date="1453494062000" expanded="true" signature="131587:132341" placeholder="(defmacro with-local-vars ...)" />
-            <marker date="1453494062000" expanded="true" signature="132343:132797" placeholder="(defn ns-resolve ...)" />
-            <marker date="1453494062000" expanded="true" signature="132799:132988" placeholder="(defn resolve ...)" />
-            <marker date="1453494062000" expanded="true" signature="132990:133284" placeholder="(defn array-map ...)" />
-            <marker date="1453494062000" expanded="true" signature="133329:137112" placeholder="(defn destructure ...)" />
-            <marker date="1453494062000" expanded="true" signature="137114:137590" placeholder="(defmacro let ...)" />
-            <marker date="1453494062000" expanded="true" signature="137592:138157" placeholder="(defn maybe-destructured ...)" />
-            <marker date="1453494062000" expanded="true" signature="138215:141061" placeholder="(defmacro fn ...)" />
-            <marker date="1453494062000" expanded="true" signature="141063:142119" placeholder="(defmacro loop ...)" />
-            <marker date="1453494062000" expanded="true" signature="142121:142532" placeholder="(defmacro when-first ...)" />
-            <marker date="1453494062000" expanded="true" signature="142534:142857" placeholder="(defmacro lazy-cat ...)" />
-            <marker date="1453494062000" expanded="true" signature="142859:147876" placeholder="(defmacro for ...)" />
-            <marker date="1453494062000" expanded="true" signature="147878:147953" placeholder="(defmacro comment ...)" />
-            <marker date="1453494062000" expanded="true" signature="147955:148247" placeholder="(defmacro with-out-str ...)" />
-            <marker date="1453494062000" expanded="true" signature="148249:148546" placeholder="(defmacro with-in-str ...)" />
-            <marker date="1453494062000" expanded="true" signature="148548:148689" placeholder="(defn pr-str ...)" />
-            <marker date="1453494062000" expanded="true" signature="148691:148831" placeholder="(defn prn-str ...)" />
-            <marker date="1453494062000" expanded="true" signature="148833:148983" placeholder="(defn print-str ...)" />
-            <marker date="1453494062000" expanded="true" signature="148985:149141" placeholder="(defn println-str ...)" />
-            <marker date="1453494062000" expanded="true" signature="149207:149449" placeholder="(defn ex-info ...)" />
-            <marker date="1453494062000" expanded="true" signature="149451:149651" placeholder="(defn ex-data ...)" />
-            <marker date="1453494062000" expanded="true" signature="149653:150049" placeholder="(defmacro assert ...)" />
-            <marker date="1453494062000" expanded="true" signature="150051:150273" placeholder="(defn test ...)" />
-            <marker date="1453494062000" expanded="true" signature="150275:150547" placeholder="(defn re-pattern ...)" />
-            <marker date="1453494062000" expanded="true" signature="150549:150768" placeholder="(defn re-matcher ...)" />
-            <marker date="1453494062000" expanded="true" signature="150770:151286" placeholder="(defn re-groups ...)" />
-            <marker date="1453494062000" expanded="true" signature="151288:151648" placeholder="(defn re-seq ...)" />
-            <marker date="1453494062000" expanded="true" signature="151650:151953" placeholder="(defn re-matches ...)" />
-            <marker date="1453494062000" expanded="true" signature="151956:152306" placeholder="(defn re-find ...)" />
-            <marker date="1453494062000" expanded="true" signature="152308:152496" placeholder="(defn rand ...)" />
-            <marker date="1453494062000" expanded="true" signature="152498:152637" placeholder="(defn rand-int ...)" />
-            <marker date="1453494062000" expanded="true" signature="152639:152806" placeholder="(defmacro defn- ...)" />
-            <marker date="1453494062000" expanded="true" signature="152808:153445" placeholder="(defn tree-seq ...)" />
-            <marker date="1453494062000" expanded="true" signature="153447:153659" placeholder="(defn file-seq ...)" />
-            <marker date="1453494062000" expanded="true" signature="153661:153845" placeholder="(defn xml-seq ...)" />
-            <marker date="1453494062000" expanded="true" signature="153847:154004" placeholder="(defn special-symbol? ...)" />
-            <marker date="1453494062000" expanded="true" signature="154006:154137" placeholder="(defn var? ...)" />
-            <marker date="1453494062000" expanded="true" signature="154139:154423" placeholder="(defn subs ...)" />
-            <marker date="1453494062000" expanded="true" signature="154425:154651" placeholder="(defn max-key ...)" />
-            <marker date="1453494062000" expanded="true" signature="154653:154876" placeholder="(defn min-key ...)" />
-            <marker date="1453494062000" expanded="true" signature="154878:155712" placeholder="(defn distinct ...)" />
-            <marker date="1453494062000" expanded="true" signature="155716:156327" placeholder="(defn replace ...)" />
-            <marker date="1453494062000" expanded="true" signature="156329:156722" placeholder="(defmacro dosync ...)" />
-            <marker date="1453494062000" expanded="true" signature="156724:157387" placeholder="(defmacro with-precision ...)" />
-            <marker date="1453494062000" expanded="true" signature="157389:157537" placeholder="(defn mk-bound-fn ...)" />
-            <marker date="1453494062000" expanded="true" signature="157539:158258" placeholder="(defn subseq ...)" />
-            <marker date="1453494062000" expanded="true" signature="158260:158989" placeholder="(defn rsubseq ...)" />
-            <marker date="1453494062000" expanded="true" signature="158991:159266" placeholder="(defn repeatedly ...)" />
-            <marker date="1453494062000" expanded="true" signature="159268:159516" placeholder="(defn add-classpath ...)" />
-            <marker date="1453494062000" expanded="true" signature="159520:159784" placeholder="(defn hash ...)" />
-            <marker date="1453494062000" expanded="true" signature="159787:160255" placeholder="(defn mix-collection-hash ...)" />
-            <marker date="1453494062000" expanded="true" signature="160257:160546" placeholder="(defn hash-ordered-coll ...)" />
-            <marker date="1453494062000" expanded="true" signature="160548:160953" placeholder="(defn hash-unordered-coll ...)" />
-            <marker date="1453494062000" expanded="true" signature="160955:161581" placeholder="(defn interpose ...)" />
-            <marker date="1453494062000" expanded="true" signature="161583:162083" placeholder="(defmacro definline ...)" />
-            <marker date="1453494062000" expanded="true" signature="162085:162323" placeholder="(defn empty ...)" />
-            <marker date="1453494062000" expanded="true" signature="162325:162800" placeholder="(defmacro amap ...)" />
-            <marker date="1453494062000" expanded="true" signature="162802:163196" placeholder="(defmacro areduce ...)" />
-            <marker date="1453494062000" expanded="true" signature="163198:163512" placeholder="(defn float-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="163514:163838" placeholder="(defn boolean-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="163840:164149" placeholder="(defn byte-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="164151:164460" placeholder="(defn char-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="164462:164776" placeholder="(defn short-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="164778:165097" placeholder="(defn double-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="165099:165315" placeholder="(defn object-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="165317:165621" placeholder="(defn int-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="165623:165932" placeholder="(defn long-array ...)" />
-            <marker date="1453494062000" expanded="true" signature="165934:166040" placeholder="(definline booleans ...)" />
-            <marker date="1453494062000" expanded="true" signature="166042:166140" placeholder="(definline bytes ...)" />
-            <marker date="1453494062000" expanded="true" signature="166142:166240" placeholder="(definline chars ...)" />
-            <marker date="1453494062000" expanded="true" signature="166242:166343" placeholder="(definline shorts ...)" />
-            <marker date="1453494062000" expanded="true" signature="166345:166445" placeholder="(definline floats ...)" />
-            <marker date="1453494062000" expanded="true" signature="166447:166541" placeholder="(definline ints ...)" />
-            <marker date="1453494062000" expanded="true" signature="166543:166646" placeholder="(definline doubles ...)" />
-            <marker date="1453494062000" expanded="true" signature="166648:166745" placeholder="(definline longs ...)" />
-            <marker date="1453494062000" expanded="true" signature="166815:168833" placeholder="(defn seque ...)" />
-            <marker date="1453494062000" expanded="true" signature="168835:168953" placeholder="(defn class? ...)" />
-            <marker date="1453494062000" expanded="true" signature="168955:169061" placeholder="(defn- is-annotation? ...)" />
-            <marker date="1453494062000" expanded="true" signature="169063:169341" placeholder="(defn- is-runtime-annotation? ...)" />
-            <marker date="1453494062000" expanded="true" signature="169438:170334" placeholder="(defn- add-annotation ...)" />
-            <marker date="1453494062000" expanded="true" signature="170336:170479" placeholder="(defn- process-annotation ...)" />
-            <marker date="1453494062000" expanded="true" signature="170481:171191" placeholder="(defn- add-annotations ...)" />
-            <marker date="1453494062000" expanded="true" signature="171193:171401" placeholder="(defn alter-var-root ...)" />
-            <marker date="1453494062000" expanded="true" signature="171403:171706" placeholder="(defn bound? ...)" />
-            <marker date="1453494062000" expanded="true" signature="171708:172011" placeholder="(defn thread-bound? ...)" />
-            <marker date="1453494062000" expanded="true" signature="172013:172178" placeholder="(defn make-hierarchy ...)" />
-            <marker date="1453494062000" expanded="true" signature="172180:172241" placeholder="(def global-hierarchy ...)" />
-            <marker date="1453494062000" expanded="true" signature="172243:172369" placeholder="(defn not-empty ...)" />
-            <marker date="1453494062000" expanded="true" signature="172371:172608" placeholder="(defn bases ...)" />
-            <marker date="1453494062000" expanded="true" signature="172610:172929" placeholder="(defn supers ...)" />
-            <marker date="1453494062000" expanded="true" signature="172931:173851" placeholder="(defn isa? ...)" />
-            <marker date="1453494062000" expanded="true" signature="173853:174330" placeholder="(defn parents ...)" />
-            <marker date="1453494062000" expanded="true" signature="174332:174985" placeholder="(defn ancestors ...)" />
-            <marker date="1453494062000" expanded="true" signature="174987:175521" placeholder="(defn descendants ...)" />
-            <marker date="1453494062000" expanded="true" signature="175523:177119" placeholder="(defn derive ...)" />
-            <marker date="1453494062000" expanded="true" signature="177140:177913" placeholder="(defn underive ...)" />
-            <marker date="1453494062000" expanded="true" signature="177916:178270" placeholder="(defn distinct? ...)" />
-            <marker date="1453494062000" expanded="true" signature="178272:179120" placeholder="(defn resultset-seq ...)" />
-            <marker date="1453494062000" expanded="true" signature="179122:179492" placeholder="(defn iterator-seq ...)" />
-            <marker date="1453494062000" expanded="true" signature="179494:179641" placeholder="(defn enumeration-seq ...)" />
-            <marker date="1453494062000" expanded="true" signature="179643:179853" placeholder="(defn format ...)" />
-            <marker date="1453494062000" expanded="true" signature="179855:179993" placeholder="(defn printf ...)" />
-            <marker date="1453494062000" expanded="true" signature="180016:180358" placeholder="(defmacro with-loading-context ...)" />
-            <marker date="1453494062000" expanded="true" signature="180360:182996" placeholder="(defmacro ns ...)" />
-            <marker date="1453494062000" expanded="true" signature="182998:183147" placeholder="(defmacro refer-clojure ...)" />
-            <marker date="1453494062000" expanded="true" signature="183149:183392" placeholder="(defmacro defonce ...)" />
-            <marker date="1453494062000" expanded="true" signature="183478:183621" placeholder="(defonce *loaded-libs* ...)" />
-            <marker date="1453494062000" expanded="true" signature="183623:183749" placeholder="(defonce *pending-paths* ...)" />
-            <marker date="1453494062000" expanded="true" signature="183751:183866" placeholder="(defonce *loading-verbosely* ...)" />
-            <marker date="1453494062000" expanded="true" signature="183868:184507" placeholder="(defn- throw-if ...)" />
-            <marker date="1453494062000" expanded="true" signature="184509:184689" placeholder="(defn- libspec? ...)" />
-            <marker date="1453494062000" expanded="true" signature="184691:184815" placeholder="(defn- prependss ...)" />
-            <marker date="1453494062000" expanded="true" signature="184817:184996" placeholder="(defn- root-resource ...)" />
-            <marker date="1453494062000" expanded="true" signature="184998:185141" placeholder="(defn- root-directory ...)" />
-            <marker date="1453494062000" expanded="true" signature="185159:185613" placeholder="(defn- load-one ...)" />
-            <marker date="1453494062000" expanded="true" signature="185615:186086" placeholder="(defn- load-all ...)" />
-            <marker date="1453494062000" expanded="true" signature="186088:187778" placeholder="(defn- load-lib ...)" />
-            <marker date="1453494062000" expanded="true" signature="187780:188721" placeholder="(defn- load-libs ...)" />
-            <marker date="1453494062000" expanded="true" signature="188723:189316" placeholder="(defn- check-cyclic-dependency ...)" />
-            <marker date="1453494062000" expanded="true" signature="189329:191985" placeholder="(defn require ...)" />
-            <marker date="1453494062000" expanded="true" signature="191987:192412" placeholder="(defn use ...)" />
-            <marker date="1453494062000" expanded="true" signature="192414:192538" placeholder="(defn loaded-libs ...)" />
-            <marker date="1453494062000" expanded="true" signature="192540:193270" placeholder="(defn load ...)" />
-            <marker date="1453494062000" expanded="true" signature="193272:193661" placeholder="(defn compile ...)" />
-            <marker date="1453494062000" expanded="true" signature="193713:194234" placeholder="(defn get-in ...)" />
-            <marker date="1453494062000" expanded="true" signature="194236:194578" placeholder="(defn assoc-in ...)" />
-            <marker date="1453494062000" expanded="true" signature="194580:195048" placeholder="(defn update-in ...)" />
-            <marker date="1453494062000" expanded="true" signature="195050:195615" placeholder="(defn update ...)" />
-            <marker date="1453494062000" expanded="true" signature="195617:195815" placeholder="(defn empty? ...)" />
-            <marker date="1453494062000" expanded="true" signature="195817:195972" placeholder="(defn coll? ...)" />
-            <marker date="1453494062000" expanded="true" signature="195974:196117" placeholder="(defn list? ...)" />
-            <marker date="1453494062000" expanded="true" signature="196119:196306" placeholder="(defn ifn? ...)" />
-            <marker date="1453494062000" expanded="true" signature="196308:196458" placeholder="(defn fn? ...)" />
-            <marker date="1453494062000" expanded="true" signature="196461:196609" placeholder="(defn associative? ...)" />
-            <marker date="1453494062000" expanded="true" signature="196611:196756" placeholder="(defn sequential? ...)" />
-            <marker date="1453494062000" expanded="true" signature="196758:196892" placeholder="(defn sorted? ...)" />
-            <marker date="1453494062000" expanded="true" signature="196894:197046" placeholder="(defn counted? ...)" />
-            <marker date="1453494062000" expanded="true" signature="197048:197194" placeholder="(defn reversible? ...)" />
-            <marker date="1453494062000" expanded="true" signature="197196:197298" placeholder="(def *1 ...)" />
-            <marker date="1453494062000" expanded="true" signature="197300:197409" placeholder="(def *2 ...)" />
-            <marker date="1453494062000" expanded="true" signature="197411:197519" placeholder="(def *3 ...)" />
-            <marker date="1453494062000" expanded="true" signature="197521:197638" placeholder="(def *e ...)" />
-            <marker date="1453494062000" expanded="true" signature="197640:198255" placeholder="(defn trampoline ...)" />
-            <marker date="1453494062000" expanded="true" signature="198257:198857" placeholder="(defn intern ...)" />
-            <marker date="1453494062000" expanded="true" signature="198859:199105" placeholder="(defmacro while ...)" />
-            <marker date="1453494062000" expanded="true" signature="199107:199630" placeholder="(defn memoize ...)" />
-            <marker date="1453494062000" expanded="true" signature="199632:201269" placeholder="(defmacro condp ...)" />
-            <marker date="1453494062000" expanded="true" signature="201482:201612" placeholder="(defmacro add-doc-and-meta ...)" />
-            <marker date="1453494062000" expanded="true" signature="201614:201781" placeholder="(add-doc-and-meta *file* ...)" />
-            <marker date="1453494062000" expanded="true" signature="201783:201924" placeholder="(add-doc-and-meta *command-line-args* ...)" />
-            <marker date="1453494062000" expanded="true" signature="201926:202134" placeholder="(add-doc-and-meta *warn-on-reflection* ...)" />
-            <marker date="1453494062000" expanded="true" signature="202136:202353" placeholder="(add-doc-and-meta *compile-path* ...)" />
-            <marker date="1453494062000" expanded="true" signature="202355:202461" placeholder="(add-doc-and-meta *compile-files* ...)" />
-            <marker date="1453494062000" expanded="true" signature="202463:202765" placeholder="(add-doc-and-meta *unchecked-math* ...)" />
-            <marker date="1453494062000" expanded="true" signature="202767:203138" placeholder="(add-doc-and-meta *compiler-options* ...)" />
-            <marker date="1453494062000" expanded="true" signature="203140:203252" placeholder="(add-doc-and-meta *ns* ...)" />
-            <marker date="1453494062000" expanded="true" signature="203254:203438" placeholder="(add-doc-and-meta *in* ...)" />
-            <marker date="1453494062000" expanded="true" signature="203440:203620" placeholder="(add-doc-and-meta *out* ...)" />
-            <marker date="1453494062000" expanded="true" signature="203622:203793" placeholder="(add-doc-and-meta *err* ...)" />
-            <marker date="1453494062000" expanded="true" signature="203795:203946" placeholder="(add-doc-and-meta *flush-on-newline* ...)" />
-            <marker date="1453494062000" expanded="true" signature="203948:204154" placeholder="(add-doc-and-meta *print-meta* ...)" />
-            <marker date="1453494062000" expanded="true" signature="204156:204336" placeholder="(add-doc-and-meta *print-dup* ...)" />
-            <marker date="1453494062000" expanded="true" signature="204338:204562" placeholder="(add-doc-and-meta *print-readably* ...)" />
-            <marker date="1453494062000" expanded="true" signature="204564:205742" placeholder="(add-doc-and-meta *read-eval* ...)" />
-            <marker date="1453494062000" expanded="true" signature="205744:205873" placeholder="(defn future? ...)" />
-            <marker date="1453494062000" expanded="true" signature="205875:206011" placeholder="(defn future-done? ...)" />
-            <marker date="1453494062000" expanded="true" signature="206014:206544" placeholder="(defmacro letfn ...)" />
-            <marker date="1453494062000" expanded="true" signature="206546:207526" placeholder="(defn fnil ...)" />
-            <marker date="1453494062000" expanded="true" signature="207556:207637" placeholder="(defn- shift-mask ...)" />
-            <marker date="1453494062000" expanded="true" signature="207744:208110" placeholder="(defn- maybe-min-hash ...)" />
-            <marker date="1453494062000" expanded="true" signature="208112:208501" placeholder="(defn- case-map ...)" />
-            <marker date="1453494062000" expanded="true" signature="208503:208713" placeholder="(defn- fits-table? ...)" />
-            <marker date="1453494062000" expanded="true" signature="208715:209458" placeholder="(defn- prep-ints ...)" />
-            <marker date="1453494062000" expanded="true" signature="209460:211055" placeholder="(defn- merge-hash-collisions ...)" />
-            <marker date="1453494062000" expanded="true" signature="211057:212582" placeholder="(defn- prep-hashes ...)" />
-            <marker date="1453494062000" expanded="true" signature="212585:215460" placeholder="(defmacro case ...)" />
-            <marker date="1453494062000" expanded="true" signature="215829:216785" placeholder="(defn reduce ...)" />
-            <marker date="1453494062000" expanded="true" signature="216787:217360" placeholder="(extend-protocol clojure.core.protocols/IKVReduce ...)" />
-            <marker date="1453494062000" expanded="true" signature="217362:217848" placeholder="(defn reduce-kv ...)" />
-            <marker date="1453494062000" expanded="true" signature="217850:218172" placeholder="(defn completing ...)" />
-            <marker date="1453494062000" expanded="true" signature="218174:219025" placeholder="(defn transduce ...)" />
-            <marker date="1453494062000" expanded="true" signature="219027:219576" placeholder="(defn into ...)" />
-            <marker date="1453494062000" expanded="true" signature="219578:220197" placeholder="(defn mapv ...)" />
-            <marker date="1453494062000" expanded="true" signature="220199:220496" placeholder="(defn filterv ...)" />
-            <marker date="1453494062000" expanded="true" signature="220536:220737" placeholder="(defn- normalize-slurp-opts ...)" />
-            <marker date="1453494062000" expanded="true" signature="220739:221235" placeholder="(defn slurp ...)" />
-            <marker date="1453494062000" expanded="true" signature="221237:221501" placeholder="(defn spit ...)" />
-            <marker date="1453494062000" expanded="true" signature="221575:222578" placeholder="(defn future-call ...)" />
-            <marker date="1453494062000" expanded="true" signature="222582:223002" placeholder="(defmacro future ...)" />
-            <marker date="1453494062000" expanded="true" signature="223005:223147" placeholder="(defn future-cancel ...)" />
-            <marker date="1453494062000" expanded="true" signature="223149:223300" placeholder="(defn future-cancelled? ...)" />
-            <marker date="1453494062000" expanded="true" signature="223302:224269" placeholder="(defn pmap ...)" />
-            <marker date="1453494062000" expanded="true" signature="224271:224428" placeholder="(defn pcalls ...)" />
-            <marker date="1453494062000" expanded="true" signature="224430:224626" placeholder="(defmacro pvalues ...)" />
-            <marker date="1453494062000" expanded="true" signature="224708:225697" placeholder="(let ...)" />
-            <marker date="1453494062000" expanded="true" signature="225699:226046" placeholder="(add-doc-and-meta *clojure-version* ...)" />
-            <marker date="1453494062000" expanded="true" signature="226048:226464" placeholder="(defn clojure-version ...)" />
-            <marker date="1453494062000" expanded="true" signature="226466:227408" placeholder="(defn promise ...)" />
-            <marker date="1453494062000" expanded="true" signature="227410:227630" placeholder="(defn deliver ...)" />
-            <marker date="1453494062000" expanded="true" signature="227634:227946" placeholder="(defn flatten ...)" />
-            <marker date="1453494062000" expanded="true" signature="227948:228342" placeholder="(defn group-by ...)" />
-            <marker date="1453494062000" expanded="true" signature="228344:229750" placeholder="(defn partition-by ...)" />
-            <marker date="1453494062000" expanded="true" signature="229752:230025" placeholder="(defn frequencies ...)" />
-            <marker date="1453494062000" expanded="true" signature="230027:230506" placeholder="(defn reductions ...)" />
-            <marker date="1453494062000" expanded="true" signature="230508:230746" placeholder="(defn rand-nth ...)" />
-            <marker date="1453494062000" expanded="true" signature="230748:231818" placeholder="(defn partition-all ...)" />
-            <marker date="1453494062000" expanded="true" signature="231820:232061" placeholder="(defn shuffle ...)" />
-            <marker date="1453494062000" expanded="true" signature="232063:233216" placeholder="(defn map-indexed ...)" />
-            <marker date="1453494062000" expanded="true" signature="233218:234180" placeholder="(defn keep ...)" />
-            <marker date="1453494062000" expanded="true" signature="234182:235534" placeholder="(defn keep-indexed ...)" />
-            <marker date="1453494062000" expanded="true" signature="235536:237278" placeholder="(defn every-pred ...)" />
-            <marker date="1453494062000" expanded="true" signature="237280:238825" placeholder="(defn some-fn ...)" />
-            <marker date="1453494062000" expanded="true" signature="238827:239828" placeholder="(defn- assert-valid-fdecl ...)" />
-            <marker date="1453494062000" expanded="true" signature="239830:240618" placeholder="(defn with-redefs-fn ...)" />
-            <marker date="1453494062000" expanded="true" signature="240620:241274" placeholder="(defmacro with-redefs ...)" />
-            <marker date="1453494062000" expanded="true" signature="241276:241447" placeholder="(defn realized? ...)" />
-            <marker date="1453494062000" expanded="true" signature="241449:241988" placeholder="(defmacro cond-&gt; ...)" />
-            <marker date="1453494062000" expanded="true" signature="241990:242534" placeholder="(defmacro cond-&gt;&gt; ...)" />
-            <marker date="1453494062000" expanded="true" signature="242536:242868" placeholder="(defmacro as-&gt; ...)" />
-            <marker date="1453494062000" expanded="true" signature="242870:243212" placeholder="(defmacro some-&gt; ...)" />
-            <marker date="1453494062000" expanded="true" signature="243214:243559" placeholder="(defmacro some-&gt;&gt; ...)" />
-            <marker date="1453494062000" expanded="true" signature="243561:243686" placeholder="(defn preserving-reduced ...)" />
-            <marker date="1453494062000" expanded="true" signature="243688:243988" placeholder="(defn cat ...)" />
-            <marker date="1453494062000" expanded="true" signature="243990:244479" placeholder="(defn dedupe ...)" />
-            <marker date="1453494062000" expanded="true" signature="244481:244757" placeholder="(defn random-sample ...)" />
-            <marker date="1453494062000" expanded="true" signature="244759:245101" placeholder="(deftype Eduction ...)" />
-            <marker date="1453494062000" expanded="true" signature="245103:245472" placeholder="(defn eduction ...)" />
-            <marker date="1453494062000" expanded="true" signature="245474:245625" placeholder="(defmethod print-method ...)" />
-            <marker date="1453494062000" expanded="true" signature="245627:245829" placeholder="(defn run! ...)" />
-            <marker date="1453494062000" expanded="true" signature="245832:246004" placeholder="(defn tagged-literal? ...)" />
-            <marker date="1453494062000" expanded="true" signature="246006:246213" placeholder="(defn tagged-literal ...)" />
-            <marker date="1453494062000" expanded="true" signature="246215:246399" placeholder="(defn reader-conditional? ...)" />
-            <marker date="1453494062000" expanded="true" signature="246401:246640" placeholder="(defn reader-conditional ...)" />
-            <marker date="1453494062000" expanded="true" signature="246710:246951" placeholder="(def default-data-readers ...)" />
-            <marker date="1453494062000" expanded="true" signature="246953:248059" placeholder="(def *data-readers* ...)" />
-            <marker date="1453494062000" expanded="true" signature="248061:248379" placeholder="(def *default-data-reader-fn* ...)" />
-            <marker date="1453494062000" expanded="true" signature="248381:248607" placeholder="(defn- data-reader-urls ...)" />
-            <marker date="1453494062000" expanded="true" signature="248609:248716" placeholder="(defn- data-reader-var ...)" />
-            <marker date="1453494062000" expanded="true" signature="248718:249950" placeholder="(defn- load-data-reader-file ...)" />
-            <marker date="1453494062000" expanded="true" signature="249952:250157" placeholder="(defn- load-data-readers ...)" />
-            <marker date="1453494062000" expanded="true" signature="250159:250243" placeholder="(try ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2122,7 +1329,19 @@
             <marker date="1453870796000" expanded="true" signature="100:165" placeholder="(defn- computer-name ...)" />
             <marker date="1453870796000" expanded="true" signature="167:287" placeholder="(defn- computer-goes-first ...)" />
             <marker date="1453870796000" expanded="true" signature="289:596" placeholder="(defn start ...)" />
-            <marker date="1453870796000" expanded="true" signature="598:997" placeholder="(defn take-square ...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/tic/ai_engine_spec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.061349694">
+          <caret line="2" column="33" selection-start-line="1" selection-start-column="3" selection-end-line="2" selection-end-column="33" />
+          <folding>
+            <marker date="1454181298000" expanded="true" signature="0:135" placeholder="(ns tic.ai-engine-spec ...)" />
+            <marker date="1454181298000" expanded="true" signature="294:983" placeholder="(describe ...)" />
+            <marker date="1454181298000" expanded="true" signature="985:1432" placeholder="(describe ...)" />
+            <marker date="1454181298000" expanded="true" signature="1435:3233" placeholder="(describe ...)" />
           </folding>
         </state>
       </provider>
@@ -2132,33 +1351,33 @@
         <state vertical-scroll-proportion="0.15337424">
           <caret line="5" column="63" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="63" />
           <folding>
-            <marker date="1454302196000" expanded="true" signature="0:283" placeholder="(ns tic.ui.swing-controller-spec ...)" />
-            <marker date="1454302196000" expanded="true" signature="285:740" placeholder="(deftype SpySquareWidget ...)" />
-            <marker date="1454302196000" expanded="true" signature="772:1030" placeholder="(deftype SpyGameListener ...)" />
-            <marker date="1454302196000" expanded="true" signature="1032:3910" placeholder="(describe ...)" />
+            <marker date="1454383450000" expanded="true" signature="0:283" placeholder="(ns tic.ui.swing-controller-spec ...)" />
+            <marker date="1454383450000" expanded="true" signature="285:740" placeholder="(deftype SpySquareWidget ...)" />
+            <marker date="1454383450000" expanded="true" signature="772:1030" placeholder="(deftype SpyGameListener ...)" />
+            <marker date="1454383450000" expanded="true" signature="1032:3910" placeholder="(describe ...)" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tic/ui/swing_controller.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2760736">
-          <caret line="9" column="21" selection-start-line="5" selection-start-column="1" selection-end-line="9" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.12269939">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
-            <marker date="1454301756000" expanded="true" signature="0:118" placeholder="(ns tic.ui.swing-controller ...)" />
-            <marker date="1454301756000" expanded="true" signature="120:282" placeholder="(defprotocol SquareWidget ...)" />
-            <marker date="1454301756000" expanded="true" signature="284:372" placeholder="(defprotocol GameListener ...)" />
-            <marker date="1454301756000" expanded="true" signature="374:429" placeholder="(def state ...)" />
-            <marker date="1454301756000" expanded="true" signature="431:1131" placeholder="(defn take-square! ...)" />
-            <marker date="1454301756000" expanded="true" signature="1133:1359" placeholder="(defn init! ...)" />
+            <marker date="1454386307000" expanded="true" signature="0:117" placeholder="(ns tic.ui.swing-controller ...)" />
+            <marker date="1454386307000" expanded="true" signature="119:281" placeholder="(defprotocol SquareWidget ...)" />
+            <marker date="1454386307000" expanded="true" signature="283:371" placeholder="(defprotocol GameListener ...)" />
+            <marker date="1454386307000" expanded="true" signature="373:428" placeholder="(def state ...)" />
+            <marker date="1454386307000" expanded="true" signature="430:1124" placeholder="(defn take-square! ...)" />
+            <marker date="1454386307000" expanded="true" signature="1126:1352" placeholder="(defn init! ...)" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tic/ui/swing.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4601227">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.44785276">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
           <folding />
         </state>
       </provider>
