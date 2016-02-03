@@ -26,11 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="449d5f7d-dd9f-483c-b05b-a843b02dd538" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" afterPath="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/ui/swing.clj" afterPath="$PROJECT_DIR$/src/tic/ui/swing.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" afterPath="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" />
     </list>
     <ignored path="tic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,11 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="swing.clj" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tic/ui/swing.clj">
+      <file leaf-file-name="project.clj" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44785276">
-              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.22304833">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -108,13 +106,13 @@
         <option value="$PROJECT_DIR$/src/tic/swing_ui.clj" />
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/javax/swing/JButton.java" />
         <option value="$PROJECT_DIR$/src/tic/ui/swing_ui.clj" />
-        <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/src/tic/ui/swing_1.clj" />
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/javax/swing/JFrame.java" />
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/java/awt/BorderLayout.java" />
         <option value="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" />
         <option value="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" />
         <option value="$PROJECT_DIR$/src/tic/ui/swing.clj" />
+        <option value="$PROJECT_DIR$/project.clj" />
       </list>
     </option>
   </component>
@@ -124,9 +122,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -317,6 +314,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="946" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -806,16 +804,16 @@
       <workItem from="1453779307027" duration="4995000" />
       <workItem from="1453869522262" duration="11604000" />
       <workItem from="1454104254815" duration="28441000" />
-      <workItem from="1454374878219" duration="5823000" />
+      <workItem from="1454374878219" duration="9993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147002000" />
+    <option name="totallyTimeSpent" value="151172000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -836,7 +834,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39054728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36811253" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2638889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -914,7 +912,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
+          <folding>
+            <marker date="1454471350000" expanded="true" signature="0:367" placeholder="(ns tic.ui.swing ...)" />
+            <marker date="1454471350000" expanded="true" signature="370:729" placeholder="(extend JButton ...)" />
+            <marker date="1454471350000" expanded="true" signature="732:922" placeholder="(defn action-listener ...)" />
+            <marker date="1454471350000" expanded="true" signature="924:998" placeholder="(defn show-msg ...)" />
+            <marker date="1454471350000" expanded="true" signature="1000:1253" placeholder="(defn game-listener ...)" />
+            <marker date="1454471350000" expanded="true" signature="1256:1676" placeholder="(defn add-square-buttons! ...)" />
+            <marker date="1454471350000" expanded="true" signature="1678:2309" placeholder="(defn show-gui ...)" />
+            <marker date="1454471350000" expanded="true" signature="2311:2366" placeholder="(defn -main ...)" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,16 +1116,6 @@
             <marker date="1438711546000" expanded="true" signature="9608:9799" placeholder="/**...*/" />
             <marker date="1438711546000" expanded="false" signature="9849:9864" placeholder=" { " />
             <marker date="1438711546000" expanded="false" signature="9898:9908" placeholder=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24539877">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <marker date="1454262433000" expanded="true" signature="0:405" placeholder="(defproject tic ...)" />
           </folding>
         </state>
       </provider>
@@ -1376,8 +1373,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tic/ui/swing.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44785276">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.5260223">
+          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+          <folding>
+            <marker date="1454471350000" expanded="true" signature="0:367" placeholder="(ns tic.ui.swing ...)" />
+            <marker date="1454471350000" expanded="true" signature="370:729" placeholder="(extend JButton ...)" />
+            <marker date="1454471350000" expanded="true" signature="732:922" placeholder="(defn action-listener ...)" />
+            <marker date="1454471350000" expanded="true" signature="924:998" placeholder="(defn show-msg ...)" />
+            <marker date="1454471350000" expanded="true" signature="1000:1253" placeholder="(defn game-listener ...)" />
+            <marker date="1454471350000" expanded="true" signature="1256:1676" placeholder="(defn add-square-buttons! ...)" />
+            <marker date="1454471350000" expanded="true" signature="1678:2309" placeholder="(defn show-gui ...)" />
+            <marker date="1454471350000" expanded="true" signature="2311:2366" placeholder="(defn -main ...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22304833">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding />
         </state>
       </provider>

@@ -67,5 +67,5 @@
       (.pack)
       (.setVisible true))))
 
-(defn launch-app []
+(defn -main []
   (SwingUtilities/invokeLater show-gui))
