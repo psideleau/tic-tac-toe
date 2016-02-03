@@ -1,7 +1,6 @@
 (ns tic.ai-engine
   (:require [tic.board :as board]))
 
-
 (defn minimax-square-stack
   [{:keys [board
            current-player
@@ -19,7 +18,6 @@
                                         :depth (inc depth)
                                         :square %})  (board/open-squares new-board))]
             (apply (:score-selection-fn opposing-player) scores)))))
-
 
 (defn minimax [board current-player opposing-player]
   (map #(minimax-square-stack {:board board
@@ -57,7 +55,3 @@
     (if (board/new-game? board)
       (make-first-move params selection-fn)
       (make-move params))))
-
-
-
-

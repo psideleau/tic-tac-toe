@@ -30,7 +30,6 @@
         (should= 1 (count (board/taken-squares (:board game2) :X)))
         (should= :O (:current-turn game))))
 
-
   (it "should throw an exception if user attempts to take a square already taken"
       (let [game2 (game-controller/take-square game 1)]
         (should-throw IllegalStateException (game-controller/take-square game2 1))))
@@ -41,10 +40,8 @@
             player-take-edge3 (game-controller/take-square player-take-edge2 7)]
         (should (board/winner? (:board player-take-edge3) (:computer player-take-edge3))))))
 
-
 (describe "user winning or ending the game"
   (it "user wins the game"
       (let [game {:board [[:X :X :_][:O :X :O][:X :O :X]] :player :X :computer :O}
             game-ended (game-controller/take-square game 2)]
         (should= :X (board/winner (:board game-ended) )))))
-

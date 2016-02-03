@@ -196,7 +196,6 @@
              (should-not (board/winner? board))
              (should= :_ (board/winner board)))))
 
-
   (context "the state of a board"
     (it "all positions should be free"
      (should= [0 1 2 3 4 5 6 7 8] (board/open-squares (board/new-board))))
@@ -205,6 +204,4 @@
       (should= [1 3 8] (board/open-squares [[:X :_ :O]
                                             [:_ :O :X]
                                             [:O :X :_]])))))
-
-
 

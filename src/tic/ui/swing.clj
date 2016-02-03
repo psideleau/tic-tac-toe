@@ -7,7 +7,6 @@
            [tic.ui.swing_controller GameListener]
           ))
 
-
 (extend JButton
   swing-controller/SquareWidget
   {:square-index (fn [this] (Integer/parseInt (.getActionCommand this)))
@@ -17,14 +16,11 @@
    :disabled? (fn [this] (= false (.isEnabled this)))
    })
 
-
 (defn action-listener [game-listener]
   (proxy [ActionListener] []
     (actionPerformed [event]
       (do
-
-        (swing-controller/take-square! (.getSource event) game-listener)
-      ))))
+        (swing-controller/take-square! (.getSource event) game-listener)))))
 
 (defn show-msg [jframe msg]
   (JOptionPane/showMessageDialog jframe, msg))
