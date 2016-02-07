@@ -10,7 +10,7 @@
 (describe "playing a tic-tac-toe game via console"
  (it "should play a game"
    (do
-      (with-redefs [game-controller/take-square (fn[game square]
+      (with-redefs [game-controller/take-square! (fn[game square]
                                                   (let [new-board (board/take-square (:board game) (:player game) square)]
                                                     (reset! ui/game (assoc game :board new-board))))]
       (with-in-str (make-input ["true" 0 1 2])

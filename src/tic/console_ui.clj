@@ -13,14 +13,14 @@
     (flush)
 
     (let [player-first (Boolean/parseBoolean (read-line))]
-      (reset! game (controller/start {:player :X :player-first player-first}))
+      (reset! game (controller/start! {:player :X :player-first player-first}))
       (println "game" @game)
       (flush)
 
       (while (not (or (board/winner? (:board @game)) (board/all-squares-taken? (:board @game))))
         (println "Take square: ")
         (let [square (Integer/parseInt (read-line))]
-          (reset! game (controller/take-square @game square))
+          (reset! game (controller/take-square! @game square))
           (println (:board @game))
           (flush)))
 

@@ -3,7 +3,7 @@
             [tic.board :as board]
             [tic.game-controller :as game-controller]
             [tic.ui.swing-controller :as swing-controller])
-  (:import [tic.ui.swing_controller GameListener SquareWidget]))
+  (:import [tic.ui.swing_controller SquareWidget]))
 
 (deftype SpySquareWidget [^{:volatile-mutable true} square-index
                           ^{:volatile-mutable true} current-state
@@ -16,11 +16,13 @@
     (disabled? [this] disabled))
 
 (def game-spy-data (atom {}))
+
+(declare squares)
 (deftype SpyGameListener []
-  GameListener
-  (lost-game [this] (swap! game-spy-data assoc :lost-game-called true))
-  (won-game  [this] (swap! game-spy-data assoc :won-game-called true))
-  (tied-game [this] (swap! game-spy-data assoc :tied-game-called true)))
+  game-controller/GameListener
+  (update-board! [this game]  (swing-controller/update-board-ui! @squares game))
+  (winner [this game] (swap! game-spy-data assoc :won-game-called true :game game))
+  (tied [this game] (swap! game-spy-data assoc :tied-game-called true :game game)))
 
 (describe "playing tic-tac-toe"
  (before
@@ -34,14 +36,14 @@
  (context "starting a game"
    (it "should start game"
     (should (every? #(= (.current-state %) "_") (:ui-squares @swing-controller/state)))
-    (should= (:game @swing-controller/state) (game-controller/start {:player :X :player-first true}))
+    (should= (.game (:game-state @swing-controller/state)) (game-controller/start! {:player :X :player-first true}))
     (should (every? #(= (.disabled? %) false)   (:ui-squares @swing-controller/state)))))
 
  (context "playing the game"
    (it "take an open square"
     (let  [ui-square (first @squares)]
       (swing-controller/take-square! ui-square game-listener)
-      (let [game (:game @swing-controller/state)
+      (let [game (.game (:game-state @swing-controller/state))
             board (:board game)
             computer-ui-square (nth @squares (first (board/taken-squares board (:computer game))))]
         (should= 7 (count (board/open-squares board)))
@@ -55,28 +57,31 @@
 
   (context "the game is over"
     (it "user won the game"
-      (let  [ui-square (first @squares)]
-      (with-redefs [board/tie? (fn [board player1 player2] false)
-                    board/winner? (fn [board player] (= player :X))]
+      (let  [ui-square (nth @squares 2)
+             game {:board [[:O :O :_]
+                            [:X :X :O]
+                            [:O :O :X]] :player :O :computer :X}]
+        (.set-game! (:game-state @swing-controller/state) game)
         (swing-controller/take-square! ui-square game-listener)
         (should (:won-game-called @game-spy-data))
-        (should-not (:lost-game-called @game-spy-data))
-        (should-not (:tied-game-called @game-spy-data)))))
+        (should-not (:tied-game-called @game-spy-data))))
 
     (it "computer won the game"
-     (let  [ui-square (first @squares)]
-       (with-redefs [board/tie? (fn [board player1 player2] false)
-                     board/winner? (fn [board player] (= player :O))]
+     (let  [ui-square (nth @squares 7)
+            game {:board [[:O :O :_]
+                          [:X :X :O]
+                          [:O :_ :X]] :player :X :computer :O}]
+         (.set-game! (:game-state @swing-controller/state) game)
          (swing-controller/take-square! ui-square game-listener)
-         (should-not (:won-game-called @game-spy-data))
-         (should (:lost-game-called @game-spy-data))
-         (should-not (:tied-game-called @game-spy-data)))))
+         (should (:won-game-called @game-spy-data))
+         (should-not (:tied-game-called @game-spy-data))))
 
     (it "game ended in a tie"
-     (let  [ui-square (first @squares)]
-       (with-redefs [board/tie? (fn [board player1 player2] true)
-                     board/winner? (fn [board player] false)]
+     (let  [ui-square (nth @squares 7)
+            game {:board [[:O :O :X]
+                           [:X :X :O]
+                           [:O :_ :X]] :player :X :computer :O}]
+         (.set-game! (:game-state @swing-controller/state) game)
          (swing-controller/take-square! ui-square game-listener)
          (should-not (:won-game-called @game-spy-data))
-         (should-not (:lost-game-called @game-spy-data))
-         (should (:tied-game-called @game-spy-data)))))))
+         (should (:tied-game-called @game-spy-data))))))

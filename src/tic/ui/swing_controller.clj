@@ -1,6 +1,8 @@
 (ns tic.ui.swing-controller
   (:require [tic.game-controller :as game-controller]
-            [tic.board :as board]))
+            [tic.board :as board]
+            [tic.game-state :as game-state])
+  (:import  [tic.game_state MemoryGameState]))
 
 (defprotocol SquareWidget
   (square-index [this])
@@ -9,14 +11,9 @@
   (set-disabled! [this disabled])
   (disabled? [this]))
 
-(defprotocol GameListener
-  (lost-game [this])
-  (won-game [this])
-  (tied-game [this]))
 
 (def state
-  (atom {:game []
-         :ui-squares []}))
+  (atom {:game-state (game-state/memory-game-state)}))
 
 (defn player-name [board ui-square]
   (name (board/get-board-square board  (square-index ui-square))))
@@ -32,24 +29,11 @@
     (let [ui-square (nth ui-squares idx)]
       (update-ui-square-if-taken! (:board game) ui-square))))
 
-(defn update-state! [game]
-  (swap! state assoc :game game))
-
-(defn notify-user-if-game-is-over! [game game-listener]
-  (let [board (:board game)]
-    (cond
-      (board/tie? board (:player game) (:computer game)) (tied-game game-listener)
-      (board/winner? board (:player game)) (won-game game-listener)
-      (board/winner? board (:computer game)) (lost-game game-listener))))
-
 (defn take-square! [ui-square game-listener]
-  (let [game (game-controller/take-square (:game @state) (square-index ui-square))]
-    (update-board-ui! (:ui-squares @state) game)
-    (update-state! game)
-    (notify-user-if-game-is-over! game game-listener)))
+  (game-controller/take-square! (:game-state @state) (square-index ui-square) game-listener))
 
 (defn init! [ui-squares]
-  (swap! state assoc :ui-squares ui-squares :game (game-controller/start {:player :X :player-first true}))
+  (game-controller/start! {:player :X :player-first true :game-state (:game-state @state)})
   (doseq [square ui-squares]
     (set-disabled! square false)
     (set-taken-by! square "_")))

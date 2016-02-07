@@ -4,7 +4,7 @@
   (:import [javax.swing SwingUtilities JFrame JLabel JPanel JButton JOptionPane]
            [java.awt GridLayout BorderLayout]
            [java.awt.event ActionListener]
-           [tic.ui.swing_controller GameListener]
+           [tic.ui.game_controller GameListener]
           ))
 
 (extend JButton
@@ -28,9 +28,8 @@
 (defn game-listener [jframe]
   (reify
     GameListener
-    (lost-game [this] (show-msg jframe "You Have Lost The Game"))
-    (won-game  [this] (show-msg jframe "You Have Won The Game"))
-    (tied-game [this] (show-msg jframe "You Have Tied The Game"))))
+    (winner  [this game] (show-msg jframe "You Have Won The Game"))
+    (tied-game [this game] (show-msg jframe "You Have Tied The Game"))))
 
 
 (defn add-square-buttons! [jpanel game-listener]

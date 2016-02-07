@@ -26,13 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="449d5f7d-dd9f-483c-b05b-a843b02dd538" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tic/game_state.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/tic/ai_engine_spec.clj" afterPath="$PROJECT_DIR$/spec/tic/ai_engine_spec.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/tic/board_spec.clj" afterPath="$PROJECT_DIR$/spec/tic/board_spec.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/tic/console_ui_spec.clj" afterPath="$PROJECT_DIR$/spec/tic/console_ui_spec.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/tic/game_controller_spec.clj" afterPath="$PROJECT_DIR$/spec/tic/game_controller_spec.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" afterPath="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/ai_engine.clj" afterPath="$PROJECT_DIR$/src/tic/ai_engine.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/board.clj" afterPath="$PROJECT_DIR$/src/tic/board.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/console_ui.clj" afterPath="$PROJECT_DIR$/src/tic/console_ui.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/game_controller.clj" afterPath="$PROJECT_DIR$/src/tic/game_controller.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/ui/swing.clj" afterPath="$PROJECT_DIR$/src/tic/ui/swing.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" afterPath="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" />
@@ -57,11 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="game_controller_spec.clj" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spec/tic/game_controller_spec.clj">
+      <file leaf-file-name="swing_controller.clj" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tic/ui/swing_controller.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.111524165">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.19593346">
+              <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -111,15 +111,16 @@
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/javax/swing/JFrame.java" />
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/java/awt/BorderLayout.java" />
         <option value="$PROJECT_DIR$/project.clj" />
-        <option value="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" />
-        <option value="$PROJECT_DIR$/src/tic/ui/swing.clj" />
         <option value="$PROJECT_DIR$/src/tic/ai_engine.clj" />
-        <option value="$PROJECT_DIR$/src/tic/board.clj" />
-        <option value="$PROJECT_DIR$/src/tic/game_controller.clj" />
-        <option value="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" />
         <option value="$PROJECT_DIR$/spec/tic/ai_engine_spec.clj" />
         <option value="$PROJECT_DIR$/spec/tic/board_spec.clj" />
+        <option value="$PROJECT_DIR$/src/tic/board.clj" />
+        <option value="$PROJECT_DIR$/src/tic/game_state.clj" />
+        <option value="$PROJECT_DIR$/src/tic/ui/swing.clj" />
         <option value="$PROJECT_DIR$/spec/tic/game_controller_spec.clj" />
+        <option value="$PROJECT_DIR$/src/tic/game_controller.clj" />
+        <option value="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" />
+        <option value="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" />
       </list>
     </option>
   </component>
@@ -176,7 +177,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,8 +294,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -811,46 +812,50 @@
       <workItem from="1453779307027" duration="4995000" />
       <workItem from="1453869522262" duration="11604000" />
       <workItem from="1454104254815" duration="28441000" />
-      <workItem from="1454374878219" duration="13893000" />
+      <workItem from="1454374878219" duration="14678000" />
+      <workItem from="1454788598249" duration="836000" />
+      <workItem from="1454822915168" duration="17532000" />
+      <workItem from="1454875563967" duration="41000" />
+      <workItem from="1454875732534" duration="3323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155072000" />
+    <option name="totallyTimeSpent" value="177589000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36459553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2638889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36811253" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2638889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -915,20 +920,24 @@
     </option>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/tic/ui/swing_controller.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/tic/game_controller_spec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tic/ui/swing.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <marker date="1454475631000" expanded="true" signature="0:367" placeholder="(ns tic.ui.swing ...)" />
-            <marker date="1454475631000" expanded="true" signature="369:728" placeholder="(extend JButton ...)" />
-            <marker date="1454475631000" expanded="true" signature="730:912" placeholder="(defn action-listener ...)" />
-            <marker date="1454475631000" expanded="true" signature="914:988" placeholder="(defn show-msg ...)" />
-            <marker date="1454475631000" expanded="true" signature="990:1243" placeholder="(defn game-listener ...)" />
-            <marker date="1454475631000" expanded="true" signature="1246:1666" placeholder="(defn add-square-buttons! ...)" />
-            <marker date="1454475631000" expanded="true" signature="1668:2299" placeholder="(defn show-gui ...)" />
-            <marker date="1454475631000" expanded="true" signature="2301:2356" placeholder="(defn -main ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -936,15 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
-          <folding>
-            <marker date="1454475663000" expanded="true" signature="0:53" placeholder="(ns tic.ai-engine ...)" />
-            <marker date="1454475663000" expanded="true" signature="55:861" placeholder="(defn minimax-square-stack ...)" />
-            <marker date="1454475663000" expanded="true" signature="863:1550" placeholder="(defn minimax ...)" />
-            <marker date="1454475663000" expanded="true" signature="1552:1776" placeholder="(defn- square-index-with-max-score ...)" />
-            <marker date="1454475663000" expanded="true" signature="1778:2011" placeholder="(defn- make-first-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2013:2342" placeholder="(defn- make-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2344:2590" placeholder="(defn computer-take-square ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -952,12 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
-          <folding>
-            <marker date="1454476649000" expanded="true" signature="0:135" placeholder="(ns tic.ai-engine-spec ...)" />
-            <marker date="1454476649000" expanded="true" signature="294:965" placeholder="(describe ...)" />
-            <marker date="1454476649000" expanded="true" signature="967:1414" placeholder="(describe ...)" />
-            <marker date="1454476649000" expanded="true" signature="1416:3116" placeholder="(describe ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -965,15 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding>
-            <marker date="1454476383000" expanded="true" signature="0:98" placeholder="(ns tic.game-controller ...)" />
-            <marker date="1454476383000" expanded="true" signature="100:165" placeholder="(defn- computer-name ...)" />
-            <marker date="1454476383000" expanded="true" signature="167:287" placeholder="(defn- computer-goes-first ...)" />
-            <marker date="1454476383000" expanded="true" signature="289:594" placeholder="(defn start ...)" />
-            <marker date="1454476383000" expanded="true" signature="596:727" placeholder="(defn update-board-with-players-choice ...)" />
-            <marker date="1454476383000" expanded="true" signature="729:863" placeholder="(defn update-board-with-computers-choice ...)" />
-            <marker date="1454476383000" expanded="true" signature="865:1230" placeholder="(defn take-square ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -981,15 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <marker date="1454475663000" expanded="true" signature="0:53" placeholder="(ns tic.ai-engine ...)" />
-            <marker date="1454475663000" expanded="true" signature="55:861" placeholder="(defn minimax-square-stack ...)" />
-            <marker date="1454475663000" expanded="true" signature="863:1550" placeholder="(defn minimax ...)" />
-            <marker date="1454475663000" expanded="true" signature="1552:1776" placeholder="(defn- square-index-with-max-score ...)" />
-            <marker date="1454475663000" expanded="true" signature="1778:2011" placeholder="(defn- make-first-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2013:2342" placeholder="(defn- make-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2344:2590" placeholder="(defn computer-take-square ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -997,15 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <marker date="1454475663000" expanded="true" signature="0:53" placeholder="(ns tic.ai-engine ...)" />
-            <marker date="1454475663000" expanded="true" signature="55:861" placeholder="(defn minimax-square-stack ...)" />
-            <marker date="1454475663000" expanded="true" signature="863:1550" placeholder="(defn minimax ...)" />
-            <marker date="1454475663000" expanded="true" signature="1552:1776" placeholder="(defn- square-index-with-max-score ...)" />
-            <marker date="1454475663000" expanded="true" signature="1778:2011" placeholder="(defn- make-first-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2013:2342" placeholder="(defn- make-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2344:2590" placeholder="(defn computer-take-square ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1013,15 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <marker date="1454475663000" expanded="true" signature="0:53" placeholder="(ns tic.ai-engine ...)" />
-            <marker date="1454475663000" expanded="true" signature="55:861" placeholder="(defn minimax-square-stack ...)" />
-            <marker date="1454475663000" expanded="true" signature="863:1550" placeholder="(defn minimax ...)" />
-            <marker date="1454475663000" expanded="true" signature="1552:1776" placeholder="(defn- square-index-with-max-score ...)" />
-            <marker date="1454475663000" expanded="true" signature="1778:2011" placeholder="(defn- make-first-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2013:2342" placeholder="(defn- make-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2344:2590" placeholder="(defn computer-take-square ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1029,15 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <marker date="1454475663000" expanded="true" signature="0:53" placeholder="(ns tic.ai-engine ...)" />
-            <marker date="1454475663000" expanded="true" signature="55:861" placeholder="(defn minimax-square-stack ...)" />
-            <marker date="1454475663000" expanded="true" signature="863:1550" placeholder="(defn minimax ...)" />
-            <marker date="1454475663000" expanded="true" signature="1552:1776" placeholder="(defn- square-index-with-max-score ...)" />
-            <marker date="1454475663000" expanded="true" signature="1778:2011" placeholder="(defn- make-first-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2013:2342" placeholder="(defn- make-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2344:2590" placeholder="(defn computer-take-square ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,54 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="89" column="11" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
-          <folding>
-            <marker date="1438711546000" expanded="false" signature="0:215" placeholder="/.../" />
-            <marker date="1438711546000" expanded="false" signature="245:532" placeholder="..." />
-            <marker date="1438711546000" expanded="true" signature="535:2090" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="2091:2118" placeholder="/serial/" />
-            <marker date="1438711546000" expanded="true" signature="2192:2253" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="2315:2376" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="2397:2408" placeholder=" { " />
-            <marker date="1438711546000" expanded="true" signature="2425:2431" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="2437:2553" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="2583:2594" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="2611:2617" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="2623:2719" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="2788:2799" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="2816:2822" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="2828:3039" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="3069:3114" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="3120:3296" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="3340:3468" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="3474:3604" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="3631:3642" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="3681:3687" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="3694:4040" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="4073:4084" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="4101:4107" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="4114:4695" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="4733:4911" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="4917:5170" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="5208:5219" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="5241:5247" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="5253:5958" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="6017:6208" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="6214:6563" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="6595:6805" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="6811:6936" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="7007:7318" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="7325:7724" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="7760:7935" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="7938:7997" placeholder="//..." />
-            <marker date="1438711546000" expanded="true" signature="8003:8583" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="8636:8785" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="8791:9493" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="9498:9525" placeholder="/serial/" />
-            <marker date="1438711546000" expanded="true" signature="9597:9914" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="9608:9799" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="9849:9864" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="9898:9908" placeholder=" }" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1128,85 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48670757">
           <caret line="333" column="31" selection-start-line="333" selection-start-column="31" selection-end-line="333" selection-end-column="31" />
-          <folding>
-            <marker date="1438711546000" expanded="false" signature="0:215" placeholder="/.../" />
-            <marker date="1438711546000" expanded="true" signature="265:4393" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="4511:4747" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="4771:4996" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="5020:5323" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="5354:5656" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="5685:5987" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="6016:6319" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="6345:6649" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="6681:7306" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="7337:7520" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="7554:7737" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="7771:7954" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="7988:8054" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="8109:8178" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="8233:8305" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="8359:8430" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="8484:8554" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="8610:8784" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="8850:9018" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="9081:9255" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="9323:9491" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="9555:9822" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="9891:10156" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="10221:10494" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="10564:10831" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="11017:11106" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="11132:11143" placeholder=" { " />
-            <marker date="1438711546000" expanded="true" signature="11154:11160" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="11166:11469" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="11514:11573" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="11579:11667" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="11692:11703" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="11715:11721" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="11727:11869" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="11903:11914" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="11931:11937" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="11943:12029" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="12054:12065" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="12077:12083" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="12089:12227" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="12261:12272" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="12289:12295" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="12301:13306" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="13378:13704" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="13710:13805" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="13886:14951" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="14957:15370" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="15425:16072" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="16078:16875" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="16936:17765" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="17772:19295" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="19374:20285" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="20292:20657" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="20707:21487" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="21493:22109" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="22167:23533" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="23539:24203" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="24263:25639" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="25645:25921" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="25978:25989" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="26048:26054" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="26060:26398" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="26453:26464" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="26476:26482" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="26488:26826" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="26881:26892" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="26904:26910" placeholder=" }" />
-            <marker date="1438711546000" expanded="true" signature="26916:27050" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="27102:27109" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="27115:28045" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="28096:29601" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="29607:29886" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="true" signature="29943:30709" placeholder="{...}" />
-            <marker date="1438711546000" expanded="true" signature="30715:30866" placeholder="/**...*/" />
-            <marker date="1438711546000" expanded="false" signature="30895:30906" placeholder=" { " />
-            <marker date="1438711546000" expanded="false" signature="30976:30982" placeholder=" }" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1214,11 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5705522">
           <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-          <folding>
-            <marker date="1438696928000" expanded="false" signature="0:215" placeholder="/.../" />
-            <marker date="1438696928000" expanded="true" signature="275:856" placeholder="/**...*/" />
-            <marker date="1438696928000" expanded="true" signature="918:967" placeholder="/**...*/" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1233,107 +1050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22304833">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <marker date="1454471418000" expanded="true" signature="0:394" placeholder="(defproject tic ...)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tic/ui/swing_controller.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7211896">
-          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-          <folding>
-            <marker date="1454475517000" expanded="true" signature="0:117" placeholder="(ns tic.ui.swing-controller ...)" />
-            <marker date="1454475517000" expanded="true" signature="119:281" placeholder="(defprotocol SquareWidget ...)" />
-            <marker date="1454475517000" expanded="true" signature="283:371" placeholder="(defprotocol GameListener ...)" />
-            <marker date="1454475517000" expanded="true" signature="373:428" placeholder="(def state ...)" />
-            <marker date="1454475517000" expanded="true" signature="430:532" placeholder="(defn player-name ...)" />
-            <marker date="1454475517000" expanded="true" signature="534:743" placeholder="(defn update-ui-square-if-taken! ...)" />
-            <marker date="1454475517000" expanded="true" signature="745:926" placeholder="(defn update-board-ui! ...)" />
-            <marker date="1454475517000" expanded="true" signature="928:988" placeholder="(defn update-state! ...)" />
-            <marker date="1454475517000" expanded="true" signature="990:1309" placeholder="(defn notify-user-if-game-is-over! ...)" />
-            <marker date="1454475517000" expanded="true" signature="1311:1569" placeholder="(defn take-square! ...)" />
-            <marker date="1454475517000" expanded="true" signature="1571:1797" placeholder="(defn init! ...)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tic/ui/swing.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.059479553">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <marker date="1454475631000" expanded="true" signature="0:367" placeholder="(ns tic.ui.swing ...)" />
-            <marker date="1454475631000" expanded="true" signature="369:728" placeholder="(extend JButton ...)" />
-            <marker date="1454475631000" expanded="true" signature="730:912" placeholder="(defn action-listener ...)" />
-            <marker date="1454475631000" expanded="true" signature="914:988" placeholder="(defn show-msg ...)" />
-            <marker date="1454475631000" expanded="true" signature="990:1243" placeholder="(defn game-listener ...)" />
-            <marker date="1454475631000" expanded="true" signature="1246:1666" placeholder="(defn add-square-buttons! ...)" />
-            <marker date="1454475631000" expanded="true" signature="1668:2299" placeholder="(defn show-gui ...)" />
-            <marker date="1454475631000" expanded="true" signature="2301:2356" placeholder="(defn -main ...)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tic/game_controller.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8327138">
-          <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
-          <folding>
-            <marker date="1454476383000" expanded="true" signature="0:98" placeholder="(ns tic.game-controller ...)" />
-            <marker date="1454476383000" expanded="true" signature="100:165" placeholder="(defn- computer-name ...)" />
-            <marker date="1454476383000" expanded="true" signature="167:287" placeholder="(defn- computer-goes-first ...)" />
-            <marker date="1454476383000" expanded="true" signature="289:594" placeholder="(defn start ...)" />
-            <marker date="1454476383000" expanded="true" signature="596:727" placeholder="(defn update-board-with-players-choice ...)" />
-            <marker date="1454476383000" expanded="true" signature="729:863" placeholder="(defn update-board-with-computers-choice ...)" />
-            <marker date="1454476383000" expanded="true" signature="865:1230" placeholder="(defn take-square ...)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tic/console_ui.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8364312">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <marker date="1454181336000" expanded="true" signature="0:103" placeholder="(ns tic.console-ui ...)" />
-            <marker date="1454181336000" expanded="true" signature="127:157" placeholder="(defn current-game ...)" />
-            <marker date="1454181336000" expanded="true" signature="159:921" placeholder="(defn play-game ...)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tic/board.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8327138">
-          <caret line="105" column="49" selection-start-line="105" selection-start-column="49" selection-end-line="105" selection-end-column="49" />
-          <folding>
-            <marker date="1454475707000" expanded="true" signature="47:96" placeholder="(defn- empty-row ...)" />
-            <marker date="1454475707000" expanded="true" signature="98:170" placeholder="(defn- coordinate ...)" />
-            <marker date="1454475707000" expanded="true" signature="172:240" placeholder="(defn- board-square-val ...)" />
-            <marker date="1454475707000" expanded="true" signature="242:387" placeholder="(defn get-board-square ...)" />
-            <marker date="1454475707000" expanded="true" signature="389:476" placeholder="(defn- play-marked-all-of? ...)" />
-            <marker date="1454475707000" expanded="true" signature="478:566" placeholder="(defn- is-winner-accross? ...)" />
-            <marker date="1454475707000" expanded="true" signature="568:674" placeholder="(defn- square-vals-top-to-bottom ...)" />
-            <marker date="1454475707000" expanded="true" signature="676:934" placeholder="(defn- winner-top-to-bottom? ...)" />
-            <marker date="1454475707000" expanded="true" signature="936:1050" placeholder="(defn- square-vals-top-left-to-bottom-right ...)" />
-            <marker date="1454475707000" expanded="true" signature="1052:1244" placeholder="(defn- square-vals-bottom-left-to-top-right ...)" />
-            <marker date="1454475707000" expanded="true" signature="1246:1448" placeholder="(defn- winner-diagonal? ...)" />
-            <marker date="1454475707000" expanded="true" signature="1467:1759" placeholder="(defn winner? ...)" />
-            <marker date="1454475707000" expanded="true" signature="1761:1829" placeholder="(defn free? ...)" />
-            <marker date="1454475707000" expanded="true" signature="1831:1889" placeholder="(defn new-board ...)" />
-            <marker date="1454475707000" expanded="true" signature="1891:2054" placeholder="(defn- players ...)" />
-            <marker date="1454475707000" expanded="true" signature="2056:2278" placeholder="(defn winner ...)" />
-            <marker date="1454475707000" expanded="true" signature="2280:2338" placeholder="(defn- mark-col ...)" />
-            <marker date="1454475707000" expanded="true" signature="2340:2523" placeholder="(defn take-square ...)" />
-            <marker date="1454475707000" expanded="true" signature="2525:2614" placeholder="(defn all-squares-taken? ...)" />
-            <marker date="1454475707000" expanded="true" signature="2616:2745" placeholder="(defn tie? ...)" />
-            <marker date="1454475707000" expanded="true" signature="2747:2830" placeholder="(defn find-squares-matching ...)" />
-            <marker date="1454475707000" expanded="true" signature="2832:2902" placeholder="(defn open-squares ...)" />
-            <marker date="1454475707000" expanded="true" signature="2904:3004" placeholder="(defn taken-squares ...)" />
-            <marker date="1454475707000" expanded="true" signature="3006:3079" placeholder="(defn new-game? ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1341,48 +1057,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.055762082">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1454475663000" expanded="true" signature="0:53" placeholder="(ns tic.ai-engine ...)" />
-            <marker date="1454475663000" expanded="true" signature="55:861" placeholder="(defn minimax-square-stack ...)" />
-            <marker date="1454475663000" expanded="true" signature="863:1550" placeholder="(defn minimax ...)" />
-            <marker date="1454475663000" expanded="true" signature="1552:1776" placeholder="(defn- square-index-with-max-score ...)" />
-            <marker date="1454475663000" expanded="true" signature="1778:2011" placeholder="(defn- make-first-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2013:2342" placeholder="(defn- make-move ...)" />
-            <marker date="1454475663000" expanded="true" signature="2344:2590" placeholder="(defn computer-take-square ...)" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj">
+    <entry file="file://$PROJECT_DIR$/spec/tic/console_ui_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.055762082">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding>
-            <marker date="1454476565000" expanded="true" signature="0:283" placeholder="(ns tic.ui.swing-controller-spec ...)" />
-            <marker date="1454476565000" expanded="true" signature="285:740" placeholder="(deftype SpySquareWidget ...)" />
-            <marker date="1454476565000" expanded="true" signature="772:1030" placeholder="(deftype SpyGameListener ...)" />
-            <marker date="1454476565000" expanded="true" signature="1032:3747" placeholder="(describe ...)" />
-          </folding>
+        <state vertical-scroll-proportion="0.39033458">
+          <caret line="14" column="101" selection-start-line="12" selection-start-column="6" selection-end-line="14" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tic/console_ui.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7867133">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tic/board.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51573426">
+          <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tic/game_state.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7763401">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/tic/ai_engine_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8921933">
+        <state vertical-scroll-proportion="0.88724583">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <marker date="1454476649000" expanded="true" signature="0:135" placeholder="(ns tic.ai-engine-spec ...)" />
             <marker date="1454476649000" expanded="true" signature="294:965" placeholder="(describe ...)" />
             <marker date="1454476649000" expanded="true" signature="967:1414" placeholder="(describe ...)" />
-            <marker date="1454476649000" expanded="true" signature="1416:3116" placeholder="(describe ...)" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/tic/board_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55390334">
-          <caret line="197" column="10" selection-start-line="197" selection-start-column="10" selection-end-line="197" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.55637705">
+          <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
           <folding>
             <marker date="1454476684000" expanded="true" signature="0:93" placeholder="(ns tic.board-spec ...)" />
             <marker date="1454476684000" expanded="true" signature="95:295" placeholder="(describe ...)" />
@@ -1392,22 +1113,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/tic/console_ui_spec.clj">
+    <entry file="file://$PROJECT_DIR$/src/tic/ui/swing.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39033458">
-          <caret line="14" column="101" selection-start-line="12" selection-start-column="6" selection-end-line="14" selection-end-column="101" />
+        <state vertical-scroll-proportion="0.8336414">
+          <caret line="58" column="63" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
           <folding>
-            <marker date="1454177507000" expanded="true" signature="0:187" placeholder="(ns tic.console-ui-spec ...)" />
-            <marker date="1454177507000" expanded="true" signature="189:259" placeholder="(defn make-input ...)" />
-            <marker date="1454177507000" expanded="true" signature="261:798" placeholder="(describe ...)" />
+            <marker date="1454877693000" expanded="true" signature="0:366" placeholder="(ns tic.ui.swing ...)" />
+            <marker date="1454877693000" expanded="true" signature="368:727" placeholder="(extend JButton ...)" />
+            <marker date="1454877693000" expanded="true" signature="729:911" placeholder="(defn action-listener ...)" />
+            <marker date="1454877693000" expanded="true" signature="913:987" placeholder="(defn show-msg ...)" />
+            <marker date="1454877693000" expanded="true" signature="989:1184" placeholder="(defn game-listener ...)" />
+            <marker date="1454877693000" expanded="true" signature="1187:1607" placeholder="(defn add-square-buttons! ...)" />
+            <marker date="1454877693000" expanded="true" signature="1609:2240" placeholder="(defn show-gui ...)" />
+            <marker date="1454877693000" expanded="true" signature="2242:2297" placeholder="(defn -main ...)" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/tic/game_controller_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.111524165">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2495379">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <marker date="1454878375000" expanded="true" signature="0:200" placeholder="(ns tic.game-controller-spec ...)" />
+            <marker date="1454878375000" expanded="true" signature="232:547" placeholder="(deftype SpyGameListener ...)" />
+            <marker date="1454878375000" expanded="true" signature="550:1687" placeholder="(describe ...)" />
+            <marker date="1454878375000" expanded="true" signature="1689:3402" placeholder="(describe ...)" />
+            <marker date="1454878375000" expanded="true" signature="3404:4028" placeholder="(describe ...)" />
+            <marker date="1454878375000" expanded="true" signature="4030:4643" placeholder="(describe ...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tic/game_controller.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.805915">
+          <caret line="85" column="53" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
+          <folding>
+            <marker date="1454878634000" expanded="true" signature="0:142" placeholder="(ns tic.game-controller ...)" />
+            <marker date="1454878634000" expanded="true" signature="144:244" placeholder="(defprotocol GameListener ...)" />
+            <marker date="1454878634000" expanded="true" signature="246:311" placeholder="(defn- computer-name ...)" />
+            <marker date="1454878634000" expanded="true" signature="313:433" placeholder="(defn- computer-goes-first ...)" />
+            <marker date="1454878634000" expanded="true" signature="435:537" placeholder="(defn- start-game ...)" />
+            <marker date="1454878634000" expanded="true" signature="539:644" placeholder="(defn- valid-game-state ...)" />
+            <marker date="1454878634000" expanded="true" signature="646:1004" placeholder="(defn start! ...)" />
+            <marker date="1454878634000" expanded="true" signature="1006:1137" placeholder="(defn update-board-with-players-choice ...)" />
+            <marker date="1454878634000" expanded="true" signature="1139:1273" placeholder="(defn update-board-with-computers-choice ...)" />
+            <marker date="1454878634000" expanded="true" signature="1275:1594" placeholder="(defn play-game! ...)" />
+            <marker date="1454878634000" expanded="true" signature="1596:1705" placeholder="(defn get-opposing-player ...)" />
+            <marker date="1454878634000" expanded="true" signature="1707:1893" placeholder="(defn set-winner-and-loser ...)" />
+            <marker date="1454878634000" expanded="true" signature="1895:2030" placeholder="(defn notify-game-over! ...)" />
+            <marker date="1454878634000" expanded="true" signature="2032:2490" placeholder="(defn update-state-if-game-over! ...)" />
+            <marker date="1454878634000" expanded="true" signature="2492:2884" placeholder="(defn take-square! ...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4177449">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding>
+            <marker date="1454879431000" expanded="true" signature="0:270" placeholder="(ns tic.ui.swing-controller-spec ...)" />
+            <marker date="1454879431000" expanded="true" signature="272:727" placeholder="(deftype SpySquareWidget ...)" />
+            <marker date="1454879431000" expanded="true" signature="778:1085" placeholder="(deftype SpyGameListener ...)" />
+            <marker date="1454879431000" expanded="true" signature="1087:3870" placeholder="(describe ...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tic/ui/swing_controller.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19593346">
+          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
           <folding />
         </state>
       </provider>

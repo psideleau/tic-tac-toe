@@ -80,6 +80,7 @@
       (winner? board player2) player2
       :else :_)))
 
+
 (defn- mark-col [col player idx]
   (assoc col idx player))
 
