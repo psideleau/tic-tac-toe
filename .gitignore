@@ -11,3 +11,4 @@ pom.xml
 .lein-env
 /.idea
 *.iml
+.lein-repl-history
