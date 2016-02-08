@@ -74,7 +74,7 @@
       (board/winner? board)
           (do
             (set-winner-and-loser game-state (board/winner board))
-            (.winner game-listener (:computer game))))))
+            (.winner game-listener (.game game-state))))))
 
 (defn take-square!
   ([game-state square]

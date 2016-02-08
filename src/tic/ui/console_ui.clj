@@ -1,4 +1,4 @@
-(ns tic.console-ui
+(ns tic.ui.console-ui
   (:require [tic.game-controller :as controller]
             [tic.board :as board]))
 

@@ -1,6 +1,6 @@
-(ns tic.console-ui-spec
+(ns tic.ui.console-ui-spec
   (:require [speclj.core :refer :all]
-            [tic.console-ui :as ui]
+            [tic.ui.console-ui :as ui]
             [tic.board :as board]
             [tic.game-controller :as game-controller]))
 

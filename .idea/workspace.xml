@@ -26,16 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="449d5f7d-dd9f-483c-b05b-a843b02dd538" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tic/game_state.clj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/tic/console_ui_spec.clj" afterPath="$PROJECT_DIR$/spec/tic/ui/console_ui_spec.clj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tic/console_ui.clj" afterPath="$PROJECT_DIR$/src/tic/ui/console_ui.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/tic/console_ui_spec.clj" afterPath="$PROJECT_DIR$/spec/tic/console_ui_spec.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/tic/game_controller_spec.clj" afterPath="$PROJECT_DIR$/spec/tic/game_controller_spec.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" afterPath="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/board.clj" afterPath="$PROJECT_DIR$/src/tic/board.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/console_ui.clj" afterPath="$PROJECT_DIR$/src/tic/console_ui.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/game_controller.clj" afterPath="$PROJECT_DIR$/src/tic/game_controller.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/ui/swing.clj" afterPath="$PROJECT_DIR$/src/tic/ui/swing.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" afterPath="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" />
     </list>
     <ignored path="tic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,11 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="swing_controller.clj" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tic/ui/swing_controller.clj">
+      <file leaf-file-name="game_controller.clj" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tic/game_controller.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19593346">
-              <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.58225507">
+              <caret line="76" column="58" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -116,11 +112,14 @@
         <option value="$PROJECT_DIR$/spec/tic/board_spec.clj" />
         <option value="$PROJECT_DIR$/src/tic/board.clj" />
         <option value="$PROJECT_DIR$/src/tic/game_state.clj" />
-        <option value="$PROJECT_DIR$/src/tic/ui/swing.clj" />
-        <option value="$PROJECT_DIR$/spec/tic/game_controller_spec.clj" />
-        <option value="$PROJECT_DIR$/src/tic/game_controller.clj" />
-        <option value="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" />
         <option value="$PROJECT_DIR$/src/tic/ui/swing_controller.clj" />
+        <option value="$PROJECT_DIR$/spec/tic/ui/game_controller_spec.clj" />
+        <option value="$PROJECT_DIR$/spec/tic/game_controller_spec.clj" />
+        <option value="$PROJECT_DIR$/spec/tic/ui/console_ui_spec.clj" />
+        <option value="$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj" />
+        <option value="$PROJECT_DIR$/src/tic/ui/console_ui.clj" />
+        <option value="$PROJECT_DIR$/src/tic/ui/swing.clj" />
+        <option value="$PROJECT_DIR$/src/tic/game_controller.clj" />
       </list>
     </option>
   </component>
@@ -325,11 +324,12 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/spec/tic" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/tic/ui" />
+      <recent name="$PROJECT_DIR$/spec/tic/ui" />
+      <recent name="$PROJECT_DIR$/spec/tic" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/spec/tic" />
     </key>
   </component>
@@ -816,12 +816,12 @@
       <workItem from="1454788598249" duration="836000" />
       <workItem from="1454822915168" duration="17532000" />
       <workItem from="1454875563967" duration="41000" />
-      <workItem from="1454875732534" duration="3323000" />
+      <workItem from="1454875732534" duration="5215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177589000" />
+    <option name="totallyTimeSpent" value="179481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -837,7 +837,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36459553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36459553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2638889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1060,20 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/tic/console_ui_spec.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39033458">
-          <caret line="14" column="101" selection-start-line="12" selection-start-column="6" selection-end-line="14" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tic/console_ui.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7867133">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tic/board.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51573426">
@@ -1113,65 +1099,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tic/ui/swing.clj">
+    <entry file="file://$PROJECT_DIR$/src/tic/ui/swing_controller.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8336414">
-          <caret line="58" column="63" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.60998154">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
           <folding>
-            <marker date="1454877693000" expanded="true" signature="0:366" placeholder="(ns tic.ui.swing ...)" />
-            <marker date="1454877693000" expanded="true" signature="368:727" placeholder="(extend JButton ...)" />
-            <marker date="1454877693000" expanded="true" signature="729:911" placeholder="(defn action-listener ...)" />
-            <marker date="1454877693000" expanded="true" signature="913:987" placeholder="(defn show-msg ...)" />
-            <marker date="1454877693000" expanded="true" signature="989:1184" placeholder="(defn game-listener ...)" />
-            <marker date="1454877693000" expanded="true" signature="1187:1607" placeholder="(defn add-square-buttons! ...)" />
-            <marker date="1454877693000" expanded="true" signature="1609:2240" placeholder="(defn show-gui ...)" />
-            <marker date="1454877693000" expanded="true" signature="2242:2297" placeholder="(defn -main ...)" />
+            <marker date="1454879475000" expanded="true" signature="0:207" placeholder="(ns tic.ui.swing-controller ...)" />
+            <marker date="1454879475000" expanded="true" signature="209:371" placeholder="(defprotocol SquareWidget ...)" />
+            <marker date="1454879475000" expanded="true" signature="374:439" placeholder="(def state ...)" />
+            <marker date="1454879475000" expanded="true" signature="441:543" placeholder="(defn player-name ...)" />
+            <marker date="1454879475000" expanded="true" signature="545:754" placeholder="(defn update-ui-square-if-taken! ...)" />
+            <marker date="1454879475000" expanded="true" signature="756:937" placeholder="(defn update-board-ui! ...)" />
+            <marker date="1454879475000" expanded="true" signature="939:1077" placeholder="(defn take-square! ...)" />
+            <marker date="1454879475000" expanded="true" signature="1079:1290" placeholder="(defn init! ...)" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/tic/game_controller_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2495379">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
           <folding>
-            <marker date="1454878375000" expanded="true" signature="0:200" placeholder="(ns tic.game-controller-spec ...)" />
-            <marker date="1454878375000" expanded="true" signature="232:547" placeholder="(deftype SpyGameListener ...)" />
-            <marker date="1454878375000" expanded="true" signature="550:1687" placeholder="(describe ...)" />
-            <marker date="1454878375000" expanded="true" signature="1689:3402" placeholder="(describe ...)" />
-            <marker date="1454878375000" expanded="true" signature="3404:4028" placeholder="(describe ...)" />
-            <marker date="1454878375000" expanded="true" signature="4030:4643" placeholder="(describe ...)" />
+            <marker date="1454907363000" expanded="true" signature="0:200" placeholder="(ns tic.game-controller-spec ...)" />
+            <marker date="1454907363000" expanded="true" signature="232:547" placeholder="(deftype SpyGameListener ...)" />
+            <marker date="1454907363000" expanded="true" signature="550:1687" placeholder="(describe ...)" />
+            <marker date="1454907363000" expanded="true" signature="1689:3402" placeholder="(describe ...)" />
+            <marker date="1454907363000" expanded="true" signature="3404:4028" placeholder="(describe ...)" />
+            <marker date="1454907363000" expanded="true" signature="4030:4643" placeholder="(describe ...)" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tic/game_controller.clj">
+    <entry file="file://$PROJECT_DIR$/spec/tic/ui/console_ui_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.805915">
-          <caret line="85" column="53" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.055452865">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
           <folding>
-            <marker date="1454878634000" expanded="true" signature="0:142" placeholder="(ns tic.game-controller ...)" />
-            <marker date="1454878634000" expanded="true" signature="144:244" placeholder="(defprotocol GameListener ...)" />
-            <marker date="1454878634000" expanded="true" signature="246:311" placeholder="(defn- computer-name ...)" />
-            <marker date="1454878634000" expanded="true" signature="313:433" placeholder="(defn- computer-goes-first ...)" />
-            <marker date="1454878634000" expanded="true" signature="435:537" placeholder="(defn- start-game ...)" />
-            <marker date="1454878634000" expanded="true" signature="539:644" placeholder="(defn- valid-game-state ...)" />
-            <marker date="1454878634000" expanded="true" signature="646:1004" placeholder="(defn start! ...)" />
-            <marker date="1454878634000" expanded="true" signature="1006:1137" placeholder="(defn update-board-with-players-choice ...)" />
-            <marker date="1454878634000" expanded="true" signature="1139:1273" placeholder="(defn update-board-with-computers-choice ...)" />
-            <marker date="1454878634000" expanded="true" signature="1275:1594" placeholder="(defn play-game! ...)" />
-            <marker date="1454878634000" expanded="true" signature="1596:1705" placeholder="(defn get-opposing-player ...)" />
-            <marker date="1454878634000" expanded="true" signature="1707:1893" placeholder="(defn set-winner-and-loser ...)" />
-            <marker date="1454878634000" expanded="true" signature="1895:2030" placeholder="(defn notify-game-over! ...)" />
-            <marker date="1454878634000" expanded="true" signature="2032:2490" placeholder="(defn update-state-if-game-over! ...)" />
-            <marker date="1454878634000" expanded="true" signature="2492:2884" placeholder="(defn take-square! ...)" />
+            <marker date="1454907391000" expanded="true" signature="0:193" placeholder="(ns tic.ui.console-ui-spec ...)" />
+            <marker date="1454907391000" expanded="true" signature="195:265" placeholder="(defn make-input ...)" />
+            <marker date="1454907391000" expanded="true" signature="267:805" placeholder="(describe ...)" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/tic/ui/swing_controller_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4177449">
+        <state vertical-scroll-proportion="0.7763401">
           <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
           <folding>
             <marker date="1454879431000" expanded="true" signature="0:270" placeholder="(ns tic.ui.swing-controller-spec ...)" />
@@ -1182,10 +1156,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tic/ui/swing_controller.clj">
+    <entry file="file://$PROJECT_DIR$/src/tic/ui/console_ui.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19593346">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.38817006">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <marker date="1454907462000" expanded="true" signature="0:106" placeholder="(ns tic.ui.console-ui ...)" />
+            <marker date="1454907462000" expanded="true" signature="130:160" placeholder="(defn current-game ...)" />
+            <marker date="1454907462000" expanded="true" signature="162:926" placeholder="(defn play-game ...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tic/ui/swing.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.083179295">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding>
+            <marker date="1454908113000" expanded="true" signature="0:359" placeholder="(ns tic.ui.swing ...)" />
+            <marker date="1454908113000" expanded="true" signature="361:720" placeholder="(extend JButton ...)" />
+            <marker date="1454908113000" expanded="true" signature="722:904" placeholder="(defn action-listener ...)" />
+            <marker date="1454908113000" expanded="true" signature="906:980" placeholder="(defn show-msg ...)" />
+            <marker date="1454908113000" expanded="true" signature="982:1325" placeholder="(defn game-listener ...)" />
+            <marker date="1454908113000" expanded="true" signature="1328:1536" placeholder="(defn set-action-listener-for-buttons! ...)" />
+            <marker date="1454908113000" expanded="true" signature="1538:1795" placeholder="(defn create-buttons-for! ...)" />
+            <marker date="1454908113000" expanded="true" signature="1797:2391" placeholder="(defn show-gui ...)" />
+            <marker date="1454908113000" expanded="true" signature="2393:2448" placeholder="(defn -main ...)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tic/game_controller.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58225507">
+          <caret line="76" column="58" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
           <folding />
         </state>
       </provider>
