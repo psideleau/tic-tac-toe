@@ -1,7 +1,7 @@
 (ns tic.ui.swing
-  (:require [tic.game-controller :as game-controller]
-            [tic.ui.swing-controller :as swing-controller])
-  (:import [javax.swing SwingUtilities JFrame JLabel JPanel JButton JOptionPane]
+  (:require [tic.ui.swing-controller :as swing-controller]
+            [tic.ui.console-ui :as console-ui])
+  (:import [javax.swing SwingUtilities JFrame JPanel JButton JOptionPane]
            [java.awt GridLayout BorderLayout]
            [java.awt.event ActionListener]
            [tic.game_controller GameListener]
@@ -27,9 +27,9 @@
 
 (defn game-listener [jframe ui-squares]
   (reify
-    game-controller/GameListener
+    GameListener
     (update-board! [this game] (swing-controller/update-board-ui! ui-squares game))
-    (winner  [this game] (do (println game) (show-msg jframe (str (:winner game) " has won The Game"))))
+    (winner  [this game] (show-msg jframe (str (:winner game) " has won The Game")))
     (tied [this game] (show-msg jframe "The game has ended in a tie"))))
 
 
@@ -67,4 +67,8 @@
       (.setVisible true))))
 
 (defn -main []
-  (SwingUtilities/invokeLater show-gui))
+  (println "Enter 1 for Swing 2 for Console")
+  (flush)
+  (case (Integer/parseInt (read-line))
+    1  (SwingUtilities/invokeLater show-gui)
+    2   (console-ui/play-game)))

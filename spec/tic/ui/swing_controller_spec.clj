@@ -1,9 +1,11 @@
 (ns tic.ui.swing-controller-spec
   (:require [speclj.core :refer :all]
-            [tic.board :as board]
-            [tic.game-controller :as game-controller]
+            (tic [board :as board]
+                 [game-controller :as game-controller]
+                 [game-state :as game-state])
             [tic.ui.swing-controller :as swing-controller])
-  (:import [tic.ui.swing_controller SquareWidget]))
+  (:import [tic.ui.swing_controller SquareWidget]
+           [tic.game_controller GameListener]))
 
 (deftype SpySquareWidget [^{:volatile-mutable true} square-index
                           ^{:volatile-mutable true} current-state
@@ -19,7 +21,7 @@
 
 (declare squares)
 (deftype SpyGameListener []
-  game-controller/GameListener
+  GameListener
   (update-board! [this game]  (swing-controller/update-board-ui! @squares game))
   (winner [this game] (swap! game-spy-data assoc :won-game-called true :game game))
   (tied [this game] (swap! game-spy-data assoc :tied-game-called true :game game)))
@@ -36,7 +38,10 @@
  (context "starting a game"
    (it "should start game"
     (should (every? #(= (.current-state %) "_") (:ui-squares @swing-controller/state)))
-    (should= (.game (:game-state @swing-controller/state)) (game-controller/start! {:player :X :player-first true}))
+    (should= (.game (:game-state @swing-controller/state)) (game-controller/start!
+                                                             {:player :X
+                                                              :player-first true
+                                                              :game-state (game-state/memory-game-state)}))
     (should (every? #(= (.disabled? %) false)   (:ui-squares @swing-controller/state)))))
 
  (context "playing the game"

@@ -1,30 +1,32 @@
 (ns tic.ui.console-ui
-  (:require [tic.game-controller :as controller]
-            [tic.board :as board]))
+  (:require (tic  [game-controller :as controller]
+                  [game-state :as game-state])))
 
-(def game (atom {}))
-
-(defn current-game []
-  @game)
-
-(defn play-game []
+(defn print-console [msg]
   (do
-    (println "Would you like to go first? [true/false]")
-    (flush)
+    (println msg)
+    (flush)))
 
-    (let [player-first (Boolean/parseBoolean (read-line))]
-      (reset! game (controller/start! {:player :X :player-first player-first}))
-      (println "game" @game)
-      (flush)
+(defn game-listener [game-state]
+  (reify
+    controller/GameListener
+    (update-board! [this game]
+      (print-console (:board game)))
+    (winner  [this game]
+      (print-console (str (:winner game) " has won The Game")))
+    (tied [this game] (print-console "The game has ended in a tie"))))
 
-      (while (not (or (board/winner? (:board @game)) (board/all-squares-taken? (:board @game))))
-        (println "Take square: ")
-        (let [square (Integer/parseInt (read-line))]
-          (reset! game (controller/take-square! @game square))
-          (println (:board @game))
-          (flush)))
 
-      (if (board/tie? (:board @game) (:player @game) (:computer @game))
-        (println "The game ends in a tie")
-        (println "The winner is " (board/winner (:board @game)))))))
+(defn play-game
+  ([]
+   (play-game (game-state/memory-game-state)))
+  ([game-state]
+    (do
+      (let [game-listener (game-listener game-state)]
+        (controller/start! {:player :X :player-first true :game-state game-state})
+        (while (not (game-state/get-gs game-state :game-over))
+          (println (.game game-state))
+          (print-console "Take Square [0-8]")
+          (let [square (read-line)]
+            (controller/take-square! game-state (Integer/parseInt square) game-listener)))))))
 

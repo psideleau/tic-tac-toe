@@ -1,8 +1,7 @@
 (ns tic.ui.swing-controller
-  (:require [tic.game-controller :as game-controller]
-            [tic.board :as board]
-            [tic.game-state :as game-state])
-  (:import  [tic.game_state MemoryGameState]))
+  (:require (tic [game-controller :as game-controller]
+                 [board :as board]
+                 [game-state :as game-state])))
 
 (defprotocol SquareWidget
   (square-index [this])
@@ -10,7 +9,6 @@
   (set-taken-by! [this player])
   (set-disabled! [this disabled])
   (disabled? [this]))
-
 
 (def state
   (atom {:game-state (game-state/memory-game-state)}))

@@ -1,7 +1,7 @@
 (ns tic.ai-engine-spec
   (:require [speclj.core :refer :all]
-            [tic.board :as board]
-            [tic.ai-engine :as engine]))
+            (tic [board :as board]
+                 [ai-engine :as engine])))
 
 (def corner-squares [0 2 6 8])
 (def edge-squares [1 3 5 7])

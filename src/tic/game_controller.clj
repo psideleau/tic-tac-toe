@@ -1,7 +1,7 @@
 (ns tic.game-controller
-  (:require [tic.board :as board]
-            [tic.ai-engine :as engine]
-            [tic.game-state :as game-state]))
+  (:require (tic [board :as board]
+                 [ai-engine :as engine]
+                 [game-state :as game-state :refer [get-gs]])))
 
 (defprotocol GameListener
   (update-board! [this game])
@@ -21,18 +21,13 @@
     (computer-goes-first game)
     game))
 
-(defn- valid-game-state [game-state]
-  (if game-state
-    game-state
-    (game-state/memory-game-state)))
 
 (defn start! [{:keys [player player-first game-state]}]
    (let [game   {:player player
                  :computer (computer-name player)
                  :board (board/new-board)}
-         updated-game (start-game game player-first)
-         valid-game-state (valid-game-state game-state)]
-     (.set-game! valid-game-state updated-game)
+         updated-game (start-game game player-first)]
+     (.set-game! game-state updated-game)
      updated-game))
 
 (defn update-board-with-players-choice [game square]
@@ -53,35 +48,37 @@
     (:player game)))
 
 (defn set-winner-and-loser [game-state winner]
-  (let [game (.game game-state)]
-    (doto game-state
-      (.set-winner! winner)
-      (.set-loser!  (get-opposing-player game winner)))))
+  (.set-final-results! game-state {:winner winner
+                                   :loser (get-opposing-player (.game game-state) winner)
+                                   :game-over true}))
 
-(defn notify-game-over! [game-state update-fn game-over-fn]
-  (update-fn game-state)
-  (if game-over-fn
-    (game-over-fn game-state)))
+
+(defn execute-functions-if-game-over [{:keys [game-state win-fn, tie-fn]}]
+  (let [game  (.game game-state)
+        board (:board game)]
+    (cond
+      (board/tie? board (:player game) (:computer game)) (tie-fn)
+      (board/winner? board) (win-fn))))
 
 (defn update-state-if-game-over! [game-state game-listener]
-  (let [board (.board game-state)
-        game  (.game game-state)]
-    (cond
-      (board/tie? board (:player game) (:computer game))
-        (do
-          (.set-tie! game-state)
-          (.tied game-listener (.game game-state)) )
-      (board/winner? board)
-          (do
-            (set-winner-and-loser game-state (board/winner board))
-            (.winner game-listener (.game game-state))))))
+  (execute-functions-if-game-over {
+      :game-state game-state
+      :tie-fn #(do
+                  (.set-final-results! game-state {:tie true :game-over true})
+                  (.tied game-listener (.game game-state)))
+      :win-fn #(do
+                (set-winner-and-loser game-state (board/winner (get-gs game-state :board)))
+                (.winner game-listener (.game game-state)))}))
 
-(defn take-square!
-  ([game-state square]
-    (take-square! game-state square nil))
-  ([game-state square game-listener]
-    (when-not (board/free? (.board game-state) square)
+(defn take-square! [game-state square game-listener]
+    (when-not (board/free? (get-gs game-state :board) square)
         (throw (IllegalStateException. "Square is already taken")))
     (play-game! game-state square)
     (.update-board! game-listener (.game game-state))
-    (update-state-if-game-over! game-state game-listener)))
+    (update-state-if-game-over! game-state game-listener))
+
+(defn game-over? [game-state]
+  (let [return-true-fn (fn [] true)]
+    (execute-functions-if-game-over {:game-state game-state
+                                 :tie-fn return-true-fn
+                                 :win-fn return-true-fn })))
