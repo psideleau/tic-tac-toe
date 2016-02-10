@@ -1,0 +1,17 @@
+.board
+{
+    display: table;
+}
+
+.row {
+ display:table-row
+}
+
+.square
+{
+    display: table-cell;
+    border: solid;
+    border-width: thin;
+    padding-left: 5px;
+    padding-right: 5px;
+}
