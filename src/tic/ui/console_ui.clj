@@ -7,7 +7,7 @@
     (println msg)
     (flush)))
 
-(defn game-listener [game-state]
+(defn game-listener []
   (reify
     controller/GameListener
     (update-board! [this game]
@@ -19,14 +19,13 @@
 
 (defn play-game
   ([]
-   (play-game (game-state/memory-game-state)))
-  ([game-state]
-    (do
-      (let [game-listener (game-listener game-state)]
-        (controller/start! {:player :X :player-first true :game-state game-state})
-        (while (not (game-state/get-gs game-state :game-over))
-          (println (.game game-state))
+   (play-game (game-listener)))
+  ([game-listener]
+    (loop [game (controller/start {:player :X :player-first true})]
+      (if-not (:game-over game)
+        (do
+          (println game)
           (print-console "Take Square [0-8]")
           (let [square (read-line)]
-            (controller/take-square! game-state (Integer/parseInt square) game-listener)))))))
+          (recur (controller/take-square game (Integer/parseInt square) game-listener))))))))
 

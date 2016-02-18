@@ -24,9 +24,9 @@
   (layout/common
     [:h1 "New User"]
     (form/form-to [:post "/users"]
-                  (form/label "name" "Enter name")
-                  (form/text-field "name")
-                  (form/submit-button "Submit"))))
+    (form/label "name" "Enter name")
+    (form/text-field "name")
+    (form/submit-button "Submit"))))
 
 (defn create-user! [req]
   (response/redirect (str "/users/1?name=" (get (:params req) :name))))

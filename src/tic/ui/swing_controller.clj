@@ -11,7 +11,7 @@
   (disabled? [this]))
 
 (def state
-  (atom {:game-state (game-state/memory-game-state)}))
+  (game-state/memory-game-state))
 
 (defn player-name [board ui-square]
   (name (board/get-board-square board  (square-index ui-square))))
@@ -28,10 +28,10 @@
       (update-ui-square-if-taken! (:board game) ui-square))))
 
 (defn take-square! [ui-square game-listener]
-  (game-controller/take-square! (:game-state @state) (square-index ui-square) game-listener))
+  (reset! state (game-controller/take-square @state (square-index ui-square) game-listener)))
 
 (defn init! [ui-squares]
-  (game-controller/start! {:player :X :player-first true :game-state (:game-state @state)})
+  (reset! state (game-controller/start {:player :X :player-first true}))
   (doseq [square ui-squares]
     (set-disabled! square false)
     (set-taken-by! square "_")))

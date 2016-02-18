@@ -15,7 +15,10 @@
   (get (.game game-state) property))
 
 (defn memory-game-state []
-  (MemoryGameState. (atom {})))
+  (atom {}))
+
+(defn update-game-state! [game-state game]
+  (reset! game-state game))
 
 
 

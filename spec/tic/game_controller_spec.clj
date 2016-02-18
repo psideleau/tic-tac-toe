@@ -12,23 +12,16 @@
   (tied [this game]  (swap! game-spy-data assoc :tied-called true :game game)))
 
 
-(describe "starting a new game"
-  (before
-    (def game-state (game-state/memory-game-state)))
-
-
+(describe "starting a new game" 
   (it "should create an empty board when player picks X and wants to go first"
       (let [expected-game {:board    [[:_ :_ :_] [:_ :_ :_] [:_ :_ :_]]
                            :player   :X
                            :computer :O}]
-        (should= expected-game (game-controller/start! {:player       :X
-                                                        :player-first true
-                                                        :game-state   game-state}))
-        (should= expected-game (.game game-state))))
+        (should= expected-game (game-controller/start {:player        :X
+                                                        :player-first true}))))
 
   (it "should create a board where computer goes first when player picks O and wants to go second"
-      (game-controller/start! {:player :O :player-first false :game-state game-state})
-      (let [game (.game game-state)]
+      (let [game (game-controller/start {:player :O :player-first false })]
         (should= :O (:player game))
         (should= :X (:computer game))
         (should= :O (:current-turn game))
@@ -40,67 +33,64 @@
     (before
       (reset! game-spy-data {})
       (def spy-game-listener (SpyGameListener.))
-      (def game-state (game-state/memory-game-state))
-      (game-controller/start! {:player :O :player-first true :game-state game-state}))
+      (def game (game-controller/start {:player :O :player-first true})))
 
     (it "should allow user to take free square and have computer go next"
-        (game-controller/take-square! game-state 1 spy-game-listener)
-        (should= :O (board/get-board-square (:board (.game game-state)) 1))
-        (should= 1 (count (board/taken-squares (:board (.game game-state)) :X)))
-        (should= :O (:current-turn (.game game-state)))
-        (should (:update-board-called @game-spy-data))
-        (should-not (:tie (.game game-state)))
-        (should-not (:winner (.game game-state)))
-        (should-not (:loser (.game game-state)))
-        (should-not (:game-over (.game game-state)))
-        (should-not (:winner-called @game-spy-data))
-        (should-not (:tied-called @game-spy-data)))
+        (let [updated-game (game-controller/take-square game 1 spy-game-listener)]
+          (println "THE BOARD IS " (:board updated-game))
+          (should= :O (board/get-board-square (:board updated-game ) 1))
+          (should= 1 (count (board/taken-squares (:board updated-game ) :X)))
+          (should= :O (:current-turn updated-game))
+          (should (:update-board-called @game-spy-data))
+          (should-not (:tie updated-game))
+          (should-not (:winner updated-game))
+          (should-not (:loser updated-game))
+          (should-not (:game-over updated-game))
+          (should-not (:winner-called updated-game))
+          (should-not (:tied-called updated-game))))
 
     (it "should throw an exception if user attempts to take a square already taken"
-        (game-controller/take-square! game-state 1 spy-game-listener)
-        (should-throw IllegalStateException (game-controller/take-square! game-state 1 spy-game-listener)))
+        (let [updated-game (game-controller/take-square game 1 spy-game-listener)]
+        (should-throw IllegalStateException (game-controller/take-square updated-game 1 spy-game-listener))))
 
     (it "a computer should beat an inexperienced user"
-        (game-controller/take-square! game-state 1 spy-game-listener)
-        (game-controller/take-square! game-state 2 spy-game-listener)
-        (game-controller/take-square! game-state 7 spy-game-listener)
-        (should (board/winner? (:board (.game game-state) (:computer (.game game-state)))))
-        (should= :X (board/winner (:board (.game game-state))))
-        (should= :X (:winner (.game game-state)))
-        (should (:game-over (.game game-state)))
-        (should= :O (:loser (.game game-state)))
-        (should-not (:tie (.game game-state)))
-        (should (:winner-called @game-spy-data))))
+        (let [state1 (game-controller/take-square game 1 spy-game-listener)
+              state2 (game-controller/take-square state1 2 spy-game-listener)
+              end-game (game-controller/take-square state2 7 spy-game-listener)]
+        (should (board/winner? (:board end-game) (:computer end-game)))
+        (should= :X (board/winner (:board end-game)))
+        (should= :X (:winner end-game))
+        (should (:game-over  end-game))
+        (should= :O (:loser  end-game))
+        (should-not (:tie    end-game))
+        (should (:winner-called @game-spy-data)))))
 
 (describe "user winning the game"
   (before
     (reset! game-spy-data {})
-    (def spy-game-listener (SpyGameListener.))
-    (def game-state (game-state/memory-game-state)))
+    (def spy-game-listener (SpyGameListener.)))
   (it "user wins the game"
-      (let [game {:board [[:X :X :_] [:O :X :O] [:X :O :X]] :player :X :computer :O}]
-        (.set-game! game-state game)
-        (game-controller/take-square! game-state 2 spy-game-listener)
-        (should= :X (board/winner (:board (.game game-state))))
-        (should= :X (:winner (.game game-state)))
-        (should= :O (:loser (.game game-state)))
-        (should (:game-over (.game game-state)))
-        (should-not (:tie (.game game-state)))
+      (let [fake-game {:board [[:X :X :_] [:O :X :O] [:X :O :X]] :player :X :computer :O}
+            game  (game-controller/take-square fake-game 2 spy-game-listener)]
+        (should= :X (board/winner (:board game)))
+        (should= :X (:winner game))
+        (should= :O (:loser game))
+        (should (:game-over game))
+        (should-not (:tie game))
         (should (:winner-called @game-spy-data)))))
 
 (describe "user tying the game"
   (before
     (reset! game-spy-data {})
-    (def spy-game-listener (SpyGameListener.))
-    (def game-state (game-state/memory-game-state)))
+    (def spy-game-listener (SpyGameListener.)))
   (it "user ties the game"
-      (let [game {:board [[:O :O :_]
+      (let [fake-game {:board [[:O :O :_]
                           [:X :X :O]
-                          [:O :O :X]] :player :X :computer :O}]
-        (.set-game! game-state game)
-        (game-controller/take-square! game-state 2 spy-game-listener)
-        (should (:tie (.game game-state)))
-        (should-not (:winner (.game game-state)))
-        (should-not (:loser (.game game-state)))
-        (should (:game-over (.game game-state)))
+                          [:O :O :X]] :player :X :computer :O}
+            game  (game-controller/take-square fake-game 2 spy-game-listener)]
+        
+        (should (:tie game))
+        (should-not (:winner game))
+        (should-not (:loser game))
+        (should (:game-over game))
         (should (:tied-called @game-spy-data)))))
