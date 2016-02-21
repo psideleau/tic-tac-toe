@@ -18,7 +18,7 @@
 (defn create-row [offset]
   [:div {:class "row"}
     (map (fn [id] [:div {:class "square"}
-             [:input {:type "button" :name "square" :value (str (+ offset id))}]]) (range 3))])
+             [:input {:type "button" :class "tic-btn" :name "square" :value "_" :id (str "square-" (+ offset id))}]]) (range 3))])
 
 (defn home []
   (layout/common [:h1 "Tic-Tac-Toe"]
@@ -27,7 +27,7 @@
                   (create-row 3)
                   (create-row 6)
                  ]
-                 (  elm/link-to "/start" "Start a game")))
+                 [:a  {:href "#" :id "start-game"} "start game" ]))
 
 (defn start-game []
   (response/response (game-controller/start {:player :X :player-first true})))

@@ -7,7 +7,13 @@
                  [compojure "1.4.0"]
                  [hiccup "1.0.5"]
                  [ring-server "0.4.0"]
-                 [ring/ring-json "0.4.0"]]
+                 [ring/ring-json "0.4.0"]
+                 ;;ClojureScript
+                 [org.clojure/clojurescript "1.7.122"]
+                 [cljs-ajax "0.5.1"]
+                 [prismatic/dommy "1.1.0"]]
+  :source-paths ["src/clj"]
+
   :ring {:handler tic.ui.handler/app
          :init tic.ui.handler/init
          :destroy tic.ui.handler/destroy}
@@ -21,6 +27,18 @@
                         [org.clojure/data.json "0.2.6"]
                         [ring/ring-devel "1.4.0"]]}}
   :plugins [[speclj "3.3.1"]
-            [lein-ring "0.9.7"]]
+            [lein-ring "0.9.7"]
+            [lein-cljsbuild "1.1.2"]]
+  :cljsbuild {
+              :builds [ { :id "test"
+                         :source-paths ["src/cljs"]
+                         :compiler {:main "tic.client"
+                                    :asset-path "js/out"
+                                    :output-to "resources/public/js/app.js"
+                                    :output-dir "resources/public/js/out"
+                                    :optimizations :none
+                                    :source-map true} }
+                       ]
+              }
   :main tic.ui.swing
   :test-paths ["spec"])
