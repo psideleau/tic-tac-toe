@@ -2,9 +2,18 @@
   (:require [compojure.core :refer [GET POST defroutes]]
             [ring.util.response :as response]
             [tic.ui.layout :as layout]
-            [hiccup.form :as form]
-            [hiccup.util :as util]
-            [hiccup.element :as elm]))
+            [hiccup.element :as elm]
+            (tic [game-controller :as game-controller]
+                 [game-unmarshaller :as game-unmarshaller])
+            )
+  (:import (tic.game_controller GameListener)))
+
+(deftype WebGameListener [callback-methods
+                          callback-method-atom]
+  GameListener
+  (update-board! [this game] )
+  (winner  [this game] (reset! callback-method-atom (:winner-method callback-methods)))
+  (tied [this game] (reset! callback-method-atom (:tied-method callback-methods))))
 
 (defn create-row [offset]
   [:div {:class "row"}
@@ -20,22 +29,17 @@
                  ]
                  (  elm/link-to "/start" "Start a game")))
 
-(defn new-user []
-  (layout/common
-    [:h1 "New User"]
-    (form/form-to [:post "/users"]
-    (form/label "name" "Enter name")
-    (form/text-field "name")
-    (form/submit-button "Submit"))))
+(defn start-game []
+  (response/response (game-controller/start {:player :X :player-first true})))
 
-(defn create-user! [req]
-  (response/redirect (str "/users/1?name=" (get (:params req) :name))))
-
-(defn get-user [req]
-  (layout/common [:h1 (str "User: " (util/escape-html (get (:params req) :name)))]))
+(defn take-square [square json-request]
+  (let [callback-method-atom (atom nil)
+        game-listener (WebGameListener. (:callback-methods json-request) callback-method-atom)
+        unmarshalled-game (game-unmarshaller/unmarshall (:game json-request))
+        updated-game (game-controller/take-square unmarshalled-game square game-listener)]
+    (response/response  {:game updated-game :callback-method @callback-method-atom})))
 
 (defroutes home-routes
-           (GET "/" [] (home))
-           (GET "/users/new" req (new-user))
-           (GET "/users/:id" req (get-user req))
-           (POST "/users"    req (create-user! req)))
+  (GET "/" [] (home))
+  (POST "/tic-tac-toe" [] (start-game))
+  (POST "/squares/:id" [id :as request] (take-square (Integer/parseInt id) (:body request))))

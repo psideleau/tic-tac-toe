@@ -1,6 +1,5 @@
 (ns tic.ui.console-ui
-  (:require (tic  [game-controller :as controller]
-                  [game-state :as game-state])))
+  (:require (tic  [game-controller :as controller])))
 
 (defn print-console [msg]
   (do
@@ -15,7 +14,6 @@
     (winner  [this game]
       (print-console (str (:winner game) " has won The Game")))
     (tied [this game] (print-console "The game has ended in a tie"))))
-
 
 (defn play-game
   ([]
