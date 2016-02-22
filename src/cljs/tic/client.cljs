@@ -20,11 +20,20 @@
   (reset! game response)
       (update-board (:board response)))
 
+(defn ^:export won []
+  (js/alert (str (:winner @game) " has won the game")))
+
+(defn ^:export tied []
+  (js/alert "the game ends in a tie"))
 
 (defn take-square-handler [response]
       (.log js/console "server responded..." (str response))
       (reset! game (:game response))
-      (update-board (:board @game)))
+      (update-board (:board @game))
+      (if (:callback-method response)
+        (let [callback-fn (aget js/window "tic" "client" (:callback-method response))]
+             (println callback-fn)
+             (callback-fn))))
 
 (defn error-handler [{:keys [status status-text]}]
       (.log js/console (str "something bad happened: " status " " status-text)))
@@ -43,7 +52,7 @@
   (POST (str "/squares/" square)
         {:handler take-square-handler
          :error-handler error-handler
-         :params {:game @game, :callback-methods{:winner-method "win" :tied-method "tied"}}
+         :params {:game @game, :callback-methods{:winner-method "won" :tied-method "tied"}}
          :format :json
          :keywords? true
          :response-format :json})))
