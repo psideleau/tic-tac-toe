@@ -5,7 +5,7 @@
 
 (enable-console-print!)
 
-(println "Hello world!")
+;(println "Hello world!")
 (def game (atom {}))
 
 (defn update-board [board]
@@ -76,7 +76,7 @@
     (dommy/listen! (sel1 :#start-game) :click start-game)))
 
 
-(set! (.-onload js/window)  init)
+;(set! (.-onload js/window)  init)
 
 
 
