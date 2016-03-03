@@ -13,7 +13,7 @@
                  [cljs-ajax "0.5.1"]
                  [prismatic/dommy "1.1.0"]
                  [reagent "0.6.0-alpha"]]
-  :source-paths ["src/clj"]
+  :source-paths ["src/clj" "src/cljc"]
 
   :ring {:handler tic.ui.handler/app
          :init tic.ui.handler/init
@@ -33,23 +33,24 @@
             [lein-cljsbuild "1.1.2"]
             [lein-figwheel "0.5.0-4"]]
   :cljsbuild {
-              :builds [ { :id "dev"
-                         :source-paths ["src/cljs"]
-                         :figwheel true
+              :builds [{:id           "dev"
+                        :source-paths ["src/cljs"]
+                        :figwheel     true
+                        :compiler     {:asset-path    "js/out"
+                                       :output-to     "resources/public/js/app.js"
+                                       :output-dir    "resources/public/js/out"
+                                       :optimizations :none
+                                       :source-map    true}
+                        }
+                         { :id "test"
+                         :source-paths ["src/cljs" "src/cljc"]
+                         :figwheel false
                          :compiler {:asset-path "js/out"
-                                    :output-to "resources/public/js/app.js"
+                                    :output-to "resources/public/js/test.js"
                                     :output-dir "resources/public/js/out"
                                     :optimizations :none
+                                    :main "tic.runner"
                                     :source-map true} }
-                       { :id "test"
-                        :source-paths ["src/cljs" "spec/cljs"]
-                        :figwheel false
-                        :compiler {:asset-path "js/out"
-                                   :output-to "resources/public/js/test.js"
-                                   :output-dir "resources/public/js/out"
-                                   :optimizations :none
-                                   :main "tic.runner"
-                                   :source-map true} }
                        ]
               }
   :main tic.ui.swing

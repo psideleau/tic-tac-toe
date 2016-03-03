@@ -1,14 +1,25 @@
 (ns tic.ui.handler-spec
   (:require [speclj.core :refer :all]
+            [ring.util.codec :as codec]
             [ring.mock.request :refer :all]
             [clojure.data.json :as json]
             [tic.ui.handler :refer :all]
             [tic.game-controller :as game-controller]))
 
+
 (defn get-request [url]
   (app (request :get url)))
 
+(defn should-draw-tic-tac-toe-board [body]
+  (should= 3 (count (re-seq #"class=\"row\"" body)))
+  (should= 9 (count (re-seq #"class=\"square\"" body))))
+
 (describe "starting a game of tic-tac-toe"
+  (it "GET '/' should say tic tac toe"
+      (let [response (get-request "/")
+            body (:body response)]
+        (should-draw-tic-tac-toe-board body)
+        (should= 200 (:status response))))
 
   (it "POST '/tic-tac-toe' should start a new game"
       (let [expected-game (game-controller/start { :player :X :player-first true})
