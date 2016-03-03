@@ -50,26 +50,15 @@
   (assoc game :winner winner :loser (get-opposing-player game winner) :game-over true))
 
 
-(defn execute-functions-if-game-over [{:keys [game win-fn, tie-fn]}]
+(defn set-end-state-if-game-over [game]
   (let [board (:board game)]
     (cond
-      (board/tie? board (:player game) (:computer game)) (tie-fn)
-      (board/winner? board) (win-fn)
+      (board/tie? board (:player game) (:computer game)) (assoc game :tie true :game-over true)
+      (board/winner? board) (set-winner-and-loser game (board/winner (:board game)))
       :else game)))
 
-(defn update-state-if-game-over [game game-listener]
-  (execute-functions-if-game-over {
-      :game game
-      :tie-fn #(let [updated-game (assoc game :tie true :game-over true)]
-                  (.tied game-listener updated-game)
-                  updated-game)
-      :win-fn #(let [updated-game (set-winner-and-loser game (board/winner (:board game)))]
-                (.winner game-listener updated-game)
-                updated-game)}))
-
-(defn take-square [game square game-listener]
+(defn take-square [game square]
     (when-not (board/free? (:board game) square)
         (throw (IllegalStateException. "Square is already taken")))
   (let [game (play-game game square)]
-    (.update-board! game-listener game)
-    (update-state-if-game-over game game-listener)))
+    (set-end-state-if-game-over game)))

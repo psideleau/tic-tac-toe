@@ -1,5 +1,6 @@
 (ns tic.reagent
   (:require
+    [tic.ui.game-over :as game-over]
     [ajax.core :refer [GET POST]]
     [reagent.core :as r]))
 
@@ -20,10 +21,10 @@
          :keywords? true
          :response-format :json}))
 
-(defn ^:export won []
-  (js/alert (str (:winner @game) " has won the game")))
+(defn  won [game]
+  (js/alert (str (:winner game) " has won the game")))
 
-(defn ^:export tied []
+(defn tied [game]
   (js/alert "the game ends in a tie"))
 
 (defn get-square-value [row col game]
@@ -35,9 +36,7 @@
 (defn take-square-handler [response]
   (.log js/console "server responded..." (str response))
   (reset! game (:game response))
-  (if (:callback-method response)
-    (let [callback-fn (aget js/window "tic" "reagent" (:callback-method response))]
-      (callback-fn))))
+  (game-over/execute-if-game-over {:tie-fn tied :win-fn won :game @game}))
 
 (defn take-square [row col]
   (let [square (+ (* row 3) col)]
@@ -77,7 +76,7 @@
   (r/render-component [board-ui]
                       (.getElementById js/document "main-area")))
 
-(defn ^:export run []
+(defn run []
   (mountit))
 
 (run)

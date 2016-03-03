@@ -1,8 +1,7 @@
 (ns tic.ui.swing-controller-spec
   (:require [speclj.core :refer :all]
             (tic [board :as board]
-                 [game-controller :as game-controller]
-                 [game-state :as game-state])
+                 [game-controller :as game-controller])
             [tic.ui.swing-controller :as swing-controller])
   (:import [tic.ui.swing_controller SquareWidget]
            [tic.game_controller GameListener]))
@@ -17,20 +16,13 @@
     (set-disabled! [this disabled-param] (set! disabled disabled-param))
     (disabled? [this] disabled))
 
-(def game-spy-data (atom {}))
 
 (declare squares)
-(deftype SpyGameListener []
-  GameListener
-  (update-board! [this game]  (swing-controller/update-board-ui! @squares game))
-  (winner [this game] (swap! game-spy-data assoc :won-game-called true :game game))
-  (tied [this game] (swap! game-spy-data assoc :tied-game-called true :game game)))
+
 
 (describe "playing tic-tac-toe"
  (before
-   (reset! game-spy-data {})
    (def squares (atom []))
-   (def game-listener (SpyGameListener.))
    (dotimes [idx 9]
      (reset! squares (into @squares [(SpySquareWidget. idx  "X" true)])))
      (swing-controller/init! @squares))
@@ -47,46 +39,13 @@
  (context "playing the game"
    (it "take an open square"
     (let  [ui-square (first @squares)]
-      (swing-controller/take-square! ui-square game-listener)
+      (swing-controller/take-square! ui-square @squares)
       (let [game @swing-controller/state
             board (:board game)
             computer-ui-square (nth @squares (first (board/taken-squares board (:computer game))))]
         (should= 7 (count (board/open-squares board)))
         (should= "X" (.current-state ui-square))
         (should (.disabled? ui-square))
-        (should-not (:lost-game-called @game-spy-data))
-        (should-not (:won-game-called @game-spy-data))
-        (should-not (:tied-game-called @game-spy-data))
         (should= "O" (.current-state computer-ui-square))
-        (should (.disabled? computer-ui-square))))))
+        (should (.disabled? computer-ui-square)))))))
 
-  (context "the game is over"
-    (it "user won the game"
-      (let  [ui-square (nth @squares 2)
-             game {:board [[:O :O :_]
-                            [:X :X :O]
-                            [:O :O :X]] :player :O :computer :X}]
-        (reset! swing-controller/state  game)
-        (swing-controller/take-square! ui-square game-listener)
-        (should (:won-game-called @game-spy-data))
-        (should-not (:tied-game-called @game-spy-data))))
-
-    (it "computer won the game"
-     (let  [ui-square (nth @squares 7)
-            game {:board [[:O :O :_]
-                          [:X :X :O]
-                          [:O :_ :X]] :player :X :computer :O}]
-         (reset! swing-controller/state  game)
-         (swing-controller/take-square! ui-square game-listener)
-         (should (:won-game-called @game-spy-data))
-         (should-not (:tied-game-called @game-spy-data))))
-
-    (it "game ended in a tie"
-     (let  [ui-square (nth @squares 7)
-            game {:board [[:O :O :X]
-                           [:X :X :O]
-                           [:O :_ :X]] :player :X :computer :O}]
-         (reset! swing-controller/state  game)
-         (swing-controller/take-square! ui-square game-listener)
-         (should-not (:won-game-called @game-spy-data))
-         (should (:tied-game-called @game-spy-data))))))

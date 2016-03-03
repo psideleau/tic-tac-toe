@@ -4,16 +4,8 @@
             [tic.ui.layout :as layout]
             [hiccup.element :as elm]
             (tic [game-controller :as game-controller]
-                 [game-unmarshaller :as game-unmarshaller])
-            )
-  (:import (tic.game_controller GameListener)))
-
-(deftype WebGameListener [callback-methods
-                          callback-method-atom]
-  GameListener
-  (update-board! [this game] )
-  (winner  [this game] (reset! callback-method-atom (:winner-method callback-methods)))
-  (tied [this game] (reset! callback-method-atom (:tied-method callback-methods))))
+                 [game-unmarshaller :as game-unmarshaller]
+                 )))
 
 (defn create-row [offset]
   [:div {:class "row"}
@@ -33,11 +25,9 @@
   (response/response (game-controller/start {:player :X :player-first true})))
 
 (defn take-square [square json-request]
-  (let [callback-method-atom (atom nil)
-        game-listener (WebGameListener. (:callback-methods json-request) callback-method-atom)
-        unmarshalled-game (game-unmarshaller/unmarshall (:game json-request))
-        updated-game (game-controller/take-square unmarshalled-game square game-listener)]
-    (response/response  {:game updated-game :callback-method @callback-method-atom})))
+  (let [unmarshalled-game (game-unmarshaller/unmarshall (:game json-request))
+        updated-game (game-controller/take-square unmarshalled-game square)]
+    (response/response  {:game updated-game})))
 
 (defroutes home-routes
   (GET "/" [] (home))

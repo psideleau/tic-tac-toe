@@ -13,3 +13,5 @@ pom.xml
 /.idea
 *.iml
 .lein-repl-history
+figwheel_server.log
+/node_modules

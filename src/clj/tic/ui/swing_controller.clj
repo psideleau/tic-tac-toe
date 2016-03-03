@@ -27,8 +27,10 @@
     (let [ui-square (nth ui-squares idx)]
       (update-ui-square-if-taken! (:board game) ui-square))))
 
-(defn take-square! [ui-square game-listener]
-  (reset! state (game-controller/take-square @state (square-index ui-square) game-listener)))
+(defn take-square! [ui-square ui-squares]
+  (do
+    (reset! state (game-controller/take-square @state (square-index ui-square)))
+    (update-board-ui! ui-squares @state)))
 
 (defn init! [ui-squares]
   (reset! state (game-controller/start {:player :X :player-first true}))

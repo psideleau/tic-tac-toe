@@ -13,7 +13,7 @@
                  [cljs-ajax "0.5.1"]
                  [prismatic/dommy "1.1.0"]
                  [reagent "0.6.0-alpha"]]
-  :source-paths ["src/clj"]
+  :source-paths ["src/clj" "src/cljc"]
 
   :ring {:handler tic.ui.handler/app
          :init tic.ui.handler/init
@@ -33,7 +33,7 @@
             [lein-figwheel "0.5.0-4"]]
   :cljsbuild {
               :builds [ { :id "test"
-                         :source-paths ["src/cljs"]
+                         :source-paths ["src/cljs" "src/cljc"]
                          :figwheel true
                          :compiler {:asset-path "js/out"
                                     :output-to "resources/public/js/app.js"

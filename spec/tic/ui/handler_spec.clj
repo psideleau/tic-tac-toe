@@ -6,11 +6,6 @@
             [tic.ui.handler :refer :all]
             [tic.game-controller :as game-controller]))
 
-(deftype SpyGameListener []
-  game-controller/GameListener
-  (update-board! [this game] )
-  (winner [this game] )
-  (tied [this game] ))
 
 (defn get-request [url]
   (app (request :get url)))
@@ -38,7 +33,7 @@
       (content-type "application/json")))
 
 (defn expected-game-result-after-taking-the-third-square [game]
-  (json/write-str (game-controller/take-square game 2 (SpyGameListener.))))
+  (json/write-str (game-controller/take-square game 2)))
 
 (defn json-response-body [response]
   (json/read-str (:body response) :key-fn keyword))
@@ -50,11 +45,11 @@
   (let [expected-game-json (expected-game-result-after-taking-the-third-square game)]
    (should= (json/read-str expected-game-json :key-fn keyword) (:game (json-response-body response)))))
 
-(defn request-body [game state-callback-methods]
-  {:game game :callback-methods state-callback-methods})
+(defn request-body [game]
+  {:game game})
 
-(defn execute-test [game state-callback-methods]
-  (-> (request-body game state-callback-methods)
+(defn execute-test [game]
+  (-> (request-body game)
       (take-the-third-square)
       (app)))
 
@@ -63,30 +58,26 @@
 
 (describe "playing a game of tic-tac-toe"
   (before
-    (def game (game-controller/start { :player :X :player-first true}))
-    (def state-callback-methods {:winner-method "win" :tied-method "tied"}))
+    (def game (game-controller/start { :player :X :player-first true})))
 
   (it "POST '/squares/' should take a square"
-    (let [response (execute-test game state-callback-methods)]
+    (let [response (execute-test game)]
       (assert-response-ok response)
-      (assert-correct-game game response)
-      (assert-callback-method-is nil response)))
+      (assert-correct-game game response)))
 
   (it "POST '/squares/' should win game"
     (let [winning-game (assoc game :board [[:X :X :_][:_ :_ :_][:_ :_ :_]])
-          response (execute-test winning-game state-callback-methods)]
+          response (execute-test winning-game)]
       (assert-response-ok response)
-      (assert-correct-game winning-game response)
-      (assert-callback-method-is "win" response)))
+      (assert-correct-game winning-game response)))
 
   (it "POST '/squares/' should tie game"
     (let [winning-game (assoc game :board [[:X :O :_]
                                            [:X :O :X]
                                            [:O :X :O]])
-          response (execute-test winning-game state-callback-methods)]
+          response (execute-test winning-game)]
       (assert-response-ok response)
-      (assert-correct-game winning-game response)
-      (assert-callback-method-is "tied" response))))
+      (assert-correct-game winning-game response))))
 
 
 (describe "client side bug sending an invalid request"
