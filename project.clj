@@ -13,7 +13,7 @@
                  [cljs-ajax "0.5.1"]
                  [prismatic/dommy "1.1.0"]
                  [reagent "0.6.0-alpha"]]
-  :source-paths ["src/clj" "src/cljc"]
+  :source-paths ["src/clj"]
 
   :ring {:handler tic.ui.handler/app
          :init tic.ui.handler/init
@@ -28,18 +28,28 @@
                         [org.clojure/data.json "0.2.6"]
                         [ring/ring-devel "1.4.0"]]}}
   :plugins [[speclj "3.3.1"]
+            [lein-doo "0.1.6"]
             [lein-ring "0.9.7"]
             [lein-cljsbuild "1.1.2"]
             [lein-figwheel "0.5.0-4"]]
   :cljsbuild {
-              :builds [ { :id "test"
-                         :source-paths ["src/cljs" "src/cljc"]
+              :builds [ { :id "dev"
+                         :source-paths ["src/cljs"]
                          :figwheel true
                          :compiler {:asset-path "js/out"
                                     :output-to "resources/public/js/app.js"
                                     :output-dir "resources/public/js/out"
                                     :optimizations :none
                                     :source-map true} }
+                       { :id "test"
+                        :source-paths ["src/cljs" "spec/cljs"]
+                        :figwheel false
+                        :compiler {:asset-path "js/out"
+                                   :output-to "resources/public/js/test.js"
+                                   :output-dir "resources/public/js/out"
+                                   :optimizations :none
+                                   :main "tic.runner"
+                                   :source-map true} }
                        ]
               }
   :main tic.ui.swing
