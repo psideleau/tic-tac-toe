@@ -76,8 +76,9 @@
   (r/render-component [board-ui]
                       (.getElementById js/document "main-area")))
 
-(defn run []
+(defn ^:export run []
+  (.log js/console "mounting it")
   (mountit))
 
-(run)
+;(run)
 

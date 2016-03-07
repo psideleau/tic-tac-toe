@@ -28,7 +28,6 @@
 
     (it "should allow user to take free square and have computer go next"
         (let [updated-game (game-controller/take-square game 1)]
-          (println "THE BOARD IS " (:board updated-game))
           (should= :O (board/get-board-square (:board updated-game ) 1))
           (should= 1 (count (board/taken-squares (:board updated-game ) :X)))
           (should= :O (:current-turn updated-game))

@@ -43,14 +43,16 @@
                                        :source-map    true}
                         }
                          { :id "test"
-                         :source-paths ["src/cljs" "src/cljc"]
+                         :source-paths ["src/cljs" "src/cljc" "spec/cljs"]
                          :figwheel false
                          :compiler {:asset-path "js/out"
                                     :output-to "resources/public/js/test.js"
                                     :output-dir "resources/public/js/out"
+                                    :foreign-libs [{:file "http://sinonjs.org/releases/sinon-1.17.3.js"
+                                                    :provides ["sinon"]}]
                                     :optimizations :none
                                     :main "tic.runner"
-                                    :source-map true} }
+                                    :source-map false} }
                        ]
               }
   :main tic.ui.swing
