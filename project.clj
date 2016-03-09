@@ -30,6 +30,7 @@
   :plugins [[speclj "3.3.1"]
             [lein-doo "0.1.6"]
             [lein-ring "0.9.7"]
+            [lein-kibit "0.1.2"]
             [lein-cljsbuild "1.1.2"]
             [lein-figwheel "0.5.0-4"]]
   :cljsbuild {
@@ -56,7 +57,7 @@
                        ]
               }
   :main tic.ui.swing
-  :test-paths ["spec"]
+  :test-paths ["spec/clj"]
   :figwheel {
              :http-server-root "public" ;; this will be in resources/
              :server-port 3449          ;; default
