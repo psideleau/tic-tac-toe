@@ -22,5 +22,8 @@
     "karma-chrome-launcher": "^0.2.2",
     "karma-cljs-test": "^0.1.0",
     "sinon": "^1.17.3"
+  },
+  "dependencies": {
+    "react-bootstrap": "^0.28.3"
   }
 }

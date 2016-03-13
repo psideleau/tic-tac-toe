@@ -2,19 +2,20 @@
 <html>
 <head>
  <link rel="stylesheet" href="css/screen.css" />
-    <script type="text/javascript" src="js/out/goog/base.js"></script>
-    <script src="js/app.js"></script>
 </head>
 <body>
+<script type="text/javascript" src="js/out/goog/base.js"></script>
+
+
+<script src="js/app.js"></script>
 <div id="main-area">
 </div>
 
 <script>
-    goog.require("tic.reagent");
+    goog.require("tic.client_gateway");
     goog.require("tic.ui.game_over");
-</script>
-<script>
-    tic.reagent.run();
+    goog.require("tic.client");
+    goog.require("tic.client_runner")
 </script>
 </body>
 </html>
