@@ -40,6 +40,8 @@
                         :compiler     {:asset-path    "js/out"
                                        :output-to     "resources/public/js/app.js"
                                        :output-dir    "resources/public/js/out"
+                                       :foreign-libs [{:file "https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.28.3/react-bootstrap.min.js"
+                                                       :provides ["bootstrap"]}]
                                        :optimizations :none
                                        :source-map    true}
                         }
@@ -49,7 +51,9 @@
                          :compiler {:asset-path "js/out"
                                     :output-to "resources/public/js/test.js"
                                     :output-dir "resources/public/js/out"
-                                    :foreign-libs [{:file "http://sinonjs.org/releases/sinon-1.17.3.js"
+                                    :foreign-libs [{:file "https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.28.3/react-bootstrap.min.js"
+                                                    :provides ["bootstrap"]}
+                                                   {:file "http://sinonjs.org/releases/sinon-1.17.3.js"
                                                     :provides ["sinon"]}]
                                     :optimizations :none
                                     :main "tic.runner"

@@ -1,10 +1,16 @@
 .board
 {
     display: table;
+    width: 75%;
 }
 
 .row {
- display:table-row
+    display:table-row;
+    padding:0px;
+}
+
+.tic-btn {
+    width:100%;
 }
 
 .square
@@ -12,6 +18,5 @@
     display: table-cell;
     border: solid;
     border-width: thin;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0px;
 }

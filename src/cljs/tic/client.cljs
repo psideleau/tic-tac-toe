@@ -2,10 +2,16 @@
   (:require
     [tic.ui.game-over :as game-over]
     [tic.client-gateway :as gateway]
+    [bootstrap :as bootstrap]
     [reagent.core :as r]))
 
 (defonce game (r/atom {}))
 (def rows 3)
+(def Panel (r/adapt-react-class js/ReactBootstrap.Panel))
+(def Grid (r/adapt-react-class js/ReactBootstrap.Grid))
+(def Row (r/adapt-react-class js/ReactBootstrap.Row))
+(def Alert (r/adapt-react-class js/ReactBootstrap.Alert))
+(def Col (r/adapt-react-class js/ReactBootstrap.Col))
 
 (defn start-game-handler [response]
   (.log js/console "server responded..." (str response))
@@ -45,23 +51,26 @@
   [:div {:class "row" :key (str "outer-row" row)}
    (doall
      (map (fn [id] [:div {:class "square" :key (str "square-class-" row "-" id)}
-                    [:input
+                    [:button
                         {:type "button" :class "tic-btn"
                          :name "square"
-                         :value (get-square-value row id @game)
                          :on-click #(take-square row id)
                          :key (str "square-" row "-" id)
-                         :id (str "square-" row "-" id)}
+                         :id (str "square-" row "-" id)} (get-square-value row id @game)
                      ]]) (range 3)))])
+
+
+(defn error-alert []
+  [Alert {:alertVisible false}
+    [:p "an unexepcted error has occurred"]])
 
 (defn board-ui []
   [:div
-   [:script {:src "https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.28.3/react-bootstrap.min.js"}]
-   [:h1 "Tic-Tac-Toe 2"]
-   [:div {:class "board"}
-    (for [x (range 3)]
-      ^{:key (str 'row-loop' x)}[create-row x])]
-   [:a  {:href "#"  :on-click start-game :id "start-game"} "start game " ]])
+   [Panel {:header "Tic-Tac-Toe" :bsStyle "primary"}
+     [:div {:class "board"}
+      (for [x (range 3)]
+        ^{:key (str 'row-loop' x)}[create-row x])]
+     [:a  {:href "#"  :on-click start-game :id "start-game"} "start game " ]]])
 
 (defn mountit []
   (r/render-component [board-ui]
