@@ -23,6 +23,7 @@
                    (reset! winner-callback {})
                    (reset! tied-callback {})
                    (reset! server (.create s/fakeServer))
+                   (reset!  r/game {})
                    (.respondWith @server "POST" "/tic-tac-toe" (str
                                              "{\"player\" : \"X\",
                                               \"computer\" : \"O\",
@@ -31,10 +32,49 @@
                  (.removeChild (.-body js/document) @div)
                  (.restore @server))})
 
+  (defn render [component]
+    (reagent/render-component component (.getElementById js/document "test-area")))
+
   (deftest test-displaying-a-board []
-    (reagent/render-component [r/create-row 1]
-    (.getElementById js/document "test-area"))
+    (render [r/create-row 1])
     (is (= 3  (.-length  (.querySelectorAll js/document ".tic-btn")))))
+
+  (deftest test-should-display-game-over-result []
+    (swap! r/game assoc :game-over true )
+    (render [r/game-over-alert])
+    (is (not (nil?  (.querySelector js/document "#game-over-alert")))))
+
+  (defn click-button [id]
+    (.click  (.querySelector js/document id)))
+
+  (deftest test-close-game-over-alert []
+    (swap! r/game assoc :game-over true )
+    (render [r/game-over-alert])
+    (click-button  "#game-over-close-btn")
+    (is (nil?  (:game-over @r/game))))
+
+  (deftest test-should-not-display-game-over-result []
+    (swap! r/game assoc :game-over false )
+    (render [r/game-over-alert])
+    (is  (nil?  (.querySelector js/document "#game-over-alert"))))
+
+  (deftest test-should-display-error-alert []
+    (swap! r/game assoc :error true :error-msg "error")
+    (render [r/error-alert])
+    (is  (not (nil?  (.querySelector js/document "#error-alert")))))
+
+  (deftest test-should-close-error-alert []
+     (swap! r/game assoc :error true :error-msg "error")
+     (render [r/error-alert])
+     (click-button "#error-alert-close-btn")
+     (is (nil?  (:error @r/game)))
+     (is (nil?  (:error-msg @r/game))))
+
+  (deftest test-should-not-display-error-alert []
+    (swap! r/game dissoc :error)
+    (render [r/error-alert])
+    (is  (nil?  (.querySelector js/document "#error-alert"))))
+
 
   (deftest test-start-game []
     (r/start-game)
@@ -60,18 +100,18 @@
       (is (true? (:game-over @winner-callback)))))
 
 
- (deftest test-player-tieds-game []
-  (.respondWith @server "POST" "/squares/2"
-               (str "{\"game\" : {
-                      \"player\" : \"X\",
-                      \"computer\" : \"O\",
-                      \"game-over\" : true,
-                      \"tie\" : true,
-                      \"board\" : " (stub-board-as-str) "}}"))
-  (with-redefs [r/tied (fn[game] (reset! tied-callback game))]
-    (r/take-square 0 2)
-    (.respond @server)
-    (is (true? (:game-over @tied-callback)))))
+  (deftest test-player-tieds-game []
+    (.respondWith @server "POST" "/squares/2"
+                 (str "{\"game\" : {
+                        \"player\" : \"X\",
+                        \"computer\" : \"O\",
+                        \"game-over\" : true,
+                        \"tie\" : true,
+                        \"board\" : " (stub-board-as-str) "}}"))
+    (with-redefs [r/tied (fn[game] (reset! tied-callback game))]
+      (r/take-square 0 2)
+      (.respond @server)
+      (is (true? (:game-over @tied-callback)))))
 
   (deftest test-player-takes-square []
     (.respondWith @server "POST" "/squares/2"

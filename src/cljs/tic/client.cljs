@@ -8,18 +8,13 @@
 (defonce game (r/atom {}))
 (def rows 3)
 (def Panel (r/adapt-react-class js/ReactBootstrap.Panel))
-(def Grid (r/adapt-react-class js/ReactBootstrap.Grid))
-(def Row (r/adapt-react-class js/ReactBootstrap.Row))
 (def Alert (r/adapt-react-class js/ReactBootstrap.Alert))
-(def Col (r/adapt-react-class js/ReactBootstrap.Col))
 
 (defn start-game-handler [response]
-  (.log js/console "server responded..." (str response))
   (reset! game response))
 
 (defn error-handler [{:keys [status status-text]}]
-  (swap! game merge {:error status-text} @game)
-  (.log js/console (str "something bad happened: " status " " status-text)))
+  (swap! game merge {:error status-text} @game))
 
 (defn start-game []
   (gateway/start-game start-game-handler error-handler))
@@ -58,56 +53,31 @@
                          :on-click #(take-square row id)
                          :key (str "square-" row "-" id)
                          :id (str "square-" row "-" id)} (get-square-value row id @game)
-                     ]]) (range 3)))])
-
+                     ]]) (range rows)))])
 
 (defn error-alert []
-  (r/create-class                 ;; <-- expects a map of functions
+  (r/create-class
     {
-     :get-initial-state (fn[this] {:alert-visible true })
-
-     :component-did-mount               ;; the name of a lifecycle function
-                    #(.log js/console "component-did-mount")   ;; your implementation
-
-     :component-will-mount              ;; the name of a lifecycle function
-                    #(.log js/console "component-will-mount")  ;; your implementation
-
-     ;; other lifecycle funcs can go in here
-
-     :display-name  "my-component"  ;; for more helpful warnings & errors
-
-     :render        ;; Note:  is not :render
-                    (fn [this]           ;; remember to repeat parameters
-                      (if (:error @game)
-                        [Alert {:bsStyle "danger"}
-                         [:p "an unexpected error has occurred"]
-                         [:button {:on-click #(swap! game dissoc :error)} "Close"]]
-                        ))}))
-
+     :render
+      (fn [this]
+        (if (:error @game)
+          [Alert {:bsStyle "danger" :id "error-alert"}
+           [:p "an unexpected error has occurred"]
+           [:button {:id "error-alert-close-btn" :on-click #(swap! game dissoc :error :error-msg)} "Close"]]
+          ))
+     }))
 
 (defn game-over-alert []
-  (r/create-class                 ;; <-- expects a map of functions
+  (r/create-class
     {
-     :get-initial-state (fn[this] {:alert-visible true })
-
-     :component-did-mount               ;; the name of a lifecycle function
-                        #(.log js/console "component-did-mount")   ;; your implementation
-
-     :component-will-mount              ;; the name of a lifecycle function
-                        #(.log js/console "component-will-mount")  ;; your implementation
-
-     ;; other lifecycle funcs can go in here
-
-     :display-name  "my-component"  ;; for more helpful warnings & errors
-
-     :render        ;; Note:  is not :render
-                        (fn [this]           ;; remember to repeat parameters
-                          (if (:game-over @game)
-                            [Alert {:bsStyle "info"}
-                             [:p (:game-over-msg @game)]
-                             [:button {:on-click #(swap! game dissoc :game-over-msg :game-over)} "Close"]]
-                            ))}))
-
+     :render
+      (fn [this]
+        (if (:game-over @game)
+          [Alert {:bsStyle "info" :id "game-over-alert"}
+           [:p (:game-over-msg @game)]
+           [:button {:id "game-over-close-btn" :on-click #(swap! game dissoc :game-over-msg :game-over)} "Close"]]
+          ))
+     }))
 
 (defn board-ui []
   [:div
@@ -116,11 +86,8 @@
      [game-over-alert]
      [:div {:class "board"}
       (for [x (range 3)]
-        ^{:key (str 'row-loop' x)}[create-row x])]
+        ^{:key (str 'row-loop' x)} [create-row x])]
      [:a  {:href "#"  :on-click start-game :id "start-game"} "start game " ]]])
 
 (defn mountit []
-  (r/render-component [board-ui]
-                      (.getElementById js/document "main-area")))
-
-
+  (r/render-component [board-ui] (.getElementById js/document "main-area")))
